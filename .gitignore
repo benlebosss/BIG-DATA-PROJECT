@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.ipynb_checkpoints/
+spark-warehouse/
+metastore_db/
+derby.log
+checkpoints/
+# Large IMDb files stay out of git
+data/*
+!data/.gitkeep
+!data/README.md
+.DS_Store
