@@ -1,0 +1,6 @@
+table,column,type,rows,null_count,empty_count,null_pct,empty_pct,missing_pct
+title.akas,isOriginalTitle,BooleanType(),59668790,59668790,0,100.0,0.0,100.0
+title.basics,isAdult,BooleanType(),12846867,12846867,0,100.0,0.0,100.0
+title.akas,attributes,StringType(),59668790,59353075,0,99.471,0.0,99.471
+title.basics,endYear,IntegerType(),12846867,12684284,0,98.734,0.0,98.734
+name.basics,deathYear,IntegerType(),15716378,15452135,0,98.319,0.0,98.319
