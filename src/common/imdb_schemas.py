@@ -59,6 +59,9 @@ def read_table(spark: SparkSession, name: str, data_dir: str = "data/imdb") -> D
 
     IMDb encodes missing values as the literal ``\\N``; they become real nulls.
     """
+    parquet = Path(data_dir).parent / "parquet" / name.replace(".", "_")
+    if parquet.exists():  # fast path: see src/preparation/to_parquet.py
+        return spark.read.parquet(str(parquet))
     path = Path(data_dir) / f"{name}.tsv.gz"
     return (
         spark.read.option("sep", "\t")
