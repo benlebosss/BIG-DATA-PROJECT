@@ -1,0 +1,5 @@
+talents,n_people,mean_rating_multi,mean_rating_single,mean_rating_gain,pct_better_when_multi
+direct+write,7670,5.93,5.91,0.038,51.1
+act+direct+write,1658,5.88,5.85,0.047,54.3
+act+write,1292,5.7,5.76,0.02,52.4
+act+direct,505,5.81,5.93,-0.076,48.3
