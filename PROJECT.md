@@ -25,6 +25,7 @@ Requires the Parquet tables (`python -m src.preparation.to_parquet`); the cleane
 `src.preparation.clean` are used automatically when `data/clean/` exists.
 
 ```bash
+python -m src.exploration.wikidata_language  # original language of the movies (Q6), ~1 min, needs internet
 python -m src.exploration.run_all            # all questions, CSV files in results/exploration/
 python -m src.exploration.run_all --only q4  # a single question (q1, q2 (= Q2 + Q3), q4 ... q8)
 python -m pytest -q tests/test_exploration.py
@@ -41,6 +42,8 @@ Each question is also a module with its own parameters, e.g.
   of later steps. This list will be updated for each step.
 - Data exploration (`src/exploration/`, `tests/test_exploration.py`): Claude (Anthropic, Claude Code)
   was used to write the PySpark code of the eight questions and their unit tests, and to
-  check the language coverage of `title.akas`. The interpretation of the results in REPORT.md
+  check the language coverage of `title.akas`, and for the Wikidata gatherer of the original
+  languages (`src/exploration/wikidata_language.py`). The language data itself comes from
+  Wikidata (human-curated, CC0), never from an AI tool. The interpretation of the results in REPORT.md
   is written by us.
 - No AI tool was used to write explanations or reasoning in REPORT.md.
