@@ -32,6 +32,7 @@ def test_q1_flags_only_extreme_runtime(spark):
     rows.append(movie("ttshort", 2000, 30))  # not feature length: ignored
     out = q1_runtime_outliers.runtime_outliers(df(spark, "title.basics", rows), z=3).collect()
     assert [r.tconst for r in out] == ["ttlong"] and out[0].direction == "longer"
+    assert out[0].z_outlier and out[0].iqr_outlier
 
 
 def test_q2_ranks_genres_by_votes(spark):
@@ -84,6 +85,23 @@ def test_q6_infers_language_from_original_title(spark):
     names = df(spark, "name.basics", [("nm1", "Polyglot", None, None, None, None)])
     out = q6_multilingual_actors.multilingual_actors(basics, akas, principals, ratings, names).collect()
     assert [(r.nconst, r.languages) for r in out] == [("nm1", "en,fr")]
+
+
+def test_q6_wikidata_language_resolution(spark):
+    movies = df(spark, "title.basics", [movie(f"tt{i}", 2000, 100, title=f"T{i}") for i in range(4)])
+    akas = df(spark, "title.akas", [("tt1", 1, "T1", "DE", "de", None, None, None),
+                                    ("tt2", 1, "T2", "US", "en", None, None, None),
+                                    ("tt3", 1, "T3", "FR", "fr", None, None, None)])
+    wd_schema = "tconst string, language_code string"
+    wikidata = spark.createDataFrame([("tt0", "zh"), ("tt0", "cmn"),       # same language twice
+                                      ("tt1", "de"), ("tt1", "fr"),        # settled by IMDb in "imdb" mode
+                                      ("tt2", "es"), ("tt2", "it")], wd_schema)  # multilingual
+    def resolve(mode):
+        rows = q6_multilingual_actors.original_language(movies, akas, wikidata, mode).collect()
+        return {r.tconst: (r.original_language, r.language_source) for r in rows}
+    assert resolve("exclude") == {"tt0": ("cmn", "wikidata"), "tt1": (None, "multilingual"),
+                                  "tt2": (None, "multilingual"), "tt3": ("fr", "imdb_akas")}
+    assert resolve("imdb")["tt1"] == ("de", "wikidata+imdb_akas")
 
 
 def test_q7_early_peak(spark):
