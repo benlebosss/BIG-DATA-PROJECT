@@ -43,6 +43,12 @@ def test_profile_counts_nulls(spark, data_dir):
     assert row["rows"] == 2 and row["null_count"] == 1 and row["null_pct"] == 50.0
 
 
+def test_booleans_are_parsed(spark, data_dir):
+    from src.common.imdb_schemas import read_table
+    rows = read_table(spark, "title.basics", data_dir).select("isAdult").collect()
+    assert [r.isAdult for r in rows] == [False, False]
+
+
 def test_orphans_detected(spark, data_dir):
     from src.common.imdb_schemas import read_table
     t = {n: read_table(spark, n, data_dir) for n in FILES}
