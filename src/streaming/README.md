@@ -29,3 +29,9 @@ Use `event_time` as the event-time column with a watermark for late data.
 ## Local test
     docker compose up -d kafka
     python -m src.streaming.wikipedia_producer --max-events 20
+
+## Run without Kafka
+
+    python -m src.streaming.consumer --source files --input-dir data/stream_input --timeout 120
+
+Drop JSON-lines files in the input directory; each line has the fields of CHANGE_SCHEMA.
