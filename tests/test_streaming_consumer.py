@@ -63,3 +63,8 @@ def ref_df(spark, tmp_path):
 def test_parse_changes_drops_missing_timestamp(spark, tmp_path):
     line = json.dumps({"event_id": "e", "wiki": "enwiki", "title": "Alien", "type": "edit"})
     assert parse_changes(lines_df(spark, tmp_path, [line])).count() == 0
+
+
+def test_match_is_case_insensitive(spark, tmp_path):
+    raw = lines_df(spark, tmp_path, [event("ALIEN (film)", 1700000000)])
+    assert match_entities(parse_changes(raw), ref_df(spark, tmp_path)).count() == 1
