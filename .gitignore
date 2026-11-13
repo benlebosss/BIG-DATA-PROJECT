@@ -12,3 +12,4 @@ data/*
 !data/.gitkeep
 !data/README.md
 .DS_Store
+.pytest_cache/
