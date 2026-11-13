@@ -2,6 +2,7 @@
 from pathlib import Path
 
 from pyspark.sql import DataFrame, SparkSession
+from pyspark.sql import functions as F
 from pyspark.sql.types import (
     BooleanType,
     DoubleType,
@@ -63,12 +64,20 @@ def read_table(spark: SparkSession, name: str, data_dir: str = "data/imdb") -> D
     if parquet.exists():  # fast path: see src/preparation/to_parquet.py
         return spark.read.parquet(str(parquet))
     path = Path(data_dir) / f"{name}.tsv.gz"
-    return (
+    # IMDb booleans are written 0/1, which the CSV reader does not parse as BooleanType
+    # (they would all become null): read them as integers and cast afterwards.
+    bools = [f.name for f in SCHEMAS[name].fields if isinstance(f.dataType, BooleanType)]
+    csv_schema = StructType([StructField(f.name, I) if f.name in bools else f
+                             for f in SCHEMAS[name].fields])
+    df = (
         spark.read.option("sep", "\t")
         .option("header", True)
         .option("nullValue", "\\N")
         .option("quote", "")
         .option("mode", "PERMISSIVE")
-        .schema(SCHEMAS[name])
+        .schema(csv_schema)
         .csv(str(path))
     )
+    for c in bools:
+        df = df.withColumn(c, F.col(c).cast("boolean"))
+    return df

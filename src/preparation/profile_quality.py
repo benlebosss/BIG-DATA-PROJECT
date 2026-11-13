@@ -10,6 +10,7 @@ Usage: python -m src.preparation.profile_quality [--data-dir data/imdb] [--out r
 import argparse
 from pathlib import Path
 
+import pandas as pd
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
 from pyspark.sql.types import StringType
@@ -18,8 +19,11 @@ from src.common.imdb_schemas import TABLES, read_table
 from src.common.spark_session import get_spark
 
 
-def profile_columns(df: DataFrame, table: str) -> DataFrame:
-    """Null / empty / missing percentage for every column of ``df`` (one pass)."""
+def profile_columns(df: DataFrame, table: str) -> pd.DataFrame:
+    """Null / empty / missing percentage for every column of ``df`` (one Spark pass).
+
+    The result has one row per column, so it is returned as a small pandas DataFrame.
+    """
     aggs = [F.count(F.lit(1)).alias("__total")]
     for field in df.schema.fields:
         c = F.col(field.name)
@@ -40,7 +44,7 @@ def profile_columns(df: DataFrame, table: str) -> DataFrame:
         ))
     cols = ["table", "column", "type", "rows", "null_count", "empty_count",
             "null_pct", "empty_pct", "missing_pct"]
-    return df.sparkSession.createDataFrame(out, cols)
+    return pd.DataFrame(out, columns=cols)
 
 
 def count_orphans(child: DataFrame, key: str, parent: DataFrame, parent_key: str) -> int:
@@ -161,5 +165,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--data-dir", default="data/imdb")
     ap.add_argument("--out", default="results/preparation")
+    ap.add_argument("--issues-only", action="store_true")
+    ap.add_argument("--only-issue", type=int, default=None)
+    ap.add_argument("--merge", action="store_true")
     a = ap.parse_args()
-    main(a.data_dir, a.out)
+    main(a.data_dir, a.out, issues_only=a.issues_only, only_issue=a.only_issue, merge=a.merge)
