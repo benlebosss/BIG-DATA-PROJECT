@@ -46,3 +46,7 @@ def test_allowed_namespace_is_kept():
 
 def test_several_wikis_are_accepted():
     assert parse_event(make(wiki="frwiki"), {"enwiki", "frwiki"}, None)["wiki"] == "frwiki"
+
+
+def test_iter_sse_skips_comment_lines():
+    assert list(iter_sse([": ping", "id: 7", 'data: {"x": 2}', ""])) == [("7", '{"x": 2}')]
