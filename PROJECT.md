@@ -79,3 +79,7 @@ Start Kafka with docker compose up -d kafka, then run the producer (python -m sr
 ## Where the results are
 
 results/preparation, results/exploration, results/enrichment and results/open_question hold the CSV files quoted in REPORT.md.
+
+## Git workflow
+
+One feature branch per task, one pull request per branch, reviewed and approved by the other contributor before merging. main is protected.
