@@ -15,3 +15,7 @@ looks each one up on Wikipedia (REST `page/summary`) and writes `results/enrichm
 ## Output columns
 
 imdb_id, kind (title or person), imdb_name, status (ok or not_found), wikipedia_title, description, extract, source_url, revision, wiki_timestamp, fetched_at.
+
+## Resuming a run
+
+Re-running the same command skips every entity already present in data/enrichment/wikipedia.jsonl. Delete that file to refetch everything.
