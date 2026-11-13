@@ -68,3 +68,7 @@ def test_film_table_drops_low_vote_films(spark, tmp_path):
 
 def test_film_table_keeps_only_movies(spark, tmp_path):
     assert film_table(*one_film(spark, tmp_path, title_type="tvSeries"), 1000).count() == 0
+
+
+def test_decade_of_1999_is_1990(spark, tmp_path):
+    assert film_table(*one_film(spark, tmp_path, year=1999), 1000).collect()[0].decade == 1990
