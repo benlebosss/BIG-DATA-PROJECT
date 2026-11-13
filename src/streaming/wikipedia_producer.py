@@ -1,9 +1,3 @@
-"""Step 6a: Wikipedia recent changes (Wikimedia EventStreams) -> Kafka topic.
-
-Usage (from the repo root, with Kafka running):
-    python -m src.streaming.wikipedia_producer                      # enwiki articles -> Kafka
-    python -m src.streaming.wikipedia_producer --dry-run --max-events 5   # print only, no Kafka
-"""
 import argparse
 import json
 import logging
@@ -22,10 +16,6 @@ log = logging.getLogger("wikipedia_producer")
 
 
 def parse_event(data: str, wikis: Optional[set] = None, namespaces: Optional[set] = None) -> Optional[dict]:
-    """Turn one raw EventStreams JSON payload into the flat message described in schema.py.
-
-    Returns None for events we do not want (not an edit, wrong wiki/namespace, malformed).
-    """
     try:
         obj = json.loads(data)
     except (TypeError, ValueError):
@@ -56,7 +46,6 @@ def parse_event(data: str, wikis: Optional[set] = None, namespaces: Optional[set
 
 
 def iter_sse(lines: Iterable[str]) -> Iterator[Tuple[Optional[str], str]]:
-    """Yield (last_event_id, data) for every Server-Sent Event found in ``lines``."""
     event_id = None
     for line in lines:
         if line.startswith("id:"):
@@ -66,7 +55,6 @@ def iter_sse(lines: Iterable[str]) -> Iterator[Tuple[Optional[str], str]]:
 
 
 def stream_changes(url: str = STREAM_URL) -> Iterator[str]:
-    """Yield raw JSON payloads forever, reconnecting with exponential backoff."""
     last_id, delay = None, 1
     while True:
         headers = {"User-Agent": USER_AGENT, "Accept": "text/event-stream"}
@@ -102,7 +90,7 @@ def main() -> None:
 
     producer = None
     if not a.dry_run:
-        from kafka import KafkaProducer  # imported here so tests/dry-run need no Kafka client
+        from kafka import KafkaProducer
         producer = KafkaProducer(
             bootstrap_servers=a.bootstrap,
             key_serializer=lambda k: k.encode("utf-8"),
