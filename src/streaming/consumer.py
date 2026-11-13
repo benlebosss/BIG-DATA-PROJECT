@@ -42,6 +42,13 @@ def read_source(spark: SparkSession, a) -> DataFrame:
     return spark.readStream.text(a.input_dir)
 
 
+def positive_int(value):
+    n = int(value)
+    if n < 1:
+        raise argparse.ArgumentTypeError("must be >= 1")
+    return n
+
+
 def main(a):
     spark = get_spark("wikipedia-imdb-consumer", with_kafka=(a.source == "kafka"))
     spark.sparkContext.setLogLevel("WARN")
