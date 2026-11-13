@@ -1,12 +1,3 @@
-"""Enrichment: Wikipedia synopses (titles) and biographies (people) for top IMDb entities.
-
-    python -m src.enrichment.wikipedia --titles 200 --people 200
-
-Source: Wikipedia REST ``page/summary`` endpoint. Every record keeps its lineage
-(``source_url`` + page ``revision`` + ``fetched_at``). Requests are rate limited,
-retried on 429/5xx (honouring ``Retry-After``) and cached in a JSON-lines file so that
-a run can be resumed.
-"""
 import argparse
 import json
 import re
@@ -24,7 +15,6 @@ COLUMNS = ["imdb_id", "kind", "imdb_name", "status", "wikipedia_title", "descrip
 
 
 class RateLimiter:
-    """At most ``per_second`` calls per second (minimum spacing between calls)."""
 
     def __init__(self, per_second: float = 5.0, clock=time.monotonic, sleep=time.sleep):
         self.interval, self.clock, self.sleep, self.last = 1.0 / per_second, clock, sleep, None
@@ -47,7 +37,6 @@ def candidates(kind: str, name: str, year=None) -> list:
 
 
 def is_relevant(kind: str, data: dict) -> bool:
-    """Reject disambiguation pages and pages that do not look like a film/series or a film person."""
     if data.get("type") != "standard":
         return False
     text = (data.get("description") or "") + " " + (data.get("extract") or "")[:300]
@@ -64,7 +53,6 @@ def to_record(row: dict, data: dict) -> dict:
 
 
 def enrich_row(row: dict, fetch) -> dict:
-    """``fetch(page_title) -> summary dict | None``; first relevant candidate wins."""
     for cand in candidates(row["kind"], row["imdb_name"], row.get("year")):
         data = fetch(cand)
         if data and is_relevant(row["kind"], data):
@@ -89,13 +77,12 @@ def make_fetch(per_second: float = 5.0, retries: int = 5, session=None, sleep=ti
             if r.status_code in (429, 500, 502, 503, 504):
                 sleep(float(r.headers.get("Retry-After", 2 ** attempt)))
                 continue
-            return None  # 404 and other client errors: page does not exist
+            return None
         return None
     return fetch
 
 
 def run(entities: list, cache_path: str, fetch=None, per_second: float = 5.0) -> list:
-    """Enrich ``entities`` (dicts with imdb_id, kind, imdb_name, year); resumable via cache_path."""
     fetch = fetch or make_fetch(per_second)
     cache = Path(cache_path)
     cache.parent.mkdir(parents=True, exist_ok=True)
