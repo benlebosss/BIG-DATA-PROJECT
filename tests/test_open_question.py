@@ -81,3 +81,8 @@ def test_decade_of_2000_is_2000(spark, tmp_path):
 def test_min_separate_threshold_filters_duos(data):
     films, principals = data
     assert duo_effects(films, principals, "decade", min_joint=2, min_separate=3).count() == 0
+
+
+def test_summary_mean_effect(data):
+    films, principals = data
+    assert summarize(duo_effects(films, principals, "decade", 2, 2)).collect()[0].mean_effect == 2.0
