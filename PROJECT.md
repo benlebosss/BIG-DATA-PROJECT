@@ -51,3 +51,7 @@ Each question is also a module with its own parameters, e.g.
 - Streaming (`src/streaming/`, `tests/test_streaming_*.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia -> Kafka producer, the IMDb lookup builder and the Structured Streaming consumer (join, windows, watermark) with their tests. The explanation of late-data handling in REPORT.md is written by us.
 - Enrichment (`src/enrichment/`, `tests/test_enrichment.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia lookup code (rate limiting, retries, lineage columns) and its tests. The data comes from Wikipedia, never from an AI tool.
 - REPORT.md is written by hand by the two contributors, without AI.
+
+## Requirements
+
+PySpark 3.5 needs Java 17. The Docker image provides Java 17 and Python 3.11. Outside Docker, export JAVA_HOME to a Java 17 install before running Spark.
