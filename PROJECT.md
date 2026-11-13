@@ -75,3 +75,7 @@ Spark tests start a local session and take a few seconds each.
 ## Streaming run
 
 Start Kafka with docker compose up -d kafka, then run the producer (python -m src.streaming.wikipedia_producer) and the consumer (python -m src.streaming.consumer) in two terminals. Details in src/streaming/README.md.
+
+## Where the results are
+
+results/preparation, results/exploration, results/enrichment and results/open_question hold the CSV files quoted in REPORT.md.
