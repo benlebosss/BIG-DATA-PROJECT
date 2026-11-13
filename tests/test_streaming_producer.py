@@ -38,3 +38,7 @@ def test_new_pages_are_kept():
 
 def test_bot_flag_is_forwarded():
     assert parse_event(make(bot=True))["bot"] is True
+
+
+def test_allowed_namespace_is_kept():
+    assert parse_event(make(namespace=0), {"enwiki"}, {0}) is not None
