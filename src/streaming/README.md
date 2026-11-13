@@ -22,3 +22,7 @@ match `title` against IMDb titles/names, and flag matches over a 15-30 min windo
 ## Local test
     docker compose up -d kafka
     python -m src.streaming.wikipedia_producer --max-events 20
+
+## Message example
+
+    {"event_id": "...", "wiki": "enwiki", "title": "Inception (film)", "type": "edit", "namespace": 0, "user": "...", "bot": false, "timestamp": 1790000000, "event_time": "2026-10-23T16:00:00Z"}
