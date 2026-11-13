@@ -44,3 +44,9 @@ def test_person_candidates_order():
 def test_person_relevance():
     page = {"type": "standard", "description": "American actor and filmmaker", "extract": "Tom Hanks is an actor."}
     assert is_relevant("person", page)
+
+
+def test_to_record_without_content_urls():
+    from src.enrichment.wikipedia import to_record
+    rec = to_record({"imdb_id": "x", "kind": "title", "imdb_name": "X"}, {"title": "X", "extract": "e"})
+    assert rec["source_url"] is None and rec["status"] == "ok"
