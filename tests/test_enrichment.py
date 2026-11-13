@@ -35,3 +35,7 @@ def test_rate_limiter():
     rl = RateLimiter(10, clock=lambda: t[0], sleep=lambda s: (slept.append(s), t.__setitem__(0, t[0] + s)))
     rl.wait(); rl.wait()
     assert abs(slept[0] - 0.1) < 1e-9
+
+
+def test_person_candidates_order():
+    assert candidates("person", "Tom Hanks")[0] == "Tom_Hanks"
