@@ -55,3 +55,9 @@ Each question is also a module with its own parameters, e.g.
 ## Requirements
 
 PySpark 3.5 needs Java 17. The Docker image provides Java 17 and Python 3.11. Outside Docker, export JAVA_HOME to a Java 17 install before running Spark.
+
+## Run the tests
+
+    python -m pytest -q
+
+Spark tests start a local session and take a few seconds each.
