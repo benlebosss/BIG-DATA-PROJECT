@@ -61,3 +61,13 @@ PySpark 3.5 needs Java 17. The Docker image provides Java 17 and Python 3.11. Ou
     python -m pytest -q
 
 Spark tests start a local session and take a few seconds each.
+
+## Pipeline order
+
+    python -m src.preparation.to_parquet
+    ./scripts/run_quality_checks.sh
+    python -m src.preparation.clean
+    python -m src.exploration.run_all
+    python -m src.enrichment.wikipedia
+    python -m src.streaming.reference
+    python -m src.open_question.duos_by_period
