@@ -58,3 +58,8 @@ def ref_df(spark, tmp_path):
     p = tmp_path / "ref.json"
     p.write_text(json.dumps({"key": "alien", "kind": "title", "imdb_id": "tt1", "imdb_name": "Alien", "votes": 1}))
     return spark.read.json(str(p))
+
+
+def test_parse_changes_drops_missing_timestamp(spark, tmp_path):
+    line = json.dumps({"event_id": "e", "wiki": "enwiki", "title": "Alien", "type": "edit"})
+    assert parse_changes(lines_df(spark, tmp_path, [line])).count() == 0
