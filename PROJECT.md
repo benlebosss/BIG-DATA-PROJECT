@@ -71,3 +71,7 @@ Spark tests start a local session and take a few seconds each.
     python -m src.enrichment.wikipedia
     python -m src.streaming.reference
     python -m src.open_question.duos_by_period
+
+## Streaming run
+
+Start Kafka with docker compose up -d kafka, then run the producer (python -m src.streaming.wikipedia_producer) and the consumer (python -m src.streaming.consumer) in two terminals. Details in src/streaming/README.md.
