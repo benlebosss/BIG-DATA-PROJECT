@@ -76,3 +76,8 @@ def test_decade_of_1999_is_1990(spark, tmp_path):
 
 def test_decade_of_2000_is_2000(spark, tmp_path):
     assert film_table(*one_film(spark, tmp_path, year=2000), 1000).collect()[0].decade == 2000
+
+
+def test_min_separate_threshold_filters_duos(data):
+    films, principals = data
+    assert duo_effects(films, principals, "decade", min_joint=2, min_separate=3).count() == 0
