@@ -1,13 +1,3 @@
-"""Spark Structured Streaming job: Wikipedia changes -> IMDb matches -> windowed counts.
-
-    python -m src.streaming.reference            # once: build the IMDb lookup table
-    python -m src.streaming.consumer --source kafka --window "30 minutes" --slide "5 minutes"
-
-Pipeline: parse JSON -> event time -> stream-static join with the IMDb lookup ->
-sliding-window count of matches. Late data: a watermark on ``event_time`` lets Spark
-keep window state only for ``--watermark`` after the latest event time seen; events
-older than that are dropped from the aggregation.
-"""
 import argparse
 
 from pyspark.sql import DataFrame, SparkSession
@@ -19,7 +9,6 @@ from src.streaming.schema import CHANGE_SCHEMA, TOPIC
 
 
 def parse_changes(raw: DataFrame) -> DataFrame:
-    """``raw`` has a string column ``value`` holding the JSON event."""
     return (raw.select(F.from_json(F.col("value").cast("string"), CHANGE_SCHEMA).alias("c"))
             .select("c.*")
             .filter(F.col("title").isNotNull() & F.col("timestamp").isNotNull())
@@ -27,7 +16,6 @@ def parse_changes(raw: DataFrame) -> DataFrame:
 
 
 def match_entities(changes: DataFrame, ref: DataFrame) -> DataFrame:
-    """Inner join on the normalised page title (ref is small: broadcast)."""
     keyed = changes.withColumn("key", norm_key(F.col("title")))
     return keyed.join(F.broadcast(ref), "key", "inner")
 
@@ -51,7 +39,7 @@ def read_source(spark: SparkSession, a) -> DataFrame:
                 .option("startingOffsets", a.starting_offsets)
                 .option("failOnDataLoss", "false").load()
                 .select(F.col("value").cast("string").alias("value")))
-    return spark.readStream.text(a.input_dir)  # JSON lines files (tests, replays)
+    return spark.readStream.text(a.input_dir)
 
 
 def main(a):
