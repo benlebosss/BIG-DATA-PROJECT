@@ -1,4 +1,3 @@
-"""Unit tests for the Wikipedia -> Kafka producer (no network, no Kafka)."""
 import json
 
 from src.streaming.wikipedia_producer import iter_sse, parse_event
