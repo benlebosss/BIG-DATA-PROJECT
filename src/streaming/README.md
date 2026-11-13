@@ -35,3 +35,7 @@ Use `event_time` as the event-time column with a watermark for late data.
     python -m src.streaming.consumer --source files --input-dir data/stream_input --timeout 120
 
 Drop JSON-lines files in the input directory; each line has the fields of CHANGE_SCHEMA.
+
+## Flagged windows
+
+A window is flagged when it holds at least --min-matches matched edits (default 3). Windows are 30 minutes long and slide every 5 minutes, so one edit belongs to six windows.
