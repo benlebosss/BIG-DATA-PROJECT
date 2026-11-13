@@ -61,3 +61,24 @@ def test_retry_delay_ignores_bad_header():
     from src.enrichment.wikipedia import retry_delay
     assert retry_delay({"Retry-After": "soon"}, 2) == 4.0
     assert retry_delay({"Retry-After": "500"}, 0) == 60.0
+
+
+def test_fetch_retries_on_429():
+    from src.enrichment.wikipedia import make_fetch
+
+    class R:
+        def __init__(self, code, headers=None, body=None):
+            self.status_code, self.headers, self._b = code, headers or {}, body
+
+        def json(self):
+            return self._b
+
+    answers = [R(429, {"Retry-After": "1"}), R(200, body={"title": "X"})]
+
+    class S:
+        def get(self, url, headers=None, timeout=None):
+            return answers.pop(0)
+
+    slept = []
+    fetch = make_fetch(per_second=1000, session=S(), sleep=slept.append)
+    assert fetch("X") == {"title": "X"} and slept == [1.0]
