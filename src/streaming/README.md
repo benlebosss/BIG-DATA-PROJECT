@@ -30,3 +30,7 @@ match `title` against IMDb titles/names, and flag matches over a 15-30 min windo
 ## Filters
 
 Only edit and new events are kept. By default only enwiki and namespace 0 (articles) pass, which removes talk pages, users pages and categories.
+
+## Troubleshooting
+
+Wikimedia rejects requests without a descriptive User-Agent. The producer sends one; keep it if you change the code.
