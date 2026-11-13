@@ -4,8 +4,8 @@
 
 | Name | Email |
 |------|-------|
-| TODO | TODO  |
-| TODO | TODO  |
+| Benoit (GitHub: benlebosss) | benoitquaranta030405@gmail.com |
+| Théodore Bricout (GitHub: TheodoreBricout) | TODO (Théo to fill in) |
 
 ## Setup (from scratch)
 
@@ -47,3 +47,7 @@ Each question is also a module with its own parameters, e.g.
   Wikidata (human-curated, CC0), never from an AI tool. The interpretation of the results in REPORT.md
   is written by us.
 - No AI tool was used to write explanations or reasoning in REPORT.md.
+- Data preparation (`src/preparation/`, `tests/test_preparation.py`): Claude (Anthropic, Claude Code) was used to write the profiling, cleaning and Parquet-conversion code and its tests. The cleaning choices and their explanation in REPORT.md are ours.
+- Streaming (`src/streaming/`, `tests/test_streaming_*.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia -> Kafka producer, the IMDb lookup builder and the Structured Streaming consumer (join, windows, watermark) with their tests. The explanation of late-data handling in REPORT.md is written by us.
+- Enrichment (`src/enrichment/`, `tests/test_enrichment.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia lookup code (rate limiting, retries, lineage columns) and its tests. The data comes from Wikipedia, never from an AI tool.
+- REPORT.md is written by hand by the two contributors, without AI.
