@@ -55,3 +55,9 @@ def test_to_record_without_content_urls():
 def test_not_found_record_has_no_extract():
     rec = enrich_row({"imdb_id": "x", "kind": "person", "imdb_name": "Nobody"}, lambda t: None)
     assert rec["status"] == "not_found" and "extract" not in rec
+
+
+def test_retry_delay_ignores_bad_header():
+    from src.enrichment.wikipedia import retry_delay
+    assert retry_delay({"Retry-After": "soon"}, 2) == 4.0
+    assert retry_delay({"Retry-After": "500"}, 0) == 60.0
