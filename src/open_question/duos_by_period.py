@@ -55,6 +55,7 @@ def main():
     ap.add_argument("--min-joint", type=int, default=2)
     ap.add_argument("--min-separate", type=int, default=2)
     ap.add_argument("--min-votes", type=int, default=1000)
+    ap.add_argument("--by", choices=["decade", "genre", "both"], default="both")
     ap.add_argument("--out", default="results/open_question")
     a = ap.parse_args()
     from src.common.imdb_schemas import read_table
@@ -63,7 +64,7 @@ def main():
     films = film_table(read_table(spark, "title.basics"), read_table(spark, "title.ratings"), a.min_votes)
     principals = read_table(spark, "title.principals").select("tconst", "nconst", "category")
     Path(a.out).mkdir(parents=True, exist_ok=True)
-    for by in ("decade", "genre"):
+    for by in (("decade", "genre") if a.by == "both" else (a.by,)):
         table = summarize(duo_effects(films, principals, by, a.min_joint, a.min_separate)).toPandas()
         table = table.sort_values("grp" if by == "decade" else "duos", ascending=(by == "decade"))
         table.rename(columns={"grp": by}).to_csv(f"{a.out}/duo_effect_by_{by}.csv", index=False)
