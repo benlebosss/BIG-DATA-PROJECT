@@ -6,9 +6,6 @@ from pyspark.sql import functions as F
 from src.streaming.consumer import match_entities, parse_changes, window_counts
 from src.streaming.reference import norm_key
 
-# DataFrames are built from files, not Python tuples: createDataFrame(list) fails to
-# pickle on Python 3.14.
-
 
 @pytest.fixture(scope="module")
 def spark():
