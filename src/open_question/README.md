@@ -1,0 +1,7 @@
+# Open question: director-actor duos
+
+`python -m src.open_question.duos_by_period`
+
+Effect of a duo = mean rating of their joint films minus mean rating of the other films of both members, computed inside one decade or one genre.
+Filters: movies with at least 1000 votes, duos with at least 2 joint films and 2 separate films in the group.
+Results: results/open_question/duo_effect_by_decade.csv and duo_effect_by_genre.csv.
