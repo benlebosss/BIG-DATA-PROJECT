@@ -34,3 +34,7 @@ def test_iter_sse():
 
 def test_new_pages_are_kept():
     assert parse_event(make(type="new")) is not None
+
+
+def test_bot_flag_is_forwarded():
+    assert parse_event(make(bot=True))["bot"] is True
