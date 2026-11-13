@@ -52,3 +52,11 @@ def test_genre_split_and_thresholds(data):
     assert duo_effects(films, principals, "decade", min_joint=3, min_separate=1).count() == 0
     s = summarize(duo_effects(films, principals, "decade", 2, 2)).collect()
     assert s[0].duos == 1 and s[0].share_positive == 1.0
+
+
+def one_film(spark, tmp_path, title_type="movie", year=1999, votes=5000):
+    basics = load(spark, tmp_path, "b1", [{"tconst": "t1", "titleType": title_type, "startYear": year, "genres": "Drama"}],
+                  "tconst string, titleType string, startYear int, genres string")
+    ratings = load(spark, tmp_path, "r1", [{"tconst": "t1", "averageRating": 7.0, "numVotes": votes}],
+                   "tconst string, averageRating double, numVotes int")
+    return basics, ratings
