@@ -52,3 +52,9 @@ def test_match_and_windows(spark, tmp_path):
     w = window_counts(m, "30 minutes", "5 minutes", "10 minutes", min_matches=2).collect()
     assert max(r.matches for r in w) == 2
     assert any(r.flagged for r in w) and any(not r.flagged for r in w)
+
+
+def ref_df(spark, tmp_path):
+    p = tmp_path / "ref.json"
+    p.write_text(json.dumps({"key": "alien", "kind": "title", "imdb_id": "tt1", "imdb_name": "Alien", "votes": 1}))
+    return spark.read.json(str(p))
