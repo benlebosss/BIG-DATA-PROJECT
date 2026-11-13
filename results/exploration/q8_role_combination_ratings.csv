@@ -1,0 +1,8 @@
+roles_on_movie,n_credits,n_people,avg_rating,median_rating,avg_votes
+direct+write,45437,9402,6.0,6.2,12310.0
+act,41307,4285,5.96,6.1,20001.0
+direct,20905,5239,5.96,6.1,16154.0
+write,19268,4956,5.94,6.1,24328.0
+act+direct+write,5348,2393,5.76,6.0,7217.0
+act+write,4049,1581,5.75,5.9,16132.0
+act+direct,1379,788,5.89,6.2,11980.0
