@@ -64,3 +64,7 @@ def one_film(spark, tmp_path, title_type="movie", year=1999, votes=5000):
 
 def test_film_table_drops_low_vote_films(spark, tmp_path):
     assert film_table(*one_film(spark, tmp_path, votes=10), 1000).count() == 0
+
+
+def test_film_table_keeps_only_movies(spark, tmp_path):
+    assert film_table(*one_film(spark, tmp_path, title_type="tvSeries"), 1000).count() == 0
