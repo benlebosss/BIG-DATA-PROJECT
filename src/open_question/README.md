@@ -9,3 +9,7 @@ Results: results/open_question/duo_effect_by_decade.csv and duo_effect_by_genre.
 ## Columns
 
 duos: number of duos in the group. mean_effect and median_effect: joint average minus separate average, in rating points. share_positive: share of duos whose joint films are rated higher. avg_joint_films: average number of joint films per duo.
+
+## Limits
+
+Small groups give noisy averages. A film with several genres counts once in each genre. Only films with at least 1000 votes are used, which favours well known duos.
