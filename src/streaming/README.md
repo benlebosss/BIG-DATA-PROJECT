@@ -26,3 +26,7 @@ match `title` against IMDb titles/names, and flag matches over a 15-30 min windo
 ## Message example
 
     {"event_id": "...", "wiki": "enwiki", "title": "Inception (film)", "type": "edit", "namespace": 0, "user": "...", "bot": false, "timestamp": 1790000000, "event_time": "2026-10-23T16:00:00Z"}
+
+## Filters
+
+Only edit and new events are kept. By default only enwiki and namespace 0 (articles) pass, which removes talk pages, users pages and categories.
