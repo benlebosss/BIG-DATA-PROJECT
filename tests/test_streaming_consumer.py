@@ -73,3 +73,10 @@ def test_match_is_case_insensitive(spark, tmp_path):
 def test_unmatched_page_gives_no_rows(spark, tmp_path):
     raw = lines_df(spark, tmp_path, [event("Random page", 1700000000)])
     assert match_entities(parse_changes(raw), ref_df(spark, tmp_path)).count() == 0
+
+
+def test_all_windows_flagged_with_threshold_one(spark, tmp_path):
+    raw = lines_df(spark, tmp_path, [event("Alien", 1700000000)])
+    m = match_entities(parse_changes(raw), ref_df(spark, tmp_path))
+    w = window_counts(m, "30 minutes", "5 minutes", "10 minutes", min_matches=1).collect()
+    assert w and all(r.flagged for r in w)
