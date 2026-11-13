@@ -39,3 +39,8 @@ def test_rate_limiter():
 
 def test_person_candidates_order():
     assert candidates("person", "Tom Hanks")[0] == "Tom_Hanks"
+
+
+def test_person_relevance():
+    page = {"type": "standard", "description": "American actor and filmmaker", "extract": "Tom Hanks is an actor."}
+    assert is_relevant("person", page)
