@@ -1,9 +1,3 @@
-"""Build the IMDb lookup table used to flag Wikipedia pages (stream-static join).
-
-A Wikipedia page title is compared with popular IMDb titles and with the names of
-people who acted in / directed popular titles. Popularity thresholds (numVotes) keep
-the table small enough to broadcast and limit false positives on common words.
-"""
 import argparse
 
 from pyspark.sql import DataFrame, SparkSession
@@ -18,7 +12,6 @@ PEOPLE_CATEGORIES = ["actor", "actress", "director"]
 
 
 def norm_key(col):
-    """Lower-case, drop a trailing '(film)'-style disambiguation, trim spaces."""
     return F.trim(F.lower(F.regexp_replace(col, r"\s*\([^)]*\)\s*$", "")))
 
 
