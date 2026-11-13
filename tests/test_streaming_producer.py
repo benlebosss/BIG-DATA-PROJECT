@@ -42,3 +42,7 @@ def test_bot_flag_is_forwarded():
 
 def test_allowed_namespace_is_kept():
     assert parse_event(make(namespace=0), {"enwiki"}, {0}) is not None
+
+
+def test_several_wikis_are_accepted():
+    assert parse_event(make(wiki="frwiki"), {"enwiki", "frwiki"}, None)["wiki"] == "frwiki"
