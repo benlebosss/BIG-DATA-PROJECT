@@ -50,3 +50,8 @@ def test_to_record_without_content_urls():
     from src.enrichment.wikipedia import to_record
     rec = to_record({"imdb_id": "x", "kind": "title", "imdb_name": "X"}, {"title": "X", "extract": "e"})
     assert rec["source_url"] is None and rec["status"] == "ok"
+
+
+def test_not_found_record_has_no_extract():
+    rec = enrich_row({"imdb_id": "x", "kind": "person", "imdb_name": "Nobody"}, lambda t: None)
+    assert rec["status"] == "not_found" and "extract" not in rec
