@@ -37,7 +37,8 @@ def read_source(spark: SparkSession, a) -> DataFrame:
                 .option("kafka.bootstrap.servers", a.bootstrap)
                 .option("subscribe", a.topic)
                 .option("startingOffsets", a.starting_offsets)
-                .option("failOnDataLoss", "false").load()
+                .option("failOnDataLoss", "false")
+                .option("maxOffsetsPerTrigger", a.max_offsets).load()
                 .select(F.col("value").cast("string").alias("value")))
     return spark.readStream.text(a.input_dir)
 
@@ -81,6 +82,7 @@ if __name__ == "__main__":
     ap.add_argument("--bootstrap", default="localhost:9092")
     ap.add_argument("--topic", default=TOPIC)
     ap.add_argument("--starting-offsets", default="latest")
+    ap.add_argument("--max-offsets-per-trigger", dest="max_offsets", type=positive_int, default=10000)
     ap.add_argument("--input-dir", default="data/stream_input")
     ap.add_argument("--reference", default=REF_PATH)
     ap.add_argument("--window", default="30 minutes")
