@@ -62,6 +62,13 @@ def enrich_row(row: dict, fetch) -> dict:
             "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
 
+def retry_delay(headers, attempt):
+    try:
+        return min(float(headers.get("Retry-After", 2 ** attempt)), 60.0)
+    except ValueError:
+        return float(2 ** attempt)
+
+
 def make_fetch(per_second: float = 5.0, retries: int = 5, session=None, sleep=time.sleep):
     import requests
     session = session or requests.Session()
@@ -75,7 +82,7 @@ def make_fetch(per_second: float = 5.0, retries: int = 5, session=None, sleep=ti
             if r.status_code == 200:
                 return r.json()
             if r.status_code in (429, 500, 502, 503, 504):
-                sleep(float(r.headers.get("Retry-After", 2 ** attempt)))
+                sleep(retry_delay(r.headers, attempt))
                 continue
             return None
         return None
