@@ -30,3 +30,7 @@ def test_filters():
 def test_iter_sse():
     lines = [":ok", "event: message", "id: 42", 'data: {"a": 1}', "", "data: {}"]
     assert list(iter_sse(lines)) == [("42", '{"a": 1}'), ("42", "{}")]
+
+
+def test_new_pages_are_kept():
+    assert parse_event(make(type="new")) is not None
