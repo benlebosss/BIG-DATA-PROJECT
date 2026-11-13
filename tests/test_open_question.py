@@ -60,3 +60,7 @@ def one_film(spark, tmp_path, title_type="movie", year=1999, votes=5000):
     ratings = load(spark, tmp_path, "r1", [{"tconst": "t1", "averageRating": 7.0, "numVotes": votes}],
                    "tconst string, averageRating double, numVotes int")
     return basics, ratings
+
+
+def test_film_table_drops_low_vote_films(spark, tmp_path):
+    assert film_table(*one_film(spark, tmp_path, votes=10), 1000).count() == 0
