@@ -11,3 +11,7 @@ looks each one up on Wikipedia (REST `page/summary`) and writes `results/enrichm
   is a normal page (not a disambiguation page) whose description looks like a film/series or a film person.
 - Resumable: every answer is appended to `data/enrichment/wikipedia.jsonl` (git-ignored).
 - Result of the committed run: 397 / 400 found, 3 people `not_found`.
+
+## Output columns
+
+imdb_id, kind (title or person), imdb_name, status (ok or not_found), wikipedia_title, description, extract, source_url, revision, wiki_timestamp, fetched_at.
