@@ -1,2 +1,24 @@
 table,issue,count,detail
-title.akas,titleId missing in title.basics,0,distinct orphan ids
+title.akas,titleId missing in title.basics,1,distinct orphan ids
+title.crew,tconst missing in title.basics,1333,distinct orphan ids
+title.episode,tconst missing in title.basics,0,distinct orphan ids
+title.episode,parentTconst missing in title.basics,4,distinct orphan ids
+title.principals,tconst missing in title.basics,0,distinct orphan ids
+title.ratings,tconst missing in title.basics,0,distinct orphan ids
+title.principals,nconst missing in name.basics,3203,distinct orphan ids
+title.crew,directors ids missing in name.basics,279,distinct orphan ids
+title.crew,writers ids missing in name.basics,322,distinct orphan ids
+name.basics,knownForTitles missing in title.basics,4,distinct orphan ids
+title.basics,duplicate key ['tconst'],0,
+name.basics,duplicate key ['nconst'],0,
+title.ratings,duplicate key ['tconst'],0,
+title.crew,duplicate key ['tconst'],0,
+title.episode,duplicate key ['tconst'],0,
+title.principals,"duplicate key ['tconst', 'ordering']",0,
+title.akas,"duplicate key ['titleId', 'ordering']",0,
+title.basics,endYear < startYear,0,
+title.basics,runtimeMinutes <= 0 or > 1000,441,
+title.basics,startYear > 2026,4416,future-dated titles
+name.basics,deathYear < birthYear,27,
+title.ratings,"averageRating outside [1,10]",0,
+title.principals,unparseable rows in 'ordering',0,
