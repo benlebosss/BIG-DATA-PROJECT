@@ -1,0 +1,4 @@
+films_together,n_duos,avg_duo_rating,avg_baseline,avg_lift,median_lift,pct_duos_better
+3,2829,6.63,6.45,0.185,0.191,65.0
+4-5,1382,6.63,6.44,0.19,0.205,65.8
+6+,435,6.66,6.46,0.203,0.235,69.7
