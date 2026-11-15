@@ -1,0 +1,10 @@
+metric,value
+events_in_topic,2190
+matched_events,63
+distinct_matched_pages,47
+matched_title_pages,35
+matched_person_pages,28
+first_matched_event,2026-11-15 18:50:16
+last_matched_event,2026-11-15 19:15:51
+windows_written,3
+windows_flagged,3
