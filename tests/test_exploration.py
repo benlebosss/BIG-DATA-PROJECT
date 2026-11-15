@@ -125,3 +125,11 @@ def test_q8_multi_role_movies(spark):
     names = df(spark, "name.basics", [("nm1", "Auteur", None, None, None, None)])
     r = q8_multi_talented.performance(roles, talented, names).first()
     assert r.talents == "act+direct" and r.n_multi_role_movies == 1 and r.rating_gain == 2.0
+
+
+def test_wikimedia_code_keeps_language_not_region():
+    from src.exploration.wikidata_language import wikimedia_code
+    assert wikimedia_code("zh-yue") == "yue"
+    assert wikimedia_code("en-us") == "en"
+    assert wikimedia_code("pt-br") == "pt"
+    assert wikimedia_code(None) is None
