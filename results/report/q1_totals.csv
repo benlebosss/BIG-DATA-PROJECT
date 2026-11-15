@@ -1,0 +1,4 @@
+rule,movie_genre_rows,distinct_movies,longer,shorter,distinct_shorter,distinct_longer
+z-score,6695,4708,6695,0,0,4708
+IQR,34651,23708,29467,5184,4669,19039
+either,34652,23709,29468,5184,4669,19040
