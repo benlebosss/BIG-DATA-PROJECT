@@ -4,6 +4,122 @@ All tables come from the CSV files in `results/`. Most are written by the module
 
 ## 1. Data preparation
 
+Missing values per column (nulls and empty strings, % of rows):
+
+| Table            | Column            |      Rows |    Nulls | Empty strings | Missing (%) |
+|------------------|-------------------|----------:|---------:|--------------:|------------:|
+| name.basics      | nconst            |  15726308 |        0 |             0 |       0.000 |
+| name.basics      | primaryName       |  15726308 |       88 |             0 |       0.001 |
+| name.basics      | birthYear         |  15726308 | 15042845 |             0 |      95.654 |
+| name.basics      | deathYear         |  15726308 | 15461971 |             0 |      98.319 |
+| name.basics      | primaryProfession |  15726308 |  3192578 |             0 |      20.301 |
+| name.basics      | knownForTitles    |  15726308 |  1903040 |             0 |      12.101 |
+| title.akas       | titleId           |  59706412 |        0 |             0 |       0.000 |
+| title.akas       | ordering          |  59706412 |        0 |             0 |       0.000 |
+| title.akas       | title             |  59706412 |        0 |             0 |       0.000 |
+| title.akas       | region            |  59706412 | 12896169 |             0 |      21.599 |
+| title.akas       | language          |  59706412 | 19479789 |             0 |      32.626 |
+| title.akas       | types             |  59706412 | 39968511 |             0 |      66.942 |
+| title.akas       | attributes        |  59706412 | 59390547 |             0 |      99.471 |
+| title.akas       | isOriginalTitle   |  59706412 |        0 |             0 |       0.000 |
+| title.basics     | tconst            |  12855557 |        0 |             0 |       0.000 |
+| title.basics     | titleType         |  12855557 |        0 |             0 |       0.000 |
+| title.basics     | primaryTitle      |  12855557 |        0 |             0 |       0.000 |
+| title.basics     | originalTitle     |  12855557 |        0 |             0 |       0.000 |
+| title.basics     | isAdult           |  12855557 |        0 |             0 |       0.000 |
+| title.basics     | startYear         |  12855557 |  1484994 |             0 |      11.551 |
+| title.basics     | endYear           |  12855557 | 12692766 |             0 |      98.734 |
+| title.basics     | runtimeMinutes    |  12855557 |  8011644 |             0 |      62.320 |
+| title.basics     | genres            |  12855557 |   544740 |             0 |       4.237 |
+| title.crew       | tconst            |  12856880 |        0 |             0 |       0.000 |
+| title.crew       | directors         |  12856880 |  5721595 |             0 |      44.502 |
+| title.crew       | writers           |  12856880 |  6359633 |             0 |      49.465 |
+| title.episode    | tconst            |   9942170 |        0 |             0 |       0.000 |
+| title.episode    | parentTconst      |   9942170 |        0 |             0 |       0.000 |
+| title.episode    | seasonNumber      |   9942170 |  2087110 |             0 |      20.992 |
+| title.episode    | episodeNumber     |   9942170 |  2087110 |             0 |      20.992 |
+| title.principals | tconst            | 102236837 |        0 |             0 |       0.000 |
+| title.principals | ordering          | 102236837 |        0 |             0 |       0.000 |
+| title.principals | nconst            | 102236837 |        0 |             0 |       0.000 |
+| title.principals | category          | 102236837 |        0 |             0 |       0.000 |
+| title.principals | job               | 102236837 | 82513420 |             0 |      80.708 |
+| title.principals | characters        | 102236837 | 52384437 |             0 |      51.238 |
+| title.ratings    | tconst            |   1719590 |        0 |             0 |       0.000 |
+| title.ratings    | averageRating     |   1719590 |        0 |             0 |       0.000 |
+| title.ratings    | numVotes          |   1719590 |        0 |             0 |       0.000 |
+
+The five columns with the most missing values:
+
+| Table            | Column     |      Rows |    Nulls | Missing (%) |
+|------------------|------------|----------:|---------:|------------:|
+| title.akas       | attributes |  59706412 | 59390547 |      99.471 |
+| title.basics     | endYear    |  12855557 | 12692766 |      98.734 |
+| name.basics      | deathYear  |  15726308 | 15461971 |      98.319 |
+| name.basics      | birthYear  |  15726308 | 15042845 |      95.654 |
+| title.principals | job        | 102236837 | 82513420 |      80.708 |
+
+Data quality checks:
+
+| Table            | Check                                  | Count |
+|------------------|----------------------------------------|------:|
+| title.akas       | titleId missing in title.basics        |     1 |
+| title.crew       | tconst missing in title.basics         |  1333 |
+| title.episode    | tconst missing in title.basics         |     0 |
+| title.episode    | parentTconst missing in title.basics   |     4 |
+| title.principals | tconst missing in title.basics         |     0 |
+| title.ratings    | tconst missing in title.basics         |     0 |
+| title.principals | nconst missing in name.basics          |  3203 |
+| title.crew       | directors ids missing in name.basics   |   279 |
+| title.crew       | writers ids missing in name.basics     |   322 |
+| name.basics      | knownForTitles missing in title.basics |     4 |
+| title.basics     | duplicate key ['tconst']               |     0 |
+| name.basics      | duplicate key ['nconst']               |     0 |
+| title.ratings    | duplicate key ['tconst']               |     0 |
+| title.crew       | duplicate key ['tconst']               |     0 |
+| title.episode    | duplicate key ['tconst']               |     0 |
+| title.principals | duplicate key ['tconst', 'ordering']   |     0 |
+| title.akas       | duplicate key ['titleId', 'ordering']  |     0 |
+| title.basics     | endYear < startYear                    |     0 |
+| title.basics     | runtimeMinutes <= 0 or > 1000          |   441 |
+| title.basics     | startYear > 2026                       |  4416 |
+| name.basics      | deathYear < birthYear                  |    27 |
+| title.ratings    | averageRating outside [1,10]           |     0 |
+| title.principals | unparseable rows in 'ordering'         |     0 |
+
+Rows removed by the cleaning (orphan rows):
+
+| Table            | Rows before | Rows after | Rows removed |
+|------------------|------------:|-----------:|-------------:|
+| title.basics     |    12855557 |   12855557 |            0 |
+| name.basics      |    15726308 |   15726308 |            0 |
+| title.ratings    |     1719590 |    1719590 |            0 |
+| title.crew       |    12856880 |   12855547 |         1333 |
+| title.episode    |     9942170 |    9942160 |           10 |
+| title.principals |   102236837 |  102229682 |         7155 |
+| title.akas       |    59706412 |   59706404 |            8 |
+
+Impossible values set to null by the cleaning:
+
+| Table        | Column         | Rule                  | Values set to null |
+|--------------|----------------|-----------------------|-------------------:|
+| title.basics | runtimeMinutes | <= 0 or > 1000 min    |                441 |
+| title.basics | endYear        | endYear < startYear   |                  0 |
+| name.basics  | deathYear      | deathYear < birthYear |                 27 |
+
+### Methodological Explanation
+
+**Reading the data.** IMDb ships seven `.tsv.gz` files. We read each one with an explicit schema, so column types are fixed in advance and not guessed by Spark, and `\N`, IMDb's marker for a missing value, is read as null. `isAdult` and `isOriginalTitle` hold 0 or 1, so we read them as integers and convert them afterwards. Read directly as booleans, they came out 100% null (a bug found while reviewing PR #2 and fixed in #6). The files are converted once to Parquet (`to_parquet.py`). Gzip cannot be split, so Spark reads each TSV on a single core, while every later step on Parquet is fast.
+
+**Measuring missing values.** For each column, `profile_quality.py` counts nulls and empty strings, and the missing share is (null + empty) / rows. There is no empty string anywhere, since IMDb always writes `\N`. 19 of the 39 columns have missing values, and the 20 others, all keys included, have none. Four of the five emptiest columns are empty by design: `endYear` only applies to series, `deathYear` is null for anyone alive, and `attributes` and `job` are optional fields filled only in special cases. `birthYear` (95.7%) is different: for most people, IMDb simply does not know it. Several columns used later are also incomplete: `runtimeMinutes` (62.3%), `writers` (49.5%), `directors` (44.5%), `language` in `title.akas` (32.6%), `seasonNumber` and `episodeNumber` (21.0%), `startYear` (11.6%) and `genres` (4.2%).
+
+**Quality checks.** We ran 23 checks: 10 on orphan keys, 7 on duplicate keys, 4 on impossible values, one on dates in the future and one on file parsing. Orphan keys point to a row that does not exist: 3,203 `nconst` in `title.principals` are missing from `name.basics`, 1,333 `tconst` in `title.crew` are missing from `title.basics`, and 279 directors and 322 writers listed in `title.crew` are missing from `name.basics`, plus a handful of other cases. No table has a duplicate key and no row failed to parse. Impossible values are rare: 441 runtimes at or below 0 or above 1,000 minutes and 27 people who died before they were born, but no series ending before it started and no rating outside [1, 10]. 4,416 titles are dated after 2026, up to 2115. Each check protects a join or a filter used in the later parts. `scripts/run_quality_checks.sh` runs every check in its own JVM so that it fits in a laptop's memory, then merges the results.
+
+**Treatment.** Cleaning runs in Spark (`clean.py`) and writes `data/clean/`, which Parts 2, 3 and 5 read. Duplicate keys are dropped; there were none, but the rule stays in case a later IMDb release has some. Orphan rows are removed from the child tables with a `left_semi` join: 1,333 rows in crew, 10 in episode, 7,155 in principals (the 3,203 unknown people) and 8 in akas. Impossible values are set to null and the row is kept: 441 runtimes and 27 death years. The rule for ratings outside [1, 10] drops the row instead, but it matches none. All other nulls stay as they are, and we invent no value.
+
+**What we did not fix.** The 4,416 future titles are kept, since they are mostly announced films. Q2, Q3 and Part 3 set their own range (1980-2025), but Q1 does not filter on year, so 36 of its rows are titles dated after 2026, up to 2030. Orphan identifiers inside lists (`directors`, `writers`, `knownForTitles`) are not removed, only whole orphan rows. The code also has a small defect: if `startYear` is null, a valid `endYear` would be cleared too. It affects no row in the current data.
+
+**Alternatives.** Dropping every row with an impossible value would be simpler, but a film with a wrong runtime still has a valid title, genres and rating, and a person with an impossible death year still has credits. Filling nulls with an estimate, such as the median runtime of the genre, would invent 62% of `runtimeMinutes`, and Q1 would then partly measure our own guesses. Orphan rows could have been kept, but an inner join drops them later anyway and a left join returns credits with no name, so we remove them once, in one place.
+
 ## 2. Data exploration
 
 Seven of the eight questions (all except Q5) are about feature films, so we fixed one definition and reused it everywhere. A feature film is a title with `titleType = movie`, not flagged as adult, with a known release year and a runtime above 40 minutes (`FEATURE_MIN_RUNTIME = 40`). Forty minutes is the limit the Academy uses to separate features from shorts, and we preferred an existing convention to a number of our own.
