@@ -5,7 +5,7 @@
 | Name | Email |
 |------|-------|
 | Benoit (GitHub: benlebosss) | benoitquaranta030405@gmail.com |
-| Théodore Bricout (GitHub: TheodoreBricout) | TODO (Théo to fill in) |
+| Théodore Bricout (GitHub: TheodoreBricout) | theodore.bricout@edu.ece.fr |
 
 ## Setup (from scratch)
 
