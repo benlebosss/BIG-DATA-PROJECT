@@ -16,8 +16,8 @@ docker compose up -d --build        # Kafka + Python/Spark container
 docker compose exec app bash        # shell inside the Spark container
 ```
 
-Run each module from inside the container, e.g. `python -m src.preparation.<script>`
-(to be completed as steps are implemented).
+Run each module from inside the container, e.g. `python -m src.preparation.<script>`.
+The full order is in "Pipeline order" below.
 
 ### Data exploration
 
@@ -46,11 +46,12 @@ Each question is also a module with its own parameters, e.g.
   languages (`src/exploration/wikidata_language.py`). The language data itself comes from
   Wikidata (human-curated, CC0), never from an AI tool. The interpretation of the results in REPORT.md
   is written by us.
-- No AI tool was used to write explanations or reasoning in REPORT.md.
 - Data preparation (`src/preparation/`, `tests/test_preparation.py`): Claude (Anthropic, Claude Code) was used to write the profiling, cleaning and Parquet-conversion code and its tests. The cleaning choices and their explanation in REPORT.md are ours.
 - Streaming (`src/streaming/`, `tests/test_streaming_*.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia -> Kafka producer, the IMDb lookup builder and the Structured Streaming consumer (join, windows, watermark) with their tests. The explanation of late-data handling in REPORT.md is written by us.
 - Enrichment (`src/enrichment/`, `tests/test_enrichment.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia lookup code (rate limiting, retries, lineage columns) and its tests. The data comes from Wikipedia, never from an AI tool.
-- REPORT.md is written by hand by the two contributors, without AI.
+- Enrichment, full scope (`src/enrichment/select_films.py`, `wiki_texts.py`, `build.py`, `tests/test_enrichment_texts.py`): Claude (Anthropic, Claude Code) was used to write the selection of the films and principals, the Wikipedia/Wikidata gatherer and the Spark cleaning and lineage, with their tests.
+- Open question, duos overall (`src/open_question/duos.py` and its test): Claude (Anthropic, Claude Code) was used to write the PySpark code.
+- REPORT.md: the result tables were made from the CSV files in `results/` with a small script written with Claude (Anthropic, Claude Code), and checked against the code. No AI tool was used to write explanations or reasoning in REPORT.md, the text is written by us.
 
 ## Requirements
 
@@ -67,9 +68,14 @@ Spark tests start a local session and take a few seconds each.
     python -m src.preparation.to_parquet
     ./scripts/run_quality_checks.sh
     python -m src.preparation.clean
+    python -m src.exploration.wikidata_language
     python -m src.exploration.run_all
     python -m src.enrichment.wikipedia
+    python -m src.enrichment.select_films
+    python -m src.enrichment.wiki_texts      # needs internet, about 1h30 the first time, then cached
+    python -m src.enrichment.build
     python -m src.streaming.reference
+    python -m src.open_question.duos
     python -m src.open_question.duos_by_period
 
 ## Streaming run
