@@ -37,6 +37,31 @@ def share(mask):
     return round(100 * mask.mean(), 1)
 
 
+def preparation(spark):
+    # what the cleaning changed: rows dropped (orphans, duplicates) and values set to null
+    tables = ["title_basics", "name_basics", "title_ratings", "title_crew", "title_episode",
+              "title_principals", "title_akas"]
+    rows = []
+    for t in tables:
+        before = spark.read.parquet(f"data/parquet/{t}").count()
+        after = spark.read.parquet(f"data/clean/{t}").count()
+        rows.append({"table": t.replace("_", "."), "rows_before": before, "rows_after": after,
+                     "rows_removed": before - after})
+    save(pd.DataFrame(rows), "preparation_rows_removed")
+    nulled = []
+    for t, col, rule in (("title_basics", "runtimeMinutes", "<= 0 or > 1000 min"),
+                         ("title_basics", "endYear", "endYear < startYear"),
+                         ("name_basics", "deathYear", "deathYear < birthYear")):
+        raw = spark.read.parquet(f"data/parquet/{t}").where(f"{col} is not null").count()
+        clean = spark.read.parquet(f"data/clean/{t}").where(f"{col} is not null").count()
+        nulled.append({"table": t.replace("_", "."), "column": col, "rule": rule,
+                       "values_set_to_null": raw - clean})
+    save(pd.DataFrame(nulled), "preparation_values_nulled")
+    basics = spark.read.parquet("data/clean/title_basics")
+    fig("prep titles after 2026 kept", basics.where("startYear > 2026").count())
+    fig("prep latest startYear", basics.agg({"startYear": "max"}).first()[0])
+
+
 def exploration():
     # Q1: bounds of the two rules per genre, and outliers counted as distinct movies
     st = csv("exploration/q1_genre_runtime_stats.csv")
@@ -209,6 +234,7 @@ def q4_at_1000_votes(spark):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     spark = get_spark("report-tables")
+    preparation(spark)
     exploration()
     enrichment(spark)
     duos()
