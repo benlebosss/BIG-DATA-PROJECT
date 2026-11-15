@@ -8,7 +8,7 @@ def get_spark(app_name: str = "imdb-project", with_kafka: bool = False) -> Spark
     builder = (
         SparkSession.builder.appName(app_name)
         .config("spark.driver.memory", os.getenv("SPARK_DRIVER_MEMORY", "2g"))
-        .config("spark.sql.shuffle.partitions", "8")
+        .config("spark.sql.shuffle.partitions", os.getenv("SPARK_SHUFFLE_PARTITIONS", "64"))
     )
     if with_kafka:
         builder = builder.config(
