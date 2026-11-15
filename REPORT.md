@@ -426,3 +426,100 @@ People with the most movies in several roles:
 ## 4. Streaming
 
 ## 5. Open question
+
+### 5.1 Do director-actor duos make better films together?
+
+All duos:
+
+| Duos | Directors | Actors | Avg duo rating | Avg baseline | Avg lift | Median lift | % duos better |
+|-----:|----------:|-------:|---------------:|-------------:|---------:|------------:|--------------:|
+| 4646 |      1401 |   3367 |           6.64 |         6.45 |    0.188 |         0.2 |          65.7 |
+
+Lift by number of films made together:
+
+| Films together | Duos | Avg duo rating | Avg baseline | Avg lift | Median lift | % duos better |
+|----------------|-----:|---------------:|-------------:|---------:|------------:|--------------:|
+| 3              | 2829 |           6.63 |         6.45 |    0.185 |       0.191 |          65.0 |
+| 4-5            | 1382 |           6.63 |         6.44 |    0.190 |       0.205 |          65.8 |
+| 6+             |  435 |           6.66 |         6.46 |    0.203 |       0.235 |          69.7 |
+
+Distribution of the lift:
+
+| Lift       | Duos |    % |
+|------------|-----:|-----:|
+| below -1   |  115 |  2.5 |
+| -1 to -0.5 |  314 |  6.8 |
+| -0.5 to 0  | 1142 | 24.6 |
+| 0 to 0.5   | 1792 | 38.6 |
+| 0.5 to 1   |  989 | 21.3 |
+| 1 or more  |  294 |  6.3 |
+
+Lift by decade of the first film together:
+
+| First film | Duos | Avg lift | % duos better |
+|------------|-----:|---------:|--------------:|
+| 1920s      |   38 |    0.025 |          50.0 |
+| 1930s      |  308 |    0.098 |          61.7 |
+| 1940s      |  247 |    0.170 |          69.6 |
+| 1950s      |  275 |    0.148 |          65.8 |
+| 1960s      |  359 |    0.138 |          62.4 |
+| 1970s      |  431 |    0.243 |          69.8 |
+| 1980s      |  472 |    0.302 |          73.7 |
+| 1990s      |  691 |    0.289 |          74.5 |
+| 2000s      |  956 |    0.212 |          63.9 |
+| 2010s      |  791 |    0.097 |          56.5 |
+| 2020s      |   69 |   -0.199 |          42.0 |
+
+Duos with the most films together:
+
+| Director        | Actor            | Films | First | Last | Duo avg | Director apart | Actor apart | Baseline |  Lift |
+|-----------------|------------------|------:|------:|-----:|--------:|---------------:|------------:|---------:|------:|
+| Kartal Tibet    | Kemal Sunal      |    26 |  1976 | 1990 |    6.91 |           5.40 |        7.36 |     6.38 |  0.53 |
+| Gerald Thomas   | Kenneth Williams |    25 |  1958 | 1978 |    6.12 |           5.49 |        5.75 |     5.62 |  0.51 |
+| Gerald Thomas   | Joan Sims        |    25 |  1959 | 1978 |    6.04 |           5.80 |        6.62 |     6.21 | -0.17 |
+| Gerald Thomas   | Charles Hawtrey  |    23 |  1958 | 1972 |    6.29 |           5.21 |        5.60 |     5.41 |  0.88 |
+| Gerald Thomas   | Sidney James     |    21 |  1960 | 1974 |    6.27 |           5.45 |        6.67 |     6.06 |  0.21 |
+| Johnnie To      | Suet Lam         |    20 |  1998 | 2016 |    6.78 |           6.66 |        5.90 |     6.28 |  0.49 |
+| Yasujirō Ozu    | Chishū Ryū       |    20 |  1930 | 1962 |    7.66 |           7.33 |        7.82 |     7.57 |  0.09 |
+| Akira Kurosawa  | Takashi Shimura  |    19 |  1943 | 1963 |    7.57 |           7.49 |        6.68 |     7.09 |  0.49 |
+| Kunihiko Yuyama | Ikue Otani       |    18 |  1998 | 2019 |    6.03 |           5.73 |        6.80 |     6.26 | -0.23 |
+| Gerald Thomas   | Kenneth Connor   |    17 |  1958 | 1978 |    5.86 |           6.12 |        6.00 |     6.06 | -0.20 |
+| David Dhawan    | Govinda          |    16 |  1990 | 2009 |    6.00 |           4.95 |        5.62 |     5.29 |  0.71 |
+| Akira Kurosawa  | Toshirō Mifune   |    16 |  1948 | 1965 |    7.81 |           7.25 |        7.13 |     7.19 |  0.62 |
+| Priyadarshan    | Mohanlal         |    15 |  1985 | 2021 |    7.51 |           6.61 |        6.87 |     6.74 |  0.77 |
+| Ertem Eğilmez   | Adile Naşit      |    15 |  1972 | 1984 |    8.00 |           7.48 |        7.38 |     7.43 |  0.57 |
+| Claude Chabrol  | Stéphane Audran  |    15 |  1959 | 1992 |    6.94 |           6.69 |        6.39 |     6.54 |  0.40 |
+
+Highest lift (duos with 5 films or more):
+
+| Director                 | Actor            | Films | First | Last | Duo avg | Director apart | Actor apart | Baseline | Lift |
+|--------------------------|------------------|------:|------:|-----:|--------:|---------------:|------------:|---------:|-----:|
+| Kevin Smith              | Brian O'Halloran |     5 |  1994 | 2022 |    7.14 |           5.86 |        4.50 |     5.18 | 1.96 |
+| Tigmanshu Dhulia         | Rajiv Gupta      |     5 |  2003 | 2013 |    7.32 |           5.80 |        5.11 |     5.46 | 1.86 |
+| Kevin Smith              | Jason Mewes      |     5 |  1994 | 2022 |    7.00 |           5.93 |        4.45 |     5.19 | 1.81 |
+| Rainer Werner Fassbinder | Ulli Lommel      |     7 |  1969 | 1976 |    6.67 |           7.19 |        2.90 |     5.05 | 1.62 |
+| Anthony Russo            | Chris Evans      |     5 |  2014 | 2022 |    7.76 |           6.10 |        6.41 |     6.26 | 1.50 |
+| Joe Russo                | Chris Evans      |     5 |  2014 | 2022 |    7.76 |           6.10 |        6.41 |     6.26 | 1.50 |
+| Peter Jackson            | Ian McKellen     |     6 |  2001 | 2014 |    8.28 |           7.29 |        6.40 |     6.85 | 1.44 |
+| Hansal Mehta             | Rajkummar Rao    |     5 |  2012 | 2020 |    7.38 |           5.45 |        6.44 |     5.95 | 1.43 |
+| Neeraj Pandey            | Anupam Kher      |     5 |  2008 | 2018 |    7.46 |           6.10 |        6.09 |     6.10 | 1.36 |
+| Mehmet Ada Öztekin       | Sarp Akkaya      |     6 |  2017 | 2024 |    7.37 |           6.85 |        5.16 |     6.00 | 1.36 |
+
+Lowest lift (duos with 5 films or more):
+
+| Director          | Actor             | Films | First | Last | Duo avg | Director apart | Actor apart | Baseline |  Lift |
+|-------------------|-------------------|------:|------:|-----:|--------:|---------------:|------------:|---------:|------:|
+| Edward Drake      | Bruce Willis      |     7 |  2021 | 2023 |    3.46 |           5.05 |        5.68 |     5.36 | -1.91 |
+| Juan Piquer Simón | Frank Braña       |     5 |  1979 | 1992 |    3.88 |           5.30 |        5.78 |     5.54 | -1.66 |
+| Ram Gopal Varma   | Amitabh Bachchan  |     8 |  2005 | 2017 |    5.21 |           6.59 |        6.49 |     6.54 | -1.32 |
+| Edward Drake      | Lochlyn Munro     |     5 |  2021 | 2023 |    3.38 |           4.35 |        5.00 |     4.68 | -1.30 |
+| Neri Parenti      | Christian De Sica |    12 |  1985 | 2008 |    4.40 |           6.02 |        5.33 |     5.68 | -1.28 |
+| Roger Corman      | Ed Nelson         |     5 |  1956 | 1959 |    4.30 |           5.61 |        5.52 |     5.57 | -1.27 |
+| Dario Argento     | Asia Argento      |     6 |  1993 | 2022 |    4.98 |           6.45 |        5.77 |     6.11 | -1.12 |
+| Orhan Aksoy       | Kemal Sunal       |     5 |  1987 | 1991 |    6.36 |           7.64 |        7.27 |     7.46 | -1.10 |
+| Albert Pyun       | Norbert Weisser   |     8 |  1984 | 2005 |    4.32 |           4.08 |        6.65 |     5.36 | -1.04 |
+| Robert Rodriguez  | Alexa PenaVega    |     5 |  2001 | 2013 |    4.92 |           6.34 |        5.56 |     5.95 | -1.03 |
+
+#### Methodological Explanation
+
+### 5.2 Duo effect by decade and genre
