@@ -92,7 +92,7 @@ def connect(bootstrap, retries=30, delay=2.0):
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap = argparse.ArgumentParser()
     ap.add_argument("--bootstrap", default=os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092"))
     ap.add_argument("--topic", default=TOPIC)
     ap.add_argument("--wikis", default="enwiki", help="comma-separated, empty = all wikis")
