@@ -27,9 +27,9 @@ nm0454448,Andrea King,24,1944,1994,50,Ride the Pink Horse,1947,7.2,6.49,3.95,2.5
 nm0518579,Ulli Lommel,25,1964,2020,56,Chinese Roulette,1976,7.2,5.64,3.1,2.54
 nm0037679,Lyudmila Artemeva,16,1995,2026,31,Lady Into Lassie,1995,6.8,6.8,4.33,2.47
 nm9969854,Rekha,28,1986,2026,40,In Harihar Nagar,1990,8.6,7.34,4.89,2.45
-nm0135988,Lilli Carati,18,1975,2015,40,Highway Racer,1977,6.4,5.13,2.7,2.43
 nm0006428,Arlene Dahl,26,1947,1991,44,Journey to the Center of the Earth,1959,7.0,6.2,3.8,2.4
 nm0093921,Derek Bond,23,1947,1998,51,Scott of the Antarctic,1948,7.0,6.09,3.7,2.39
+nm0135988,Lilli Carati,17,1975,2015,40,Highway Racer,1977,6.4,5.07,2.7,2.37
 nm0900568,Rena Vlahopoulou,21,1962,1982,20,The Robber Cries Thief!,1965,7.5,6.14,3.77,2.37
 nm0450810,Evelyn Keyes,34,1939,1989,50,Gone with the Wind,1939,8.2,6.52,4.15,2.37
 nm0449431,András Kern,22,1973,2016,43,Cat City,1986,8.3,7.21,4.84,2.36
@@ -92,11 +92,11 @@ nm0529964,Ignacio López Tarso,19,1959,2018,59,Macario,1960,8.3,7.28,5.35,1.93
 nm0670739,Suna Pekuysal,18,1961,2005,44,The Bad Seed,1963,7.4,6.26,4.33,1.93
 nm0123748,Tony Burton,16,1974,2006,32,The Shining,1980,8.4,6.55,4.62,1.93
 nm0000364,Sandra Dee,22,1957,1983,26,Imitation of Life,1959,7.8,6.42,4.5,1.92
+nm0712731,Aldo Ray,55,1951,1990,39,We're No Angels,1955,7.3,6.15,4.23,1.92
 nm0903866,Kostas Voutsas,50,1961,2011,50,I hartopaihtra,1964,7.4,5.67,3.75,1.92
 nm0636893,Mel Novak,27,1974,2024,50,Black Belt Jones,1974,6.2,4.68,2.76,1.92
 nm0621066,Napolean,22,1993,2024,31,Devasuram,1993,8.7,7.19,5.28,1.91
 nm0464417,Róbert Koltai,24,1974,2012,38,Csapd le csacsi!,1991,7.7,6.88,4.97,1.91
-nm0712731,Aldo Ray,56,1951,1990,39,We're No Angels,1955,7.3,6.15,4.24,1.91
 nm1747510,Doddanna,22,1987,2024,37,Ondu Muthina Kathe,1987,8.6,8.24,6.35,1.89
 nm0136994,Macdonald Carey,37,1942,1987,45,Shadow of a Doubt,1943,7.7,6.16,4.28,1.89
 nm0023868,Zeenat Aman,40,1971,2019,48,Don,1978,7.7,6.43,4.54,1.89
@@ -224,7 +224,6 @@ nm0313793,Faidon Georgitsis,18,1962,1984,22,The Red Lanterns,1963,8.1,6.44,4.82,
 nm0696038,Paula Prentiss,21,1960,2016,56,In Harm's Way,1965,7.3,6.23,4.6,1.63
 nm0109785,Brent Briscoe,19,1996,2019,23,Sling Blade,1996,8.0,6.49,4.87,1.62
 nm0004282,Anne Francis,30,1950,1990,40,Bad Day at Black Rock,1955,7.6,6.37,4.75,1.62
-nm0003501,Jamie Gillis,72,1974,2005,31,The Seduction of Lyn Carter,1974,7.0,5.82,4.2,1.62
 nm0297443,Mariola Fuentes,15,1997,2023,26,Talk to Her,2002,7.9,6.42,4.8,1.62
 nm0329730,Suresh Gopi,77,1986,2025,39,Manichitrathazhu,1993,8.7,6.97,5.35,1.62
 nm1962192,Upendra,26,1993,2025,32,Upendra,1999,8.8,7.49,5.87,1.62
@@ -375,10 +374,8 @@ nm0327602,Pedro Gonzalez Gonzalez,15,1953,1989,36,Rio Bravo,1959,7.9,6.02,4.6,1.
 nm0415777,Ka-Yan Leung,44,1974,2018,44,Flirting Scholar,1993,7.6,6.54,5.12,1.42
 nm0514852,Renata Litvinova,20,1994,2019,25,The Tuner,2004,7.5,6.9,5.48,1.42
 nm0894302,Bernard Verley,27,1965,2018,53,Love in the Afternoon,1972,7.6,7.16,5.75,1.41
-nm0366573,Veronica Hart,38,1978,2008,30,Amanda by Night,1981,6.4,5.51,4.1,1.41
 nm0634749,Tommy Noonan,17,1946,1967,21,A Star Is Born,1954,7.5,6.19,4.78,1.41
 nm0952256,Vadim Zakharchenko,15,1967,1995,28,The Garage,1980,8.0,7.21,5.8,1.41
-nm0000259,Ginger Lynn Allen,44,1984,2026,42,The Last Late Night,2000,6.7,5.76,4.34,1.41
 nm0315551,Vijayendra Ghatge,28,1976,2011,35,Ek Doctor Ki Maut,1990,8.3,6.49,5.08,1.41
 nm0157941,Chinna,15,1989,2022,33,Shiva,1989,8.0,6.94,5.53,1.41
 nm1658967,Mansoor Ali Khan,42,1991,2026,35,Vasantha Vaasal,1996,8.3,6.57,5.16,1.41
@@ -391,13 +388,13 @@ nm0593814,Yvonne Mitchell,17,1949,1976,27,Tiger Bay,1959,7.4,6.79,5.38,1.41
 nm0748822,Herbert Rudley,18,1944,1980,36,The Court Jester,1955,7.8,6.41,5.0,1.41
 nm0517820,Lindsay Lohan,20,1998,2025,27,Mean Girls,2004,7.1,5.73,4.34,1.4
 nm0001119,Yvonne De Carlo,60,1943,1993,50,The Ten Commandments,1956,7.9,6.04,4.64,1.4
-nm0864081,Gabriele Tinti,72,1954,1991,37,The Band of Honest Men,1956,7.5,6.14,4.75,1.4
 nm0092789,Massimo Boldi,55,1976,2020,44,The Country Boy,1984,6.9,5.09,3.68,1.4
 nm0372271,Myron Healey,45,1949,1988,39,Shoot-Out at Medicine Bend,1957,6.6,5.75,4.35,1.4
 nm0641097,Gail O'Grady,17,1988,2025,37,That Old Feeling,1997,6.1,5.51,4.11,1.4
 nm0412495,Guillermo Iván,18,2004,2025,21,Cero y van 4,2004,6.7,5.76,4.36,1.4
 nm0960013,Yukari Ôshima,15,1986,2011,25,Riki-Oh: The Story of Ricky,1991,7.0,5.8,4.4,1.4
 nm0496185,Ginette Leclerc,16,1937,1976,39,Le Corbeau,1943,7.8,7.06,5.68,1.39
+nm0919798,Frank Welker,20,1971,2021,50,Aladdin,1992,8.0,6.94,5.55,1.39
 nm0004867,James DeBello,19,1999,2026,27,Tomorrow's End,2011,8.4,5.47,4.07,1.39
 nm0241870,Rockmond Dunbar,16,2000,2025,25,Kiss Kiss Bang Bang,2005,7.4,6.51,5.12,1.39
 nm0059941,Cezmi Baskın,47,1988,2023,35,G.O.R.A.,2004,8.0,6.83,5.44,1.39
@@ -406,6 +403,7 @@ nm0838911,Jeremy Sumpter,19,2001,2025,24,Frailty,2001,7.2,6.29,4.9,1.39
 nm0541932,Tyler Mane,15,2000,2020,20,X-Men,2000,7.3,5.66,4.28,1.38
 nm0176401,Ugo Conti,20,1989,2018,29,Mediterraneo,1991,7.4,6.32,4.94,1.38
 nm0638295,Nutan,24,1955,1994,39,Anari,1959,7.6,7.18,5.81,1.38
+nm0864081,Gabriele Tinti,70,1954,1991,37,The Band of Honest Men,1956,7.5,6.14,4.76,1.38
 nm0707723,Rallapalli,26,1982,2014,32,Aha Naa Pellanta,1987,8.9,7.26,5.88,1.38
 nm0084107,Kevin Bishop,15,1996,2021,25,The Spanish Apartment,2002,7.3,6.67,5.29,1.38
 nm0247305,Edward Earle,18,1924,1946,22,The Wind,1928,8.0,6.62,5.24,1.38
@@ -441,6 +439,7 @@ nm0540029,Mallikharjunarao,26,1983,2008,25,Swathi Muthyam,1986,8.5,7.42,6.06,1.3
 nm0230507,Tatyana Dogileva,25,1982,2026,44,A Railway Station for Two,1983,7.8,6.35,5.0,1.35
 nm0113769,James Brown,33,1942,1979,37,A Star Is Born,1954,7.5,6.29,4.94,1.35
 nm0636466,Valeriy Nosik,16,1969,1994,25,Liberation: The Last Assault,1971,7.6,6.95,5.6,1.35
+nm0381094,Lone Hertz,16,1957,2015,58,Summer in Tyrol,1964,6.7,5.95,4.6,1.35
 nm3294569,Ponvannan,22,1995,2025,30,Paruthiveeran,2007,8.2,7.4,6.05,1.35
 nm0514905,Liu Chia-Yung,31,1969,2018,49,The 36th Chamber of Shaolin,1978,7.6,6.33,4.98,1.35
 nm0935498,Michael Winslow,26,1981,2021,40,Spaceballs,1987,7.1,4.93,3.59,1.35
@@ -553,7 +552,6 @@ nm0437630,Kar-Ying Law,39,1993,2020,27,A Chinese Odyssey: Part 2 - Cinderella,19
 nm0440397,Mikhail Kozakov,19,1956,2011,55,Nine Days of One Year,1962,7.5,6.95,5.69,1.26
 nm0469398,Petar Kralj,20,1969,2009,40,Svet Koji Nestaje,1987,9.5,7.16,5.9,1.26
 nm0331770,Walter Gotell,19,1951,2018,67,The African Queen,1951,7.7,6.1,4.84,1.26
-nm0381094,Lone Hertz,17,1957,2015,58,Summer in Tyrol,1964,6.7,5.86,4.6,1.26
 nm0534863,Madhavi,40,1965,2023,58,Bhagyada Lakshmi Baramma,1986,8.7,7.23,5.97,1.26
 nm0765270,Laboni Sarkar,28,1994,2024,30,Ponthan Mada,1994,7.9,6.98,5.72,1.26
 nm0592804,Abdullah Mishref,21,1979,2024,45,We Are the Bus People,1979,7.9,6.82,5.56,1.26
@@ -714,6 +712,7 @@ nm1052596,Mohamed Henedi,22,1994,2026,32,Upper Egyptian in the American Universi
 nm0826479,Anna Sten,16,1927,1962,35,Der Mörder Dimitri Karamasoff,1931,7.3,6.47,5.3,1.17
 nm0166452,Corinne Cléry,25,1975,2021,46,Hitch-Hike,1977,6.8,5.17,4.0,1.17
 nm0220566,Richard Derr,16,1941,1968,27,Castle in the Desert,1942,7.0,6.51,5.33,1.17
+nm0593192,Cameron Mitchell,100,1945,2018,73,Hombre,1967,7.4,5.62,4.44,1.17
 nm0002058,Samantha Eggar,29,1962,1999,37,The Collector,1965,7.5,6.08,4.91,1.17
 nm0430629,Karole Rocher,19,2001,2023,22,Polisse,2011,7.3,6.21,5.04,1.17
 nm0450815,Irwin Keyes,15,1979,2013,34,The Private Eyes,1980,6.5,5.19,4.01,1.17
@@ -809,9 +808,8 @@ nm0632457,Merab Ninidze,25,1984,2025,41,Pesvebi,1987,8.8,7.41,6.29,1.12
 nm0948000,Cem Yılmaz,20,1998,2023,25,Everything's Gonna Be Great,1998,8.1,7.64,6.52,1.12
 nm0000276,Sean Astin,76,1985,2026,41,The Lord of the Rings: The Return of the King,2003,9.0,6.35,5.23,1.12
 nm0551234,William Marshall,16,1952,1996,44,The Boston Strangler,1968,7.0,5.88,4.77,1.12
-nm0919798,Frank Welker,21,1971,2021,50,Aladdin,1992,8.0,6.67,5.55,1.12
 nm0761103,José Sancho,19,1984,2011,27,Live Flesh,1997,7.3,6.74,5.63,1.12
-nm0593192,Cameron Mitchell,101,1945,2018,73,Hombre,1967,7.4,5.62,4.5,1.12
+nm0001238,Jesús Franco,34,1964,2013,49,Strange Voyage,1964,7.6,5.0,3.88,1.12
 nm0000199,Al Pacino,57,1971,2025,54,The Godfather,1972,9.2,7.2,6.08,1.12
 nm0409105,Valéry Inkijinoff,15,1928,1966,38,A Man's Head,1933,7.1,6.87,5.75,1.12
 nm0415549,Jagathy Sreekumar,164,1982,2022,40,Kireedam,1989,8.9,6.87,5.75,1.12
@@ -855,7 +853,6 @@ nm0000448,Lance Henriksen,120,1976,2024,48,Aliens,1986,8.4,5.58,4.48,1.1
 nm0802183,Neetu Singh,22,1974,2026,52,Deewaar,1975,8.0,6.83,5.73,1.1
 nm0790071,Dick Shawn,17,1960,1987,27,The Producers,1967,7.5,6.31,5.21,1.1
 nm0900349,Sonia Viviani,17,1974,1994,20,The World Is a Wonderful Show,1975,6.7,5.37,4.27,1.1
-nm0739124,Lina Romay,72,1973,2005,32,Aberraciones sexuales de una mujer casada,1981,6.0,4.6,3.5,1.1
 nm0944464,Yu Xia,19,1994,2023,29,In the Heat of the Sun,1994,8.0,6.84,5.74,1.1
 nm0957257,Chuck Zito,17,1996,2023,27,Brooklyn Bound,2004,5.5,4.73,3.64,1.1
 nm0374567,Gerard Heinz,15,1946,1971,25,The Clouded Yellow,1950,6.9,6.18,5.08,1.1
@@ -869,6 +866,7 @@ nm0451864,Viju Khote,43,1974,2008,34,Ashi Hi Banwa Banwi,1988,9.0,6.64,5.55,1.09
 nm0586482,Nikita Mikhalkov,27,1964,2025,61,A Cruel Romance,1984,7.9,7.16,6.07,1.09
 nm0196380,Randhir Kapoor,15,1959,2014,55,Do Ustad,1959,7.3,6.33,5.24,1.09
 nm0501069,Philippe Lemaire,27,1950,2004,54,The Forbidden Christ,1951,7.1,5.94,4.84,1.09
+nm0307451,Enzo Garinei,19,1950,2019,69,Girl with a Suitcase,1961,7.4,6.24,5.15,1.09
 nm0261805,Erik Estrada,22,1970,2022,52,The New Centurions,1972,7.0,5.18,4.09,1.09
 nm0086469,Amanda Blake,15,1950,1989,39,A Star Is Born,1954,7.5,6.19,5.1,1.09
 nm0773845,Helge Schneider,16,1986,2025,39,Felidae,1994,7.0,6.25,5.16,1.09
@@ -883,7 +881,6 @@ nm0865262,Richard Todd,36,1949,1983,34,The Dam Busters,1955,7.4,6.4,5.31,1.08
 nm0000502,Christopher Lloyd,80,1977,2025,48,Back to the Future,1985,8.5,6.04,4.97,1.08
 nm0152261,Sydney Chaplin,15,1952,1977,25,Limelight,1952,8.0,6.52,5.43,1.08
 nm0147312,Laura Cayouette,17,1997,2025,28,Enemy of the State,1998,7.3,5.7,4.63,1.08
-nm0307451,Enzo Garinei,20,1950,2019,69,Girl with a Suitcase,1961,7.4,6.23,5.15,1.08
 nm0939281,Siu-Fung Wong,15,1984,2011,27,Mr. Vampire,1985,7.2,6.18,5.1,1.08
 nm0000855,Raymond J. Barry,49,1985,2024,39,Training Day,2001,7.8,6.13,5.05,1.08
 nm0245919,Anna Dymna,21,1972,2024,52,The Quack,1982,7.8,6.82,5.74,1.08
@@ -920,7 +917,6 @@ nm0919321,Johnny Weissmuller,29,1932,1955,23,Tarzan and His Mate,1934,7.2,6.54,5
 nm0147436,Roberto Cañedo,23,1943,1989,46,La sombra del Caudillo,1960,7.9,7.0,5.94,1.06
 nm0229314,Nikola Djuricko,33,1997,2023,26,Barking at the Stars,1998,8.6,7.07,6.01,1.06
 nm0908914,Dee Wallace,85,1977,2026,49,E.T. the Extra-Terrestrial,1982,7.9,5.46,4.4,1.06
-nm0001238,Jesús Franco,39,1964,2013,49,Strange Voyage,1964,7.6,4.93,3.88,1.06
 nm0353916,Jess Hahn,31,1953,1986,33,The Trial,1962,7.6,5.97,4.92,1.06
 nm0428963,Orlando Jones,21,1999,2025,26,Liberty Heights,1999,7.0,5.88,4.82,1.06
 nm0869429,Audrey Totter,32,1945,1979,34,The Set-Up,1949,7.8,6.42,5.37,1.06
@@ -932,6 +928,7 @@ nm0107151,El Brendel,23,1926,1956,30,Wings,1927,7.5,6.09,5.03,1.06
 nm0246150,Armen Dzhigarkhanyan,53,1966,2015,49,Treasure Island. Captain Flint's Map,1989,8.1,6.82,5.77,1.06
 nm0000577,George Peppard,30,1959,1992,33,Breakfast at Tiffany's,1961,7.5,6.4,5.34,1.06
 nm0010383,Aleksandr Adabashyan,15,1979,2025,46,Five Evenings,1979,7.5,6.38,5.32,1.06
+nm0739124,Lina Romay,57,1973,2005,32,Lorna . . . the Exorcist,1974,5.4,4.56,3.5,1.06
 nm0561755,Lois Maxwell,27,1947,2001,54,Lolita,1962,7.5,6.2,5.15,1.05
 nm0181003,Ray Corrigan,40,1934,1955,21,Tarzan and His Mate,1934,7.2,5.79,4.74,1.05
 nm0259724,Ole Ernst,29,1967,2010,43,The Olsen Gang on the Track,1975,7.3,6.31,5.26,1.05
@@ -967,6 +964,7 @@ nm0660282,Dimitris Papamichael,34,1957,1978,21,The Red Lanterns,1963,8.1,6.38,5.
 nm0001537,Ray Milland,105,1928,1985,57,Dial M for Murder,1954,8.1,6.51,5.47,1.04
 nm0515488,Lizy,17,1984,2018,34,Thalavattam,1986,7.9,7.04,6.0,1.04
 nm0628806,Man-Tat Ng,70,1985,2024,39,A Chinese Odyssey: Part 2 - Cinderella,1995,7.8,6.34,5.3,1.04
+nm0609151,Ib Mossin,22,1953,1975,22,Sin Alley,1957,6.4,6.02,4.98,1.04
 nm0006689,Preity G Zinta,36,1998,2026,28,Dil Chahta Hai,2001,8.0,6.0,4.96,1.04
 nm0702454,Marcel Pérès,18,1938,1970,32,Children of Paradise,1945,8.3,7.38,6.34,1.04
 nm0151815,Shih Chang,15,1983,2025,42,Bad Girl Trilogy,1998,8.3,7.36,6.33,1.04
@@ -1179,6 +1177,7 @@ nm0516215,Tony Lo Bianco,25,1965,2022,57,The French Connection,1971,7.6,6.02,5.0
 nm0754908,Samir Sabry,19,1962,2019,57,Chased by the Dogs,1962,7.4,6.26,5.3,0.96
 nm0001375,Kim Hunter,24,1943,2000,57,Planet of the Apes,1968,8.0,6.84,5.89,0.96
 nm0093872,Jerzy Bonczak,23,1975,2023,48,Nothing Funny,1995,7.3,6.21,5.25,0.96
+nm0894677,Howard Vernon,59,1946,1991,45,The Silence of the Sea,1949,7.6,5.99,5.04,0.95
 nm0903818,Aliki Vougiouklaki,40,1954,1981,27,Maiden's Cheek,1959,7.0,5.74,4.79,0.95
 nm0475610,Leonid Kuravlyov,46,1962,2009,47,Ivan Vasilyevich Changes His Profession,1973,8.2,6.94,5.99,0.95
 nm0548010,Howard Marion-Crawford,21,1935,1969,34,The Hasty Heart,1949,7.3,6.66,5.71,0.95
@@ -1193,7 +1192,6 @@ nm0063619,John Beal,34,1933,1983,50,Les Misérables,1935,7.6,6.23,5.27,0.95
 nm0227039,Melinda Dillon,18,1969,2007,38,A Christmas Story,1983,7.9,6.8,5.85,0.95
 nm0415488,Sam Jaffe,20,1934,1984,50,Ben-Hur,1959,8.1,7.02,6.07,0.95
 nm0001595,Michael Paré,140,1983,2026,43,The Virgin Suicides,1999,7.2,4.74,3.79,0.95
-nm0609151,Ib Mossin,23,1953,1976,23,Sin Alley,1957,6.4,6.02,5.07,0.95
 nm0004564,Hema Malini,73,1969,2020,51,Sholay,1975,8.1,6.47,5.52,0.95
 nm0952498,Zbigniew Zamachowski,48,1981,2025,44,Three Colors: Blue,1993,7.8,6.6,5.65,0.95
 nm0310980,Janet Gaynor,25,1926,1957,31,Sunrise,1927,8.1,6.45,5.5,0.95
@@ -1205,7 +1203,6 @@ nm0001385,Eric Idle,24,1971,2014,43,Monty Python and the Holy Grail,1975,8.1,6.6
 nm0005503,Susan Traylor,20,1992,2025,33,A River Runs Through It,1992,7.2,6.0,5.06,0.94
 nm0142517,Hugo Carvana,27,1962,2014,52,The Guns,1964,7.6,6.85,5.91,0.94
 nm0270876,Aleksandr Feklistov,18,1984,2025,41,In August of 1944,2001,7.3,6.64,5.7,0.94
-nm0894677,Howard Vernon,60,1946,1991,45,The Silence of the Sea,1949,7.6,5.99,5.05,0.94
 nm1417060,Sriman,33,1994,2026,32,Ilampuyal,2009,8.5,6.37,5.43,0.94
 nm0161836,Giovanni Cianfriglia,22,1964,1987,23,The Night Caller,1975,6.9,5.59,4.64,0.94
 nm0451170,Arbaaz Khan,38,1996,2025,29,The Stoneman Murders,2009,7.3,5.54,4.59,0.94
@@ -1348,6 +1345,7 @@ nm0304265,Delhi Ganesh,69,1980,2025,45,Nayakan,1987,8.6,6.99,6.1,0.89
 nm0045124,Farida Dadi,15,1961,2023,62,Dosti,1964,8.5,7.22,6.32,0.89
 nm0537523,Marjaana Maijala,15,1994,2023,29,Mother of Mine,2005,7.6,6.8,5.91,0.89
 nm0093713,Gianni Bonagura,15,1959,1994,35,Why?,1971,7.5,6.54,5.65,0.89
+nm0120381,Poul Bundgaard,34,1965,1998,33,The Olsen Gang Sees Red,1976,7.7,6.29,5.4,0.89
 nm0787676,Khosro Shakibai,22,1982,2009,27,Hamoun,1990,7.8,6.43,5.54,0.89
 nm0517769,Ilias Logothetis,16,1976,2013,37,Landscape in the Mist,1988,7.9,6.83,5.94,0.89
 nm0837420,Bunta Sugawara,33,1961,2006,45,Legend of a Duel to the Death,1963,7.6,6.98,6.09,0.89
@@ -1415,6 +1413,7 @@ nm0058372,Roger Bart,16,1997,2018,21,Hercules,1997,7.3,6.15,5.28,0.87
 nm0217936,David DeLuise,23,1999,2025,26,Full Disclosure,2000,6.0,4.96,4.09,0.87
 nm0882628,Jan Uuspõld,16,2001,2025,24,Ladybirds' Christmas,2001,7.2,6.39,5.52,0.86
 nm0529432,Jiří Lábus,32,1977,2025,48,The Pied Piper,1986,7.8,6.64,5.78,0.86
+nm0766225,Kei Satō,41,1959,2009,50,Harakiri,1962,8.6,7.03,6.17,0.86
 nm0001056,Dabney Coleman,40,1965,2007,42,On Golden Pond,1981,7.6,6.37,5.52,0.86
 nm0001847,Richard Widmark,58,1947,1991,44,Judgment at Nuremberg,1961,8.3,6.71,5.85,0.86
 nm0004496,Van Johnson,66,1942,1990,48,The Caine Mutiny,1954,7.6,6.4,5.53,0.86
@@ -1496,7 +1495,6 @@ nm0946473,Leonid Yarmolnik,22,1980,2024,44,Pasport,1990,7.4,6.63,5.79,0.84
 nm0228678,Andrew Divoff,38,1990,2025,35,Toy Soldiers,1991,6.6,4.56,3.72,0.84
 nm0848554,Amber Tamblyn,19,2002,2023,21,127 Hours,2010,7.5,5.85,5.01,0.84
 nm0001542,Jay Mohr,31,1995,2024,29,Jerry Maguire,1996,7.3,5.86,5.02,0.84
-nm0435726,Jean-Pierre Kalfon,44,1963,2011,48,The Boy Soldier,1981,7.3,6.12,5.29,0.84
 nm0704708,Johan Rabaeus,16,1988,2025,37,Zero Kelvin,1995,7.2,5.55,4.71,0.84
 nm0922927,Celia Weston,29,1989,2023,34,Dead Man Walking,1995,7.5,6.7,5.86,0.84
 nm0262725,Edith Evans,15,1949,1977,28,The Nun's Story,1959,7.5,7.2,6.36,0.84
@@ -1505,7 +1503,7 @@ nm0161707,Mimi Shakib,16,1941,1981,40,The Nightingale's Prayer,1959,8.1,7.19,6.3
 nm0726546,Jorge Rigaud,52,1932,1981,49,There's No Tomorrow,1939,7.3,6.52,5.68,0.84
 nm0584020,Dragan Micanovic,21,1995,2025,30,Barking at the Stars,1998,8.6,6.58,5.73,0.84
 nm0377603,Paw Henriksen,20,1996,2024,28,Brothers,2004,7.5,6.25,5.41,0.84
-nm0790034,Susan Yam-Yam Shaw,24,1976,2021,45,Big Bad Sis,1976,6.9,6.41,5.57,0.84
+nm0790034,Susan Yam-Yam Shaw,23,1976,2021,45,Big Bad Sis,1976,6.9,6.41,5.58,0.84
 nm0000693,Peter Weller,36,1979,2025,46,RoboCop,1987,7.6,5.7,4.86,0.84
 nm0059303,Jiří Bartoška,17,1978,2021,43,All My Loved Ones,1999,7.3,6.69,5.84,0.84
 nm0823536,JoeyStarr,20,2000,2024,24,Polisse,2011,7.3,5.64,4.8,0.84
@@ -1535,6 +1533,7 @@ nm0001629,Kevin Pollak,66,1990,2026,36,The Usual Suspects,1995,8.5,6.13,5.3,0.83
 nm0928295,Henry Wilcoxon,30,1934,1980,46,Mrs. Miniver,1942,7.6,6.53,5.7,0.83
 nm0000818,Shabana Azmi,77,1974,2026,52,Masoom,1983,8.3,6.89,6.06,0.83
 nm0139213,Mario Carotenuto,58,1953,1995,42,The Scopone Game,1972,7.6,6.11,5.28,0.83
+nm0298889,Giacomo Furia,28,1948,2008,60,The Band of Honest Men,1956,7.5,5.93,5.1,0.83
 nm0000212,Meg Ryan,35,1981,2023,42,When Harry Met Sally...,1989,7.7,6.25,5.42,0.83
 nm0001866,Bolo Yeung,32,1970,2015,45,Enter the Dragon,1973,7.6,5.55,4.72,0.83
 nm0516327,Lo Meng,31,1977,2025,48,Hard Boiled,1992,7.7,6.47,5.64,0.83
@@ -1547,7 +1546,6 @@ nm0193579,Tuncel Kurtiz,25,1965,2013,48,The Herd,1978,8.1,7.07,6.25,0.82
 nm0678059,Antonio Petrocelli,26,1981,2023,42,El Alamein - The Line of Fire,2002,7.0,6.47,5.65,0.82
 nm0000228,Kevin Spacey,54,1988,2025,37,Seven,1995,8.6,6.88,6.07,0.82
 nm0026876,Jean Anderson,15,1953,1992,39,The Three Lives of Thomasina,1963,7.2,6.52,5.7,0.82
-nm0639521,Donald O'Brien,27,1965,1994,29,Keoma,1976,7.0,5.61,4.78,0.82
 nm1145290,Ioana Flora,16,2001,2021,20,Stuff and Dough,2001,7.2,6.88,6.05,0.82
 nm0001137,William Devane,28,1971,2014,43,McCabe & Mrs. Miller,1971,7.6,6.35,5.52,0.82
 nm0427018,Leo Jokela,23,1954,1974,20,"Gas, Inspector Palmu!",1961,7.7,6.29,5.46,0.82
@@ -1600,9 +1598,7 @@ nm0000707,Sean Young,66,1981,2025,44,Blade Runner,1982,8.1,5.35,4.56,0.8
 nm0001245,Mira Furlan,23,1982,2021,39,The Beauty of Vice,1986,8.0,7.07,6.28,0.8
 nm0662519,Nicole Ari Parker,18,1995,2023,28,Boogie Nights,1997,7.9,6.18,5.38,0.8
 nm0764762,Sharada,25,1972,2017,45,Daana Veera Soora Karna,1977,8.8,7.03,6.23,0.8
-nm0001643,Linnea Quigley,43,1978,2024,46,The Return of the Living Dead,1985,7.3,4.62,3.82,0.8
 nm0430817,Sharman Joshi,33,1999,2025,26,3 Idiots,2009,8.4,5.97,5.17,0.8
-nm0766225,Kei Satō,42,1959,2009,50,Harakiri,1962,8.6,6.97,6.17,0.8
 nm0845867,Oleg Tabakov,43,1960,2014,54,War and Peace,1965,8.3,7.23,6.43,0.8
 nm0373902,Harald Heide-Steen Jr.,15,1968,1999,31,The Pinchcliffe Grand Prix,1975,8.4,6.45,5.65,0.8
 nm0642198,Jennifer O'Neill,26,1970,2013,43,The Innocent,1976,7.4,5.91,5.11,0.8
@@ -1616,6 +1612,7 @@ nm0098376,Hobart Bosworth,37,1916,1942,26,The Big Parade,1925,7.8,6.5,5.7,0.8
 nm0418877,John Jarratt,26,1977,2021,44,We of the Never Never,1982,6.9,5.94,5.14,0.8
 nm0957372,Velimir 'Bata' Živojinović,129,1959,2012,53,Balkan Spy,1984,8.7,6.88,6.08,0.8
 nm0000418,Danny Glover,100,1981,2023,42,The Color Purple,1985,7.7,6.36,5.56,0.8
+nm0639521,Donald O'Brien,26,1965,1994,29,Keoma,1976,7.0,5.61,4.81,0.8
 nm0848533,Tetsurō Tanba,51,1956,2002,46,Harakiri,1962,8.6,6.85,6.05,0.8
 nm0438632,Ram Kapoor,21,2003,2025,22,Udaan,2010,8.1,6.21,5.41,0.8
 nm0001072,Joseph Cotten,68,1938,1981,43,Citizen Kane,1941,8.2,6.65,5.85,0.8
@@ -1639,6 +1636,7 @@ nm0025857,Richard Anconina,25,1980,2017,37,"So Long, Stooge",1983,7.3,5.96,5.17,
 nm0001108,Robert Davi,73,1985,2024,39,The Goonies,1985,7.7,4.94,4.15,0.79
 nm0741672,Sherrie Rose,16,1989,2012,23,The King of the Kickboxers,1990,5.9,4.66,3.87,0.79
 nm0000680,Casper Van Dien,52,1997,2025,28,Sleepy Hollow,1999,7.3,4.93,4.14,0.79
+nm0001643,Linnea Quigley,42,1979,2024,45,The Return of the Living Dead,1985,7.3,4.62,3.82,0.79
 nm0038951,Shinsuke Ashida,19,1955,1992,37,The Red Angel,1966,7.7,6.98,6.19,0.79
 nm0209397,Secun de la Rosa,20,2002,2025,23,Witching and Bitching,2013,6.4,5.95,5.17,0.79
 nm0000344,Denise Crosby,19,1983,2019,36,Miracle Mile,1988,7.0,5.42,4.63,0.79
@@ -1700,12 +1698,10 @@ nm1368152,Hanieh Tavassoli,26,2002,2022,20,White Nights,2003,7.6,5.99,5.21,0.78
 nm0000685,Jon Voight,61,1967,2025,58,Heat,1995,8.3,6.31,5.53,0.78
 nm0001682,Mickey Rooney,117,1932,2017,85,Captains Courageous,1937,7.9,6.16,5.38,0.78
 nm0909620,Dylan Walsh,25,1989,2026,37,Nobody's Fool,1994,7.3,5.6,4.82,0.78
-nm0298889,Giacomo Furia,29,1948,2008,60,The Band of Honest Men,1956,7.5,5.88,5.1,0.78
 nm0911285,David Warbeck,21,1971,1998,27,"Duck, You Sucker!",1971,7.5,5.32,4.54,0.78
 nm0237260,Albert Dray,15,1976,2007,31,Shadow of the Castles,1976,7.3,6.38,5.6,0.78
 nm0765102,Dick Sargent,19,1955,1989,34,The Ghost and Mr. Chicken,1966,7.3,5.95,5.17,0.78
 nm0248254,Eriq Ebouaney,34,2000,2026,26,Kingdom of Heaven,2005,7.3,6.24,5.46,0.78
-nm0664850,Dirch Passer,63,1952,1978,26,The Baroness from the Gas Station,1960,7.1,6.08,5.3,0.78
 nm0699549,Françoise Prévost,29,1958,1980,22,Payroll,1961,7.0,6.15,5.37,0.78
 nm0412374,Dana Ivey,15,1985,2017,32,The Color Purple,1985,7.7,6.63,5.85,0.78
 nm0619938,Tatsuya Nakadai,62,1957,2014,57,The Human Condition III: A Soldier's Prayer,1961,8.8,7.28,6.5,0.78
@@ -1816,6 +1812,7 @@ nm0665327,Michael Pate,41,1950,1987,37,The Court Jester,1955,7.8,6.15,5.4,0.75
 nm0070987,Yves Beneyton,15,1967,2012,45,The Lacemaker,1977,7.4,6.55,5.8,0.75
 nm0620964,Isabelle Nanty,43,1990,2025,35,Amélie,2001,8.2,5.78,5.03,0.75
 nm0657145,Maria Pakulnis,19,1982,2024,42,No End,1985,7.3,6.28,5.53,0.75
+nm0664850,Dirch Passer,62,1952,1978,26,The Baroness from the Gas Station,1960,7.1,6.08,5.33,0.75
 nm0814718,Agnès Soral,22,1977,2022,45,"So Long, Stooge",1983,7.3,5.97,5.21,0.75
 nm0000501,Ray Liotta,71,1983,2023,40,GoodFellas,1990,8.7,6.38,5.63,0.75
 nm0889005,Pierre Vaneck,18,1955,2008,53,To Die in Madrid,1963,8.0,6.66,5.91,0.75
@@ -1872,7 +1869,6 @@ nm0586150,George Mihaita,15,1968,2018,50,Veronica,1973,8.0,7.31,6.57,0.73
 nm0267506,Anna Faris,32,2000,2026,26,Lost in Translation,2003,7.7,5.79,5.07,0.73
 nm0379258,Irm Hermann,24,1969,2018,49,Fear Eats the Soul,1974,8.0,6.94,6.21,0.73
 nm0431139,Louis Jourdan,35,1941,1992,51,Letter from an Unknown Woman,1948,7.8,6.23,5.5,0.73
-nm0439371,Vassili Karis,19,1963,1988,25,An Angel for Satan,1966,6.4,5.22,4.49,0.73
 nm0747759,Christian Rub,20,1932,1952,20,Pinocchio,1940,7.4,6.28,5.55,0.73
 nm1086956,Gustave Kervern,25,2004,2026,22,Macadam Stories,2015,7.0,6.53,5.8,0.73
 nm0001696,Julian Sands,63,1984,2024,40,The Killing Fields,1984,7.8,5.76,5.03,0.73
@@ -1967,7 +1963,6 @@ nm0066455,Beena Banerjee,53,1977,2024,47,Lekin...,1990,7.7,5.53,4.82,0.71
 nm0363515,John Harmon,18,1942,1979,37,The Lady Gambles,1949,6.6,6.01,5.3,0.71
 nm0000470,Jeffrey Jones,27,1983,2014,31,Amadeus,1984,8.4,6.2,5.49,0.71
 nm0001759,Vincent Spano,25,1979,2024,45,City of Hope,1991,7.3,5.93,5.22,0.71
-nm0120381,Poul Bundgaard,39,1965,1998,33,The Olsen Gang Sees Red,1976,7.7,6.11,5.4,0.71
 nm0233027,Martin Donovan,47,1984,2024,40,Trust,1990,7.3,6.35,5.65,0.71
 nm0000572,Sarah Jessica Parker,32,1983,2022,39,Ed Wood,1994,7.8,6.18,5.46,0.71
 nm0201462,Gérard Darmon,55,1981,2025,44,Fear City: A Family-Style Comedy,1994,7.5,5.84,5.13,0.71
@@ -2041,6 +2036,7 @@ nm0054007,Artur Barcis,25,1982,2026,44,A Short Film About Love,1988,8.1,6.64,5.9
 nm0190977,Riccardo Cucciolla,26,1964,1997,33,Sacco & Vanzetti,1971,7.7,6.29,5.6,0.69
 nm0387319,Josie Ho,30,1999,2021,22,Exiled,2006,7.2,5.84,5.15,0.69
 nm0808949,Kent Smith,39,1936,1978,42,This Land Is Mine,1943,7.6,6.66,5.97,0.69
+nm0435726,Jean-Pierre Kalfon,43,1963,2011,48,The Boy Soldier,1981,7.3,6.12,5.43,0.69
 nm0758741,Simo Salminen,35,1964,2004,40,Uuno Turhapuro armeijan leivissä,1984,6.8,5.61,4.93,0.69
 nm0939697,Evan Rachel Wood,28,1997,2023,26,The Wrestler,2008,7.9,6.65,5.95,0.69
 nm0165316,Erik Clausen,15,1981,2017,36,In the Middle of the Night,1984,6.8,6.24,5.55,0.69
@@ -2088,6 +2084,7 @@ nm0334324,Stuart Graham,21,1997,2026,29,Hunger,2008,7.5,6.56,5.88,0.68
 nm0485518,Richard Lane,64,1937,1972,35,Hellzapoppin',1941,7.4,6.18,5.5,0.68
 nm0600886,Alvy Moore,19,1953,1985,32,Riot in Cell Block 11,1954,7.0,5.85,5.16,0.68
 nm0001332,Robert Hays,16,1980,2001,21,Airplane!,1980,7.7,5.53,4.86,0.68
+nm0439371,Vassili Karis,18,1963,1988,25,An Angel for Satan,1966,6.4,5.22,4.54,0.68
 nm0001693,Eva Marie Saint,17,1956,2006,50,North by Northwest,1959,8.2,6.68,6.0,0.68
 nm0133852,Ivo Canelas,19,1998,2026,28,Alice,2005,7.3,6.42,5.73,0.68
 nm0004873,Andy Dick,30,1994,2021,27,"Scotland, Pa.",2001,6.6,5.07,4.39,0.68
@@ -2109,7 +2106,6 @@ nm0836273,Bogdan Stupka,22,1971,2011,40,Bilyy ptakh z chornoyu oznakoyu,1971,7.5
 nm0328751,Caroline Goodall,25,1991,2026,35,Schindler's List,1993,9.0,6.37,5.7,0.67
 nm0001026,Joanna Cassidy,38,1973,2025,52,Blade Runner,1982,8.1,6.0,5.33,0.67
 nm0132930,William Campbell,29,1950,1972,22,The Breaking Point,1950,7.5,6.39,5.72,0.67
-nm0211922,Anthony Steffen,44,1955,1991,36,Abandoned,1955,6.9,5.81,5.14,0.67
 nm0363615,Raimund Harmstorf,17,1971,1995,24,Der Seewolf,1971,7.7,5.67,5.0,0.67
 nm0718829,Miguel Rellán,33,1981,2026,45,El crack,1981,7.4,6.27,5.6,0.67
 nm0000449,Natasha Henstridge,37,1995,2025,30,The Whole Nine Yards,2000,6.7,5.18,4.51,0.67
@@ -2455,6 +2451,7 @@ nm0001637,Vincent Price,92,1938,1993,55,Laura,1944,7.9,6.41,5.81,0.6
 nm0006471,Elsa Lanchester,42,1935,1980,45,Witness for the Prosecution,1957,8.4,6.79,6.19,0.6
 nm0368745,Richard Hatch,18,1975,2018,43,Battlestar Galactica,1978,6.8,4.5,3.9,0.6
 nm0000256,Jenny Agutter,28,1964,2022,58,Walkabout,1971,7.6,6.21,5.6,0.6
+nm0211922,Anthony Steffen,43,1955,1991,36,Abandoned,1955,6.9,5.81,5.21,0.6
 nm1285112,Mikko Leppilampi,24,2003,2023,20,Frozen Land,2005,7.4,5.62,5.01,0.6
 nm0000001,Fred Astaire,39,1933,1981,48,Top Hat,1935,7.7,6.83,6.23,0.6
 nm0000782,Asia Argento,48,1986,2025,39,Queen Margot,1994,7.4,5.75,5.15,0.6
@@ -2651,6 +2648,7 @@ nm0000057,David Niven,77,1935,1983,48,A Matter of Life and Death,1946,8.0,6.42,5
 nm0907480,Robert Walker Jr.,21,1963,1985,22,The War Wagon,1967,6.8,5.26,4.7,0.56
 nm2922103,T. Rifnu Wikana,28,2006,2026,20,Habibie & Ainun,2012,7.6,6.56,6.0,0.56
 nm0412615,Shima Iwashita,32,1960,1999,39,Harakiri,1962,8.6,7.21,6.65,0.56
+nm0700024,Bjørn Puggaard-Müller,17,1959,1988,29,We Are Altogether Crazy,1959,6.9,5.87,5.32,0.56
 nm0651807,Per Oscarsson,39,1954,2011,57,Hunger,1966,7.7,6.11,5.55,0.56
 nm0149837,Sabyasachi Chakrabarty,50,1996,2025,29,Nuvvu Naaku Nachchav,2001,8.8,6.87,6.32,0.55
 nm0239513,Paulette Dubost,30,1934,2005,71,The Rules of the Game,1939,7.9,6.49,5.94,0.55
@@ -2668,7 +2666,6 @@ nm0785771,Jean Servais,28,1934,1972,38,Les Misérables,1934,8.3,7.0,6.45,0.55
 nm0241523,Douglass Dumbrille,96,1932,1962,30,Mr. Deeds Goes to Town,1936,7.8,6.31,5.76,0.55
 nm0466776,Fritz Kortner,17,1919,1948,29,Pandora's Box,1929,7.7,6.91,6.37,0.55
 nm0560091,Lester Matthews,43,1935,1970,35,The Biscuit Eater,1940,7.1,6.19,5.65,0.55
-nm0775810,Karin Schubert,24,1970,1993,23,Compañeros,1970,7.2,5.15,4.6,0.55
 nm0847562,Naoto Takenaka,60,1984,2025,41,Shall We Dance?,1996,7.7,6.47,5.92,0.55
 nm0004846,Marisa Coughlan,15,1999,2025,26,Super Troopers,2001,7.0,5.75,5.2,0.55
 nm0821041,Robert Stack,40,1939,2001,62,To Be or Not to Be,1942,8.1,6.3,5.75,0.55
@@ -2880,7 +2877,6 @@ nm0122780,Mark Burns,17,1966,1998,32,Death in Venice,1971,7.3,5.61,5.1,0.51
 nm0237244,Milena Dravić,53,1960,2009,49,Sesta brzina,1981,8.0,7.05,6.54,0.51
 nm0587534,John Miljan,83,1925,1958,33,Charlie Chan in Paris,1935,7.1,6.18,5.67,0.51
 nm0654110,Clive Owen,37,1988,2025,37,Sin City,2005,8.0,6.77,6.26,0.51
-nm0700024,Bjørn Puggaard-Müller,18,1959,1988,29,We Are Altogether Crazy,1959,6.9,5.82,5.32,0.51
 nm0927641,Kai Wiesinger,16,1992,2021,29,Little Sharks,1992,7.5,6.37,5.86,0.51
 nm0019699,Sadri Alisik,59,1955,1994,39,A Lame Joke,1965,7.9,6.39,5.88,0.51
 nm0042106,Tina Aumont,29,1966,2000,34,Illustrious Corpses,1976,7.2,5.96,5.45,0.51
@@ -2929,7 +2925,6 @@ nm0004858,Patrika Darbo,15,1988,2019,31,Leaving Normal,1992,6.6,5.63,5.13,0.5
 nm0504942,Gigi Leung,35,1995,2025,30,Tempting Heart,1999,7.1,6.03,5.53,0.5
 nm0316004,Franco Giacobini,28,1960,2012,52,The Fascist,1961,7.4,5.9,5.4,0.5
 nm0657404,Palau,18,1934,1966,32,Children of Paradise,1945,8.3,6.72,6.22,0.5
-nm0712248,Isarco Ravaioli,19,1960,1983,23,Deadly Inheritance,1968,5.7,4.95,4.45,0.5
 nm0177933,Chris Cooper,39,1987,2025,38,American Beauty,1999,8.3,7.07,6.57,0.5
 nm0401192,Kara Wai,65,1977,2026,49,The Eight Diagram Pole Fighter,1984,7.4,6.32,5.81,0.5
 nm0001998,Cyd Charisse,23,1943,1967,24,Singin' in the Rain,1952,8.3,6.54,6.04,0.5
@@ -3163,7 +3158,6 @@ nm0110507,Anne Brochet,23,1987,2019,32,Tous les matins du monde,1991,7.5,6.37,5.
 nm0611804,Jack Mulhall,39,1922,1959,37,The Old Fashioned Way,1934,7.3,5.7,5.24,0.46
 nm0001141,Angie Dickinson,41,1955,2001,46,Rio Bravo,1959,7.9,6.17,5.72,0.46
 nm0149846,Lily Chakravarty,24,1963,2026,63,Deya Neya,1963,8.3,7.51,7.05,0.46
-nm0519427,Malisa Longo,26,1970,1990,20,California,1977,6.6,4.71,4.24,0.46
 nm0532713,Jiří Macháček,18,1999,2020,21,Loners,2000,7.5,6.66,6.2,0.46
 nm0842023,Don Swayze,22,1987,2025,38,Shy People,1987,6.6,4.79,4.33,0.46
 nm3132784,Kishore Kumar G.,67,2005,2026,21,Interrogation,2015,8.4,6.67,6.21,0.46
@@ -3220,6 +3214,8 @@ nm0737465,Armin Rohde,33,1992,2020,28,Run Lola Run,1998,7.6,5.96,5.51,0.45
 nm0407959,Vladimir Ilin,43,1967,2025,58,Burnt by the Sun,1994,7.8,6.71,6.25,0.45
 nm0472710,David Krumholtz,28,1993,2025,32,10 Things I Hate About You,1999,7.4,6.23,5.78,0.45
 nm1789084,Xing Yu,21,2006,2026,20,Ip Man,2008,8.0,5.99,5.54,0.45
+nm0519427,Malisa Longo,25,1970,1990,20,California,1977,6.6,4.69,4.24,0.45
+nm0712248,Isarco Ravaioli,17,1960,1983,23,Deadly Inheritance,1968,5.7,4.95,4.5,0.45
 nm0636065,Sheree North,23,1954,1998,44,The Shootist,1976,7.6,6.21,5.76,0.45
 nm0790858,Aashif Sheikh,16,1995,2026,31,Pyaar Kiya to Darna Kya,1998,6.6,4.7,4.25,0.45
 nm0795289,Max Showalter,28,1952,1984,32,Smog,1962,7.2,6.37,5.92,0.45
@@ -3453,7 +3449,6 @@ nm0391738,Adrian Holmes,16,2005,2025,20,Hot Wheels Acceleracers the Ultimate Rac
 nm0000060,Gregory Peck,55,1944,1999,55,To Kill a Mockingbird,1962,8.2,6.92,6.52,0.4
 nm0154226,Justin Chatwin,23,2003,2026,23,The Chumscrubber,2005,6.8,5.28,4.88,0.4
 nm0590796,Yvette Mimieux,22,1960,1981,21,The Time Machine,1960,7.5,5.97,5.57,0.4
-nm0000183,Traci Lords,42,1984,2022,38,Passion Pit,1985,7.7,5.28,4.88,0.4
 nm0165429,Olivier Claverie,16,2001,2023,22,Guilty,2011,7.3,6.4,6.0,0.4
 nm0167509,Pierre Clémenti,32,1963,1998,35,The Leopard,1963,7.9,6.24,5.84,0.4
 nm0282530,Suzanne Flon,28,1952,2006,54,To Die in Madrid,1963,8.0,6.81,6.41,0.4
@@ -3466,10 +3461,12 @@ nm0467451,Vuk Kostic,15,2001,2022,21,Sons of My Brothers,2006,8.0,6.66,6.26,0.4
 nm0559551,Rica Matsumoto,18,1991,2017,26,Perfect Blue,1997,8.0,6.36,5.96,0.4
 nm0114805,Tom Brown,34,1929,1961,32,Merrily We Live,1938,7.3,6.3,5.9,0.4
 nm0241487,Sandrine Dumas,16,1984,2023,39,The Double Life of Véronique,1991,7.6,6.36,5.96,0.4
+nm0617790,Myriam Mézières,15,1968,2000,32,Jonah Who Will Be 25 in the Year 2000,1976,7.5,6.15,5.75,0.4
 nm0029400,Michael Angarano,28,1998,2024,26,Almost Famous,2000,7.9,6.32,5.92,0.4
 nm0379877,Armando Hernández,16,2001,2023,22,Streeters,2001,7.1,5.75,5.35,0.4
 nm0531808,Kelly Macdonald,31,1996,2024,28,No Country for Old Men,2007,8.2,6.48,6.08,0.4
 nm0000230,Sylvester Stallone,61,1970,2025,55,Rocky,1976,8.1,6.02,5.62,0.4
+nm0239359,Daniele Dublino,23,1969,1991,22,The Scopone Game,1972,7.6,6.07,5.67,0.4
 nm0771268,Rosanna Schiaffino,31,1956,1976,20,La corruzione,1963,7.3,6.21,5.81,0.4
 nm0939251,Melvin Wong,25,1977,2024,47,Righting Wrongs,1986,7.1,5.9,5.5,0.4
 nm0001882,Olivia d'Abo,33,1984,2024,40,Kicking and Screaming,1995,6.6,5.27,4.86,0.4
@@ -3846,7 +3843,6 @@ nm0659274,Claudia Pandolfi,22,1992,2026,34,Hardboiled Egg,1997,7.3,6.41,6.08,0.3
 nm0138388,Julie Carmen,18,1980,2019,39,In the Mouth of Madness,1994,7.1,5.75,5.42,0.33
 nm0156533,Nick Cheung,53,1992,2024,32,Election 2,2006,7.4,5.93,5.6,0.33
 nm0218131,William Demarest,73,1927,1975,48,Sullivan's Travels,1941,7.9,6.44,6.1,0.33
-nm0239359,Daniele Dublino,24,1969,1991,22,The Scopone Game,1972,7.6,6.0,5.67,0.33
 nm0224565,Chris Diamantopoulos,18,2001,2026,25,Protagonist,2007,7.3,5.82,5.49,0.33
 nm0126318,Edd Byrnes,15,1957,1989,32,Yellowstone Kelly,1959,6.6,5.87,5.53,0.33
 nm0619250,Abdel Ghani El Nagdi,19,1942,1975,33,Cairo Station,1958,7.5,6.65,6.32,0.33
@@ -4112,6 +4108,7 @@ nm0161607,Andrzej Chyra,56,1993,2026,33,The Debt,1999,7.8,6.21,5.94,0.28
 nm0241049,Josh Duhamel,39,2004,2026,22,Planet Ocean,2012,7.8,5.75,5.48,0.28
 nm0270443,Bekim Fehmiu,20,1962,1992,30,Special Education,1977,8.3,6.83,6.55,0.28
 nm0322977,Nebojsa Glogovac,33,1994,2019,25,"When I Grow Up, I'll Be a Kangaroo",2004,8.4,7.1,6.82,0.28
+nm0342453,Judy Gringer,22,1959,2025,66,Five Men and Rosa,1964,7.0,5.83,5.55,0.28
 nm0738042,Gilbert Roland,65,1925,1982,57,The Bad and the Beautiful,1952,7.7,6.15,5.87,0.28
 nm0001791,Robert Taylor,69,1934,1968,34,Waterloo Bridge,1940,7.7,6.51,6.24,0.28
 nm0036427,Edward Arnold,80,1932,1956,24,Mr. Smith Goes to Washington,1939,8.1,6.61,6.32,0.28
@@ -4161,7 +4158,6 @@ nm0852466,Holland Taylor,24,1984,2025,41,The Truman Show,1998,8.2,6.1,5.83,0.27
 nm0025546,Fung Hak-On,26,1973,2014,41,Snake in the Eagle's Shadow,1978,7.3,6.09,5.82,0.27
 nm0001200,Gary Farmer,32,1989,2023,34,Dead Man,1995,7.5,6.13,5.85,0.27
 nm0001806,John Turturro,71,1985,2026,41,Do the Right Thing,1989,7.9,6.4,6.14,0.27
-nm0583951,Robert Miano,91,1982,2026,44,Donnie Brasco,1997,7.7,4.71,4.44,0.27
 nm0827031,Harvey Stephens,37,1931,1961,30,Abe Lincoln in Illinois,1940,7.3,6.3,6.03,0.27
 nm0903750,Behrouz Vossoughi,28,1967,2012,45,Desiderium,1978,8.1,6.27,6.0,0.27
 nm0329094,Henry Goodman,17,1996,2023,27,The Damned United,2009,7.5,6.81,6.54,0.27
@@ -4227,6 +4223,7 @@ nm0056187,Sacha Baron Cohen,19,1997,2026,29,"Out for Love, Be Back Shortly",1997
 nm0419978,Isabel Jeans,17,1927,1969,42,Suspicion,1941,7.2,6.32,6.06,0.26
 nm1202905,Clotilde Hesme,23,2002,2024,22,Mysteries of Lisbon,2010,7.3,6.35,6.09,0.26
 nm0000232,Sharon Stone,54,1981,2025,44,Casino,1995,8.2,5.64,5.38,0.26
+nm0000259,Ginger Lynn Allen,21,1987,2026,39,The Last Late Night,2000,6.7,4.61,4.35,0.26
 nm0000834,Kathy Baker,36,1986,2026,40,Edward Scissorhands,1990,7.8,6.31,6.05,0.26
 nm0001378,Anjelica Huston,39,1969,2025,56,Crimes and Misdemeanors,1989,7.8,6.56,6.3,0.26
 nm0593775,Thomas Mitchell,57,1936,1961,25,It's a Wonderful Life,1946,8.6,6.8,6.54,0.26
@@ -4273,6 +4270,7 @@ nm1666855,Raúl Arévalo,34,2006,2026,20,Even the Rain,2010,7.4,6.21,5.96,0.25
 nm0005089,Boyd Kestner,16,1996,2023,27,Appaloosa,2008,6.7,5.31,5.06,0.25
 nm0002013,Charles Coburn,65,1938,1963,25,The Lady Eve,1941,7.7,6.68,6.43,0.25
 nm0003224,Stanley Andrews,55,1935,1956,21,King of the Royal Mounted,1940,7.4,6.17,5.92,0.25
+nm0583951,Robert Miano,90,1982,2026,44,Donnie Brasco,1997,7.7,4.69,4.44,0.25
 nm1794888,Paul Che,15,1980,2024,44,Dangerous Encounters of the First Kind,1980,7.3,5.47,5.22,0.25
 nm0001718,Kyra Sedgwick,38,1985,2025,40,Secondhand Lions,2003,7.5,6.05,5.8,0.25
 nm0738212,Guy Rolfe,20,1948,1986,38,Yesterday's Enemy,1959,7.1,6.11,5.87,0.25
@@ -4294,7 +4292,6 @@ nm0836432,Tom Sturridge,16,2006,2026,20,Pirate Radio,2009,7.3,6.25,6.0,0.25
 nm0044535,Sabine Azéma,43,1976,2024,48,Life and Nothing But,1989,7.5,6.19,5.94,0.25
 nm0190775,Imre Csuja,27,1997,2024,27,Moscow Square,2001,7.8,6.16,5.91,0.25
 nm0013789,Gianni Agus,18,1945,1983,38,The Fascist,1961,7.4,6.14,5.89,0.25
-nm0617790,Myriam Mézières,16,1968,2000,32,Jonah Who Will Be 25 in the Year 2000,1976,7.5,6.0,5.75,0.25
 nm0370677,Megumi Hayashibara,70,1991,2026,35,Neon Genesis Evangelion: The End of Evangelion,1997,8.1,6.94,6.69,0.25
 nm0000278,Pernilla August,37,1975,2025,50,The Best Intentions,1992,7.7,6.17,5.92,0.25
 nm0302105,Anna Galiena,43,1985,2026,41,The Hairdresser's Husband,1990,7.1,5.82,5.57,0.25
@@ -4441,6 +4438,7 @@ nm0194742,Arturo de Córdova,22,1943,1971,28,El,1953,7.9,6.84,6.63,0.22
 nm0406545,Abdel Moneim Ibrahim,25,1957,1986,29,Rumor of Love,1960,8.0,6.82,6.6,0.22
 nm1172478,Joel Kinnaman,27,2002,2025,23,Johan Falk: Kodnamn: Lisa,2012,7.6,6.17,5.95,0.22
 nm0000737,Jane Alexander,22,1970,2020,50,All the President's Men,1976,7.9,6.48,6.26,0.22
+nm0002168,Willeke van Ammelrooy,31,1971,2023,52,Antonia's Line,1995,7.4,6.23,6.0,0.22
 nm0350273,Hilmir Snær Guðnason,27,1995,2024,29,Angels of the Universe,2000,7.5,6.44,6.22,0.22
 nm0700084,Frank Puglia,42,1921,1965,44,Orphans of the Storm,1921,7.3,6.28,6.05,0.22
 nm1233224,Fan Liao,20,2002,2024,22,Getting Home,2007,7.5,6.48,6.27,0.22
@@ -4537,7 +4535,6 @@ nm0499218,Claude Legault,19,1992,2025,33,Gaz Bar Blues,2003,7.6,6.58,6.38,0.2
 nm0378855,Dolores Heredia,28,1993,2024,31,Dos crímenes,1994,7.3,6.34,6.14,0.2
 nm0000610,Giovanni Ribisi,43,1996,2024,28,Saving Private Ryan,1998,8.6,6.35,6.15,0.2
 nm0190595,Henri Crémieux,25,1930,1979,49,Orpheus,1950,7.8,6.6,6.4,0.2
-nm0342453,Judy Gringer,25,1959,2025,66,Five Men and Rosa,1964,7.0,5.75,5.55,0.2
 nm0719220,Francis Renaud,22,1994,2024,30,36th Precinct,2004,7.1,5.92,5.72,0.2
 nm0000593,Kelly Preston,33,1983,2021,38,Jerry Maguire,1996,7.3,5.84,5.64,0.2
 nm0934008,Reno Wilson,15,1997,2025,28,Crank,2006,6.9,5.19,4.99,0.2
@@ -4749,6 +4746,7 @@ nm0232817,Robert Donner,17,1966,1986,20,Vanishing Point,1971,7.2,5.48,5.32,0.16
 nm0619077,Ichiro Nagai,41,1962,2024,62,Conan the Future Boy: The Big Giant Robot's Resurrection,1984,8.2,6.92,6.76,0.16
 nm0703725,Maeve Quinlan,15,1999,2019,20,Not Easily Broken,2009,6.1,4.99,4.83,0.16
 nm0798855,Jay Silverheels,17,1949,1973,24,Walk the Proud Land,1956,6.6,5.96,5.8,0.16
+nm0835586,Axel Strøbye,43,1960,2000,40,The Olsen Gang Sees Red,1976,7.7,5.95,5.79,0.16
 nm1422176,Jess Weixler,25,2006,2026,20,The Disappearance of Eleanor Rigby: Her,2013,6.8,5.76,5.6,0.16
 nm0150543,Lolita Chammah,20,1988,2023,35,Story of Women,1988,7.5,6.2,6.04,0.16
 nm0919700,Ben Welden,45,1934,1957,23,Confession,1937,7.4,6.04,5.88,0.16
@@ -4781,12 +4779,12 @@ nm0301887,Craig Stevens,26,1941,1982,41,Where the Sidewalk Ends,1950,7.5,6.23,6.
 nm0349749,Ronald Guttman,18,1983,2023,40,Danton,1983,7.4,5.43,5.27,0.16
 nm0839596,Suresh,26,1973,2026,53,My Dear Kuttichaathan,1984,7.8,6.24,6.08,0.16
 nm0060780,Laurent Bateau,26,2001,2025,24,The Concert,2009,7.5,6.02,5.86,0.16
+nm0612219,Paul Muller,55,1950,1991,41,Journey to Italy,1954,7.2,5.51,5.35,0.16
 nm0895384,Ondřej Vetchý,49,1984,2025,41,Give the Devil His Due,1985,8.0,6.4,6.24,0.16
 nm0000602,Robert Redford,50,1962,2018,56,The Sting,1973,8.2,6.87,6.71,0.16
 nm0481024,Roc Lafortune,17,1997,2023,26,Seducing Doctor Lewis,2003,7.3,5.68,5.52,0.16
 nm0717203,Carl Benton Reid,38,1941,1966,25,In a Lonely Place,1950,7.9,6.52,6.35,0.16
 nm0846548,Saïd Taghmaoui,28,1995,2024,29,La haine,1995,8.1,6.17,6.01,0.16
-nm0303148,Dada Gallotti,28,1962,1982,20,Flashback,1969,8.0,5.46,5.3,0.16
 nm0354078,Kenneth Haigh,15,1956,1991,35,Cleopatra,1963,7.0,5.59,5.43,0.16
 nm0566783,Matt McCoy,36,1985,2024,39,L.A. Confidential,1997,8.2,5.01,4.85,0.16
 nm0000194,Julianne Moore,72,1990,2026,36,The Big Lebowski,1998,8.1,6.53,6.36,0.16
@@ -4835,7 +4833,6 @@ nm0000675,Jeanne Tripplehorn,22,1992,2020,28,Basic Instinct,1992,7.1,5.82,5.68,0
 nm0336509,Charles Gray,24,1960,1998,38,The Rocky Horror Picture Show,1975,7.4,5.95,5.8,0.15
 nm0368049,Ichirô Nakatani,19,1959,1981,22,Harakiri,1962,8.6,7.08,6.93,0.15
 nm0539022,Christophe Malavoy,16,1982,2025,43,La Soule,1989,7.2,6.22,6.07,0.15
-nm0612219,Paul Muller,57,1950,1991,41,Journey to Italy,1954,7.2,5.49,5.33,0.15
 nm0746162,Jean-Paul Rouve,50,1999,2025,26,La Vie En Rose,2007,7.5,5.94,5.79,0.15
 nm1922788,Devanny Pinn,28,2006,2026,20,When Black Birds Fly,2015,5.7,3.67,3.52,0.15
 nm0551761,François Marthouret,18,1972,2025,53,The French Calvinists,1972,7.4,6.56,6.41,0.15
@@ -4911,6 +4908,7 @@ nm0000277,Richard Attenborough,52,1945,1997,52,The Great Escape,1963,8.2,6.58,6.
 nm0000516,Lee Majors,27,1967,2022,55,Will Penny,1967,7.0,5.14,4.99,0.14
 nm0002063,Leif Erickson,54,1936,1975,39,On the Waterfront,1954,8.1,6.29,6.15,0.14
 nm0688285,Ken Pogue,15,1978,2000,22,The Silent Partner,1978,7.4,6.0,5.86,0.14
+nm0892891,Venantino Venantini,60,1962,2016,54,The Sucker,1965,7.3,5.36,5.22,0.14
 nm0001650,Michael Rapaport,48,1992,2024,32,True Romance,1993,7.9,5.83,5.68,0.14
 nm0322513,Iain Glen,37,1988,2025,37,Song for a Raggy Boy,2003,7.5,5.98,5.84,0.14
 nm0403582,Brandon Hurst,24,1920,1944,24,The Thief of Bagdad,1924,7.7,6.36,6.21,0.14
@@ -4954,7 +4952,6 @@ nm0314611,Tygo Gernandt,29,1996,2024,28,Godforsaken,2003,7.1,5.95,5.81,0.13
 nm0357307,Jun Hamamura,38,1955,1996,41,The Burmese Harp,1956,8.0,6.91,6.78,0.13
 nm0000352,Vincent D'Onofrio,64,1987,2024,37,Full Metal Jacket,1987,8.2,6.28,6.15,0.13
 nm0000459,Timothy Hutton,45,1980,2020,40,Ordinary People,1980,7.7,6.16,6.03,0.13
-nm0002168,Willeke van Ammelrooy,32,1971,2023,52,Antonia's Line,1995,7.4,6.13,6.0,0.13
 nm0514059,Virna Lisi,44,1955,2015,60,"The Birds, the Bees and the Italians",1966,7.5,6.07,5.93,0.13
 nm1188493,Yoshiyoshi Arakawa,28,2001,2026,25,Memories of Matsuko,2006,7.8,6.55,6.42,0.13
 nm0002056,Christine Ebersole,17,1984,2026,42,Amadeus,1984,8.4,5.48,5.34,0.13
@@ -4962,15 +4959,16 @@ nm0441410,Yoshi Katô,35,1948,1988,40,A Fugitive from the Past,1965,7.9,7.16,7.0
 nm1126340,Ryûnosuke Kamiki,45,2001,2026,25,Spirited Away,2001,8.6,6.78,6.66,0.13
 nm0000721,Victoria Abril,61,1977,2020,43,Bicycles Are for the Summer,1984,7.2,5.87,5.74,0.13
 nm0002122,Harry Hamlin,17,1978,2023,45,Making Love,1982,6.9,5.6,5.47,0.13
+nm0438585,Valérie Kaprisky,17,1983,2021,38,Mouvements du désir,1994,6.7,5.66,5.53,0.13
 nm0138428,Ian Carmichael,19,1954,1979,25,School for Scoundrels,1960,7.3,6.3,6.17,0.13
 nm0592654,Chieko Misaki,42,1958,1995,37,Where Spring Comes Late,1970,7.6,6.84,6.71,0.13
-nm0835586,Axel Strøbye,44,1960,2000,40,The Olsen Gang Sees Red,1976,7.7,5.91,5.79,0.12
 nm0891485,Yul Vazquez,28,1993,2026,33,American Gangster,2007,7.8,6.03,5.92,0.12
 nm0264770,Franco Fabrizi,48,1953,1992,39,A Difficult Life,1961,8.0,6.36,6.24,0.12
 nm0358076,Neil Hamilton,51,1923,1966,43,King of the Texas Rangers,1941,7.2,6.12,6.0,0.12
 nm0438127,John Kapelos,27,1985,2026,41,The Breakfast Club,1985,7.8,5.65,5.53,0.12
 nm1282391,Vishka Assayesh,26,1998,2024,26,To Each His Own Cinema,2007,6.7,5.27,5.15,0.12
 nm0001095,Béatrice Dalle,38,1986,2025,39,The Gate of Sun,2004,7.8,6.01,5.89,0.12
+nm0000200,Bill Paxton,52,1981,2017,36,Aliens,1986,8.4,6.24,6.12,0.12
 nm0288830,Douglas Fowley,102,1934,1979,45,Singin' in the Rain,1952,8.3,6.04,5.93,0.12
 nm0571435,T.P. McKenna,16,1960,2000,40,Straw Dogs,1971,7.4,6.3,6.18,0.12
 nm0639563,George O'Brien,42,1924,1951,27,Sunrise,1927,8.1,6.22,6.1,0.12
@@ -5032,7 +5030,6 @@ nm0339452,Jane Greer,24,1945,1984,39,Out of the Past,1947,7.9,6.34,6.23,0.11
 nm0649638,Natalia Oreiro,19,1998,2026,28,Clandestine Childhood,2011,7.0,6.01,5.91,0.11
 nm0137046,Timothy Carey,25,1953,1985,32,The Killing,1956,7.9,6.16,6.05,0.11
 nm0953982,Aleksandr Zbruev,22,1962,2014,52,Kill the Dragon,1988,7.8,6.77,6.66,0.11
-nm0221321,Brigitte Lahaie,46,1970,2004,34,Education of the Baroness,1977,6.5,5.23,5.12,0.11
 nm0437147,Kanchana,15,1964,2017,53,Babruvahana,1977,8.9,8.01,7.9,0.11
 nm0604294,Gina Morett,18,1969,2024,55,"Fe, esperanza y caridad",1973,7.5,6.41,6.3,0.11
 nm0000745,Carol Alt,21,1986,2023,37,Private Parts,1997,6.9,4.75,4.63,0.11
@@ -5189,7 +5186,6 @@ nm0312575,Giuliano Gemma,53,1962,2001,39,The Leopard,1963,7.9,5.96,5.89,0.08
 nm0950546,On-On Yu,17,1977,2017,40,Swordsman II,1992,7.1,6.29,6.21,0.08
 nm0056556,Patrick Barr,25,1933,1980,47,The Dam Busters,1955,7.4,5.95,5.87,0.08
 nm0390192,Gloria Holden,20,1936,1958,22,The Life of Emile Zola,1937,7.1,6.22,6.13,0.08
-nm0000200,Bill Paxton,53,1981,2017,36,Aliens,1986,8.4,6.2,6.12,0.08
 nm0001404,Madeline Kahn,23,1972,1999,27,Paper Moon,1973,8.1,6.08,6.0,0.08
 nm0414279,Lou Jacobi,21,1953,1994,41,The Diary of Anne Frank,1959,7.4,6.37,6.29,0.08
 nm0580916,Una Merkel,77,1930,1964,34,On Borrowed Time,1939,7.7,6.31,6.23,0.08
@@ -5215,7 +5211,6 @@ nm1894038,Fiona Sit,18,2005,2025,20,2 Young,2005,6.5,5.36,5.28,0.08
 nm0000300,Juliette Binoche,66,1985,2026,41,Three Colors: Blue,1993,7.8,6.4,6.32,0.08
 nm0517054,Rifka Lodeizen,22,1997,2024,27,Simon,2004,7.8,6.5,6.42,0.08
 nm0620154,Katsuo Nakamura,20,1956,2012,56,Demons,1971,7.9,6.77,6.69,0.08
-nm0892891,Venantino Venantini,62,1962,2016,54,The Sucker,1965,7.3,5.3,5.22,0.08
 nm0915208,Naomi Watts,56,1993,2024,31,Mulholland Drive,2001,7.9,6.3,6.22,0.08
 nm0001381,Lauren Hutton,27,1968,2018,50,The Gambler,1974,7.1,5.51,5.43,0.08
 nm0920038,Titus Welliver,17,1994,2025,31,Gone Baby Gone,2007,7.6,5.84,5.76,0.08
@@ -5473,7 +5468,6 @@ nm0362815,Lumsden Hare,31,1929,1959,30,Gunga Din,1939,7.2,6.12,6.1,0.02
 nm0638056,Bill Nunn,23,1988,2012,24,The Legend of 1900,1998,8.0,6.37,6.35,0.02
 nm0102765,Jacek Braciak,28,2002,2025,23,Rose,2011,7.5,6.31,6.29,0.02
 nm0000481,Alice Krige,35,1981,2025,44,Star Trek: First Contact,1996,7.6,5.79,5.77,0.02
-nm0438585,Valérie Kaprisky,18,1982,2021,39,Mouvements du désir,1994,6.7,5.55,5.53,0.02
 nm0895759,Karin Viard,67,1991,2026,35,Delicatessen,1991,7.5,6.09,6.07,0.02
 nm0094351,Massimo Bonetti,22,1977,2024,47,Kaos,1984,7.8,6.09,6.07,0.02
 nm0307500,Beverly Garland,29,1949,1991,42,D.O.A.,1949,7.2,5.62,5.6,0.02
