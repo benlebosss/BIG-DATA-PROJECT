@@ -1,8 +1,14 @@
 # REPORT
 
+All tables come from the CSV files in `results/`. Most are written by the module of each step; the derived ones (totals, distributions, per decade...) and the figures quoted in the text are in `results/report/`, built by `python -m src.report_tables`.
+
 ## 1. Data preparation
 
 ## 2. Data exploration
+
+Seven of the eight questions (all except Q5) are about feature films, so we fixed one definition and reused it everywhere. A feature film is a title with `titleType = movie`, not flagged as adult, with a known release year and a runtime above 40 minutes (`FEATURE_MIN_RUNTIME = 40`). Forty minutes is the limit the Academy uses to separate features from shorts, and we preferred an existing convention to a number of our own.
+
+All queries read the cleaned tables in `data/clean`. A film with several genres counts once in each of its genres. IMDb stores genres in alphabetical order, not by importance, so picking a single "main" genre would have been arbitrary. The cost is that genre totals overlap, and we come back to it wherever it affects a result.
 
 ### Q1. Feature films with an unusual runtime for their genre
 
@@ -121,13 +127,13 @@ Most extreme short movies (found by the IQR criterion only):
 
 #### Methodological Explanation
 
-I looked for abnormal runtimes inside each genre, because a normal length is not the same from one genre to the next. Two rules run on the same population: a z-score (threshold set with `--z`) and the IQR fences. I ran both on purpose, because comparing them shows how skewed the runtimes are.
+We looked for abnormal runtimes inside each genre, because a normal length is not the same from one genre to the next. Two rules run on the same population: a z-score above 3 in absolute value (`--z`) and the IQR fences, below Q1 - 1.5 × IQR or above Q3 + 1.5 × IQR. We ran both on purpose, because comparing them shows how skewed the runtimes are.
 
 The gap is large. The z-score finds no short film at all and 4,708 films that are too long. The IQR rule finds 4,669 short films (5,184 film-genre rows, as a film is tested in each of its genres) and 19,039 long ones. Runtimes have a long right tail, and a few extreme values inflate the mean and the standard deviation. In 25 of the 26 genres the lower z-score bound falls under the 40-minute floor. In Film-Noir it is 40.58 minutes, still under the shortest possible runtime of 41. So the z-score can never flag a film as short. Quartiles are not pulled by the tail, so the IQR fences are tighter in all genres but Talk-Show, but that is not enough everywhere. In 14 genres the lower fence is still at 41 minutes or below (7.5 for Documentary and Western, 16.5 for Biography), and no film can be short there either. It rises above 41 minutes in the 12 other genres, among them Drama, Comedy and Action, and these are exactly the genres where the rule finds short films.
 
 The extremes mix real films and data problems. Out 1 is a real Rivette film of about 13 hours, while the Tom and Jerry anthology is a compilation. The longest title is The Story of Documentary Film (960 minutes, dated 2026), and the largest z-score is Kahrlton Heights North at 37.3. Runtimes above 1,000 minutes had already been removed during data preparation.
 
-A z-score built on the median and the MAD is the obvious alternative. I expect it to behave more like the IQR rule, since neither is distorted by extreme values, but I did not test it. The IQR rule has the opposite weakness: with 19,039 long outliers, it is quick to call a film abnormal.
+A z-score built on the median and the MAD is the obvious alternative. We expect it to behave more like the IQR rule, since neither is distorted by extreme values, but we did not test it. The IQR rule has the opposite weakness: with 19,039 long outliers, it is quick to call a film abnormal.
 
 ### Q2. Top three genres per year (1980-2025)
 
@@ -184,7 +190,7 @@ Top three genres by total number of votes (share of the year's votes in %):
 
 #### Methodological Explanation
 
-The assignment says “most popular” without defining it. I used the sum of `numVotes` over the feature films of a genre released in a given year. A vote means somebody watched the film and cared enough to rate it, which is the closest thing to audience size in IMDb. The percentage next to each genre is its share of all votes that year.
+The assignment says "most popular" without defining it. We used the sum of `numVotes` over the feature films of a genre released in a given year. A vote means somebody watched the film and cared enough to rate it, which is the closest thing to audience size in IMDb. The percentage next to each genre is its share of all votes that year.
 
 Three other measures were possible, and each one answers a different question:
 
@@ -228,7 +234,7 @@ Years in the top three:
 
 #### Methodological Explanation
 
-Each year, the three genres from Q2 form one group that is compared with all other genres together. I chose four indicators: share of votes (how much of the audience the group holds), vote-weighted rating (how well it is liked, without films with a few dozen votes distorting the mean), votes per film and number of films. Votes per film matters most, because it tells whether the audience comes from each film or from the number of films.
+Each year, the three genres from Q2 form one group that is compared with all other genres together. We chose four indicators: share of votes (how much of the audience the group holds), vote-weighted rating (how well it is liked, without films with a few dozen votes distorting the mean), votes per film and number of films. Votes per film matters most, because it tells whether the audience comes from each film or from the number of films.
 
 Three genres out of more than twenty hold 44.7% of the votes, so popularity is concentrated. Their films, however, are not individually more popular or much better rated. Votes per film are practically equal (8,186 against 8,289), the top 3 is ahead in only 26 years out of 46, and its rating advantage is 0.14 points. The difference is the size of each genre: about 1,240 films a year for each top 3 genre, against about 270 for any other genre. Taken as a group, the others still release more films (5,243 against 3,722).
 
@@ -267,11 +273,11 @@ Number of other movies:
 
 #### Methodological Explanation
 
-Directors come from `title.crew.directors`. A director qualifies with exactly one film rated 8.0 or above, at least two other films, and an average of 6.0 or below on those others. These three values are fixed in the code. I read “multiple other movies” as two or more, because with a single other film there is nothing to average. I asked for exactly one hit because a director with two films above 8.0 is no longer a one-hit case.
+Directors come from `title.crew.directors`. A director qualifies with exactly one film rated 8.0 or above, at least two other films, and an average of 6.0 or below on those others. These three values are fixed in the code. We read "multiple other movies" as two or more, because with a single other film there is nothing to average. We asked for exactly one hit because a director with two films above 8.0 is no longer a one-hit case.
 
-Only films with at least 100 votes count (`--min-votes`, the same default as in Q7 and Q8). A rating built on a few dozen votes means little: the friends of the crew are enough to produce a 9. One hundred is still low enough to keep the small, badly rated films that the “other movies” condition depends on.
+Only films with at least 100 votes count (`--min-votes`, the same default as in Q7 and Q8). A rating built on a few dozen votes means little: the friends of the crew are enough to produce a 9. One hundred is still low enough to keep the small, badly rated films that the "other movies" condition depends on.
 
-The vote threshold is the main trade-off. At 100 votes the list has 172 directors, but 82 of the hits have fewer than 1,000 votes, and 12 are 2026 releases whose ratings have not settled (Om Ka Hari stands at 9.9). I re-ran the query at 1,000 votes to see how much it matters. Only 49 directors are left, 41 from the original list and 8 new ones, and the 2026 hits drop from 12 to 2. The stricter list is more convincing, but the result clearly depends on this one setting.
+The vote threshold is the main trade-off. At 100 votes the list has 172 directors, but 82 of the hits have fewer than 1,000 votes, and 12 are 2026 releases whose ratings have not settled (Om Ka Hari stands at 9.9). We re-ran the query at 1,000 votes to see how much it matters. Only 49 directors are left, 41 from the original list and 8 new ones, and the 2026 hits drop from 12 to 2. The stricter list is more convincing, but the result clearly depends on this one setting.
 
 ### Q5. Series whose best episode is early and worst episode is in the last season
 
@@ -303,9 +309,9 @@ Summary:
 
 #### Methodological Explanation
 
-Series are titles of type `tvSeries` or `tvMiniSeries` with at least 3 seasons of at least 10 episodes (both fixed in the code). With fewer seasons, “early” and “last” overlap. The best episode must be in season 1 or 2, and the worst in the last season, taken as the highest season number. Only episodes with at least 20 votes count (`--min-votes`), a lower bar than for films because episodes get far fewer votes. Ties on rating go to the episode with more votes, so each series has exactly one best and one worst episode.
+Series are titles of type `tvSeries` or `tvMiniSeries` with at least 3 seasons of at least 10 episodes (both fixed in the code). With fewer seasons, "early" and "last" overlap. The best episode must be in season 1 or 2, and the worst in the last season, taken as the highest season number. Only episodes with at least 20 votes count (`--min-votes`), a lower bar than for films because episodes get far fewer votes. Ties on rating go to the episode with more votes, so each series has exactly one best and one worst episode.
 
-Season averages would be less sensitive to one odd episode, but the question is about episodes. Two edge cases remain. 19 of the 353 series have no end year, so their “last” season may only be the latest so far, and episodes without a season number are ignored. For the series that match, the fall is steep: the median gap between best and worst episode is 2.2 points.
+Season averages would be less sensitive to one odd episode, but the question is about episodes. Two edge cases remain. 19 of the 353 series have no end year, so their "last" season may only be the latest so far, and episodes without a season number are ignored. For the series that match, the fall is steep: the median gap between best and worst episode is 2.2 points.
 
 ### Q6. Actors successful in movies of several original languages
 
@@ -381,13 +387,13 @@ Actors successful in three or more languages:
 
 #### Methodological Explanation
 
-A film is a success with a rating of 7 or above and at least 10,000 votes. I wanted both conditions: the rating says the film is liked, the votes say it was actually seen. A film rated 7 with 300 votes may be well liked, but few people saw it.
+A film is a success with a rating of 7 or above and at least 10,000 votes. We wanted both conditions: the rating says the film is liked, the votes say it was actually seen. A film rated 7 with 300 votes may be well liked, but few people saw it.
 
-The hard part is the language, because IMDb does not give it. `title.akas` has a language column, but it is never filled on the rows marked as the original title. My first version guessed the language from the other `title.akas` rows, and it classified Wings of Desire, a German film, as English. That was enough to make me look elsewhere.
+The hard part is the language, because IMDb does not give it. `title.akas` has a language column, but it is never filled on the rows marked as the original title. Our first version guessed the language from the other `title.akas` rows, and it classified Wings of Desire, a German film, as English. That was enough to make us look elsewhere.
 
-I took the original language from Wikidata. Each film there carries its IMDb identifier (property P345), so the join is exact and needs no title matching, and property P364 gives the original language. This covers 86.6% of the successful films. Regional variants are reduced to their base language (American English becomes `en`). Otherwise an actor with one American and one British film would count as bilingual.
+We took the original language from Wikidata. Each film there carries its IMDb identifier (property P345), so the join is exact and needs no title matching, and property P364 gives the original language. This covers 86.6% of the successful films. Regional variants are reduced to their base language (American English becomes `en`). Otherwise an actor with one American and one British film would count as bilingual.
 
-Films with several original languages (11.8%) are excluded by default, which `--multi-language` can change. I cannot know which language a given actor performed in, and counting every language would create multilingual actors who are not. Where Wikidata has no answer (1.6%), the query falls back on the `title.akas` heuristic.
+Films with several original languages (11.8%) are excluded by default, which `--multi-language` can change. We cannot know which language a given actor performed in, and counting every language would create multilingual actors who are not. Where Wikidata has no answer (1.6%), the query falls back on the `title.akas` heuristic.
 
 Staying on IMDb alone would have kept the pipeline self-contained, but it would repeat the Wings of Desire error on many non-English films. The production country is no better as a proxy, since a country is not a language (India and Switzerland are enough to show it).
 
@@ -429,16 +435,16 @@ Size of the drop between the first and second half of the career:
 
 #### Methodological Explanation
 
-Actors and actresses come from `title.principals`, with feature films of at least 100 votes. Career length is the year of the last film minus the year of the first. I kept careers of at least 20 years and 15 films (both fixed in the code): a peak needs a long career to stand out from, and each half needs enough films for its average to mean something.
+Actors and actresses come from `title.principals`, with feature films of at least 100 votes. Career length is the year of the last film minus the year of the first. We kept careers of at least 20 years and 15 films (both fixed in the code): a peak needs a long career to stand out from, and each half needs enough films for its average to mean something.
 
-“Peaked early” is not defined in the assignment. I cut each career at its middle year and asked for two things: the best-rated film is in the first half, and the first half has a higher average rating than the second. Each condition alone is too weak. The best film is a single data point, and one lucky film at 25 does not make a declining career. The average alone accepts careers that drift down without ever having had a high point.
+"Peaked early" is not defined in the assignment. We cut each career at its middle year and asked for two things: the best-rated film is in the first half, and the first half has a higher average rating than the second. Each condition alone is too weak. The best film is a single data point, and one lucky film at 25 does not make a declining career. The average alone accepts careers that drift down without ever having had a high point.
 
 Two other definitions were possible:
 
 - The slope of a regression of rating on year uses every film and gives a rate of decline. But a negative slope is a trend, not a peak, and it is harder to explain than two halves.
-- Best film in the first quarter is stricter on “early” and would shorten the list, but it rests entirely on one film.
+- Best film in the first quarter is stricter on "early" and would shorten the list, but it rests entirely on one film.
 
-My definition is generous. Of the 5,522 people it returns, 2,640 lose half a point or less between the two halves, which is closer to slow erosion than to a fall, and only 1,037 lose more than one point. A minimum drop would give a shorter and more convincing list. The cut is also made on years, not on films, so the two halves can hold very different numbers of films.
+Our definition is generous. Of the 5,522 people it returns, 2,640 lose half a point or less between the two halves, which is closer to slow erosion than to a fall, and only 1,037 lose more than one point. A minimum drop would give a shorter and more convincing list. The cut is also made on years, not on films, so the two halves can hold very different numbers of films.
 
 ### Q8. Multi-talented film professionals
 
@@ -482,11 +488,11 @@ People with the most movies in several roles:
 
 Three roles count. Acting comes from `title.principals` (categories actor, actress and self). Directing and writing come from `title.crew`, completed with the director and writer rows of `title.principals`, so that a credit present in only one table is not lost. A multi-talent holds at least two roles, each on at least three films (`--min-per-role`) with 100 votes or more. Three films separates a regular activity from a one-off, such as a director with a single cameo. A higher minimum would shrink the population quickly.
 
-The question asks how these people perform, which calls for a comparison. I made it per person: the average rating of their multi-role films minus the average of their single-role films. Each person is their own reference, so the result does not depend on whether they are famous or obscure. Comparing all multi-role films with all single-role films would mostly compare different people. I still report the averages by combination because they are easy to read. They stay within a quarter of a point, from 6.00 for directing and writing down to 5.75 for acting and writing.
+The question asks how these people perform, which calls for a comparison. We made it per person: the average rating of their multi-role films minus the average of their single-role films. Each person is their own reference, so the result does not depend on whether they are famous or obscure. Comparing all multi-role films with all single-role films would mostly compare different people. We still report the averages by combination because they are easy to read. They stay within a quarter of a point, from 6.00 for directing and writing down to 5.75 for acting and writing.
 
 Combining roles changes almost nothing. The average gain goes from -0.08 to +0.05 depending on the combination, and about half of the people do better when they combine.
 
-Two limits are specific to this question. The “self” category counts as acting, although appearing as oneself in a documentary is not really acting, and it probably inflates that role. The “People” column counts all 11,082 multi-talents, while the gain only covers the 8,481 who have both kinds of films. The other 2,601 have nothing to compare.
+Two limits are specific to this question. The "self" category counts as acting, although appearing as oneself in a documentary is not really acting, and it probably inflates that role. The "People" column counts all 11,082 multi-talents, while the gain only covers the 8,481 who have both kinds of films. The other 2,601 have nothing to compare.
 
 ### Common limits
 
@@ -644,15 +650,15 @@ Sample rows (synopsis cut to 70 characters here):
 
 ### Methodological Explanation
 
-**Scope.** We enrich the feature films defined in Part 2, released between 1980 and 2025. For each genre and year we keep the 10 films with the most votes, and ties are broken by `tconst` so that the selection is the same on every run. There are 1,027 genre-year groups, 68 of which contain fewer than 10 films, which gives 9,833 rows instead of 10,270. Since a film can be in the top 10 of several genres, this is 6,820 distinct films. For each film we take the first three principals in IMDb’s ordering, actors, actresses and directors first, then whoever comes next when one is missing (`self` in documentaries, for example). A voice actor credited for several characters counts once. This gives 10,452 distinct people, and 23 films have fewer than three principals in IMDb itself.
+**Scope.** We enrich the feature films defined in Part 2, released between 1980 and 2025. For each genre and year we keep the 10 films with the most votes, and ties are broken by `tconst` so that the selection is the same on every run. There are 1,027 genre-year groups, 68 of which contain fewer than 10 films, which gives 9,833 rows instead of 10,270. Since a film can be in the top 10 of several genres, this is 6,820 distinct films. For each film we take the first three principals in IMDb's ordering, actors, actresses and directors first, then whoever comes next when one is missing (`self` in documentaries, for example). A voice actor credited for several characters counts once. This gives 10,452 distinct people, and 23 films have fewer than three principals in IMDb itself.
 
 **Source and link.** The assignment asks for open text written by humans. English Wikipedia fits both: articles are written and reviewed by volunteers and published under CC BY-SA. To find the right page we go through Wikidata (CC0), where property P345 stores the IMDb identifier and the sitelink points to the English article, so the match is exact. Our first version (PR #8) searched by title instead, on the REST `page/summary` endpoint, for the 200 most-voted titles (movies and TV series together) and 200 people. It tried candidates like `Title_(2010_film)`, `Title_(film)`, `Title_(TV_series)` and the bare title. Guessing titles breaks on remakes and homonyms, and that endpoint returns the introduction of the article, not the synopsis, so we dropped it.
 
 **Content.** For a film, the introduction mostly covers cast, release and reception. The synopsis is in a section called Plot, Synopsis, Plot summary, Premise or Story, so we extract that section as plain text with the `extracts` API (median 604 words). For a person it is the other way round: the introduction (`exintro`) is already a short biography (median 92 words), and the full article would be far too long.
 
-**Collection.** Collection runs outside Spark in `wiki_texts.py`, as the assignment allows, and follows Wikimedia’s rules. Requests are sent one at a time, never in parallel, with a User-Agent that names the project and gives the repository URL. On Wikipedia requests we set `maxlag=5`, so the server can refuse when it is loaded. On a 429 or a maxlag reply the code waits for the `Retry-After` delay (10 s by default), and network errors are retried up to 5 times with a wait that doubles from 5 to 80 s. Wikidata is queried through SPARQL in batches of 200 identifiers, with a 1 s pause and the same 429 handling. Wikipedia gets one page per request for synopses, because the full article is needed, and 20 per request for biographies, with a 0.2 s pause. Every response is cached in JSONL files, so a new run only asks for what is missing.
+**Collection.** Collection runs outside Spark in `wiki_texts.py`, as the assignment allows, and follows Wikimedia's rules. Requests are sent one at a time, never in parallel, with a User-Agent that names the project and gives the repository URL. On Wikipedia requests we set `maxlag=5`, so the server can refuse when it is loaded. On a 429 or a maxlag reply the code waits for the `Retry-After` delay (10 s by default), and network errors are retried up to 5 times with a wait that doubles from 5 to 80 s. Wikidata is queried through SPARQL in batches of 200 identifiers, with a 1 s pause and the same 429 handling. Wikipedia gets one page per request for synopses, because the full article is needed, and 20 per request for biographies, with a 0.2 s pause. Every response is cached in JSONL files, so a new run only asks for what is missing.
 
-**Spark.** Everything after collection happens in Spark (`build.py`). The JSONL files are read with an explicit schema, the text is cleaned (repeated spaces and line breaks collapsed, reference marks like `[12]` removed, empty text set to null) and duplicates are dropped on the identifier. The result is joined with the selection and with `name.basics`. Every row that has a text carries its lineage, `source_url` and `retrieved_at`. Every row without one carries a note instead: “no English Wikipedia article”, “article found but no Plot section” or “not looked up yet”. Rows with the second note still keep their `source_url`, so we know which page was checked. We checked that no `[n]` mark is left, that a note exists exactly when the text is missing, and that every text has a URL.
+**Spark.** Everything after collection happens in Spark (`build.py`). The JSONL files are read with an explicit schema, the text is cleaned (repeated spaces and line breaks collapsed, reference marks like `[12]` removed, empty text set to null) and duplicates are dropped on the identifier. The result is joined with the selection and with `name.basics`. Every row that has a text carries its lineage, `source_url` and `retrieved_at`. Every row without one carries a note instead: "no English Wikipedia article", "article found but no Plot section" or "not looked up yet". Rows with the second note still keep their `source_url`, so we know which page was checked. We checked that no `[n]` mark is left, that a note exists exactly when the text is missing, and that every text has a URL.
 
 **Coverage and scaling.** 89.0% of the film-genre rows have a synopsis (85.8% of distinct films): 492 films have no English article and 477 have an article without a plot section. Coverage is very uneven by genre, from 99.8% for Action to 48.5% for Documentary and almost nothing for News, Reality-TV, Game-Show and Talk-Show. The causes differ. In Documentary, 202 of the 237 rows without a synopsis do have an English article, but a documentary has no plot to summarise. In News, Reality-TV, Talk-Show, Game-Show and Western the main cause is the missing English article (179 of the 208 missing Western rows, for example), and there the gap does come from relying on a single source in a single language. 75.4% of people have a biography, with directors (60.1%) well behind actresses (81.1%) and actors (78.4%). We accepted these gaps because most rows are covered and every gap is labelled. Nothing in the code is specific to these 6,820 films. The selection is driven by `--start`, `--end`, `--top` and `--people`, and the collector reads any list of identifiers from Parquet. The first pass took about 1 h 30. On the full dataset the limit would not be Spark but the request rate, which we keep low on purpose, and the cache lets a long collection be stopped and resumed.
 
@@ -662,7 +668,7 @@ Sample rows (synopsis cut to 70 characters here):
 
 ### 5.1 Do director-actor duos make better films together?
 
-Some directors keep coming back to the same actor: Kurosawa and Mifune, Scorsese and De Niro. Film history treats these pairs as something special, and I wanted to check it on the whole dataset: are the films a duo makes together rated higher than what each of them does separately? The question needs no data outside IMDb, but it joins five tables and compares each pair with two separate filmographies.
+Some directors keep coming back to the same actor: Kurosawa and Mifune, Scorsese and De Niro. Film history treats these pairs as something special, and we wanted to check it on the whole dataset: are the films a duo makes together rated higher than what each of them does separately? The question needs no data outside IMDb, but it joins five tables and compares each pair with two separate filmographies.
 
 All duos:
 
@@ -759,11 +765,11 @@ Lowest lift (duos with 5 films or more):
 
 #### Methodological Explanation
 
-**Data and definition.** The query joins `title.basics` (the feature films of Part 2), `title.ratings`, `title.crew` for directors, `title.principals` for actors and actresses, and `name.basics` for names. I keep films with at least 1,000 votes (`--min-votes`). That is stricter than in most of Part 2, because a duo's average can rest on only three films and each rating has to be reliable. A duo is a director and an actor with at least 3 feature films together (`--min-films`): two films can be a coincidence or a sequel, three starts to look like a habit. Someone who directs themselves is not a duo, and two co-directors count as two duos.
+**Data and definition.** The query joins `title.basics` (the feature films of Part 2), `title.ratings`, `title.crew` for directors, `title.principals` for actors and actresses, and `name.basics` for names. We keep films with at least 1,000 votes (`--min-votes`). That is stricter than in most of Part 2, because a duo's average can rest on only three films and each rating has to be reliable. A duo is a director and an actor with at least 3 feature films together (`--min-films`): two films can be a coincidence or a sequel, three starts to look like a habit. Someone who directs themselves is not a duo, and two co-directors count as two duos.
 
-**Lift.** For each duo I compute the average rating of their films together, then subtract a baseline. The baseline is the mean of two numbers: the director's average without this actor, and the actor's average without this director. Each of them needs at least 2 films outside the duo (fixed in the code), or there is nothing to compare with. I gave the two sides equal weight on purpose. If I had pooled all their other films, a director with forty films would have decided the baseline almost alone. A positive lift means the pair does better together than apart.
+**Lift.** For each duo we compute the average rating of their films together, then subtract a baseline. The baseline is the mean of two numbers: the director's average without this actor, and the actor's average without this director. Each of them needs at least 2 films outside the duo (fixed in the code), or there is nothing to compare with. We gave the two sides equal weight on purpose. If we had pooled all their other films, a director with forty films would have decided the baseline almost alone. A positive lift means the pair does better together than apart.
 
-**Limits.** The lift is not a causal effect. People usually keep working together because their first films did well, so duos that reach three films are already a selected group. I also checked regression to the mean in a simple way. If the lift came only from pairs starting from a low baseline, it would fall steadily as the baseline rises. By baseline quartile the lift is +0.17, +0.23, +0.22 and +0.13. It is lowest in the top quartile, but it rises before it falls, and the correlation between baseline and lift is 0.02. So the data show no clear trend, which is a weaker statement than saying the lift does not decline. As everywhere in this report, the IMDb rating is the only measure of quality.
+**Limits.** The lift is not a causal effect. People usually keep working together because their first films did well, so duos that reach three films are already a selected group. We also checked regression to the mean in a simple way. If the lift came only from pairs starting from a low baseline, it would fall steadily as the baseline rises. By baseline quartile the lift is +0.17, +0.23, +0.22 and +0.13. It is lowest in the top quartile, but it rises before it falls, and the correlation between baseline and lift is 0.02. So the data show no clear trend, which is a weaker statement than saying the lift does not decline. As everywhere in this report, the IMDb rating is the only measure of quality.
 
 **Alternatives.** A regression with one fixed effect per director and per actor would separate each person's own level from the pair more cleanly, especially for directors in dozens of duos like Michael Curtiz (37). It is harder to explain, and with three films per duo the pair effect would rest on very little. Comparing films before and after the first collaboration would get closer to causality, but ratings also move with age and period, so the comparison would mix the two. Weighting by votes would let one blockbuster decide a duo's average, and the 1,000-vote minimum already removes unreliable ratings.
 
