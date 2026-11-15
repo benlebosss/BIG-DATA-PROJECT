@@ -423,6 +423,152 @@ People with the most movies in several roles:
 
 ## 3. Data enrichment
 
+### Scope
+
+| Item                                          | Value     |
+|-----------------------------------------------|-----------|
+| Years                                         | 1980-2025 |
+| Genres                                        | 25        |
+| Genre-year groups                             | 1027      |
+| Film x genre rows (top 10 per genre and year) | 9833      |
+| Distinct films                                | 6820      |
+| Film x person rows (first 3 principals)       | 20428     |
+| Distinct people                               | 10452     |
+| Films with fewer than 3 principals in IMDb    | 23        |
+
+### Coverage
+
+Synopses:
+
+| Level             | Total | With synopsis |    % |
+|-------------------|------:|--------------:|-----:|
+| Film x genre rows |  9833 |          8756 | 89.0 |
+| Distinct films    |  6820 |          5851 | 85.8 |
+
+Films (one row per film and genre):
+
+| Status                            | Rows |    % |
+|-----------------------------------|-----:|-----:|
+| no English Wikipedia article      |  501 |  5.1 |
+| article found but no Plot section |  576 |  5.9 |
+| ok                                | 8756 | 89.0 |
+
+Principals (one row per person):
+
+| Status                       | People |    % |
+|------------------------------|-------:|-----:|
+| no English Wikipedia article |   2568 | 24.6 |
+| ok                           |   7884 | 75.4 |
+
+Biographies per role:
+
+| Role            | People | With biography |    % |
+|-----------------|-------:|---------------:|-----:|
+| actor           |   5732 |           4493 | 78.4 |
+| actress         |   3251 |           2636 | 81.1 |
+| archive_footage |    109 |             82 | 75.2 |
+| archive_sound   |      2 |              0 |  0.0 |
+| cinematographer |     11 |              1 |  9.1 |
+| composer        |     17 |              5 | 29.4 |
+| director        |    611 |            367 | 60.1 |
+| editor          |     11 |              1 |  9.1 |
+| producer        |     50 |             11 | 22.0 |
+| self            |    737 |            383 | 52.0 |
+| writer          |     23 |              4 | 17.4 |
+
+Per decade (distinct films, people counted once per decade):
+
+| Decade | Films | With synopsis | % synopsis | People | With biography | % bio |
+|--------|------:|--------------:|-----------:|-------:|---------------:|------:|
+| 1980s  |  1403 |          1182 |       84.2 |   2901 |           2356 |  81.2 |
+| 1990s  |  1432 |          1244 |       86.9 |   2651 |           2211 |  83.4 |
+| 2000s  |  1443 |          1283 |       88.9 |   2593 |           2179 |  84.0 |
+| 2010s  |  1594 |          1351 |       84.8 |   2955 |           2277 |  77.1 |
+| 2020s  |   948 |           791 |       83.4 |   2149 |           1641 |  76.4 |
+
+Synopses per genre (lowest coverage first):
+
+| Genre       | Rows | With synopsis |    % |
+|-------------|-----:|--------------:|-----:|
+| Game-Show   |    3 |             0 |  0.0 |
+| Talk-Show   |   18 |             0 |  0.0 |
+| Reality-TV  |   66 |             4 |  6.1 |
+| News        |  139 |            20 | 14.4 |
+| Documentary |  460 |           223 | 48.5 |
+| Western     |  407 |           199 | 48.9 |
+| Musical     |  460 |           381 | 82.8 |
+| Sport       |  460 |           382 | 83.0 |
+| War         |  460 |           394 | 85.7 |
+| History     |  460 |           408 | 88.7 |
+| Music       |  460 |           410 | 89.1 |
+| Animation   |  460 |           434 | 94.3 |
+| Biography   |  460 |           439 | 95.4 |
+| Family      |  460 |           447 | 97.2 |
+| Fantasy     |  460 |           448 | 97.4 |
+| Horror      |  460 |           454 | 98.7 |
+| Sci-Fi      |  460 |           455 | 98.9 |
+| Romance     |  460 |           455 | 98.9 |
+| Crime       |  460 |           456 | 99.1 |
+| Thriller    |  460 |           457 | 99.3 |
+| Drama       |  460 |           457 | 99.3 |
+| Mystery     |  460 |           458 | 99.6 |
+| Comedy      |  460 |           458 | 99.6 |
+| Adventure   |  460 |           458 | 99.6 |
+| Action      |  460 |           459 | 99.8 |
+
+Length of the collected texts (words):
+
+| Text                             | Count | Median words | 10th pct | 90th pct |  Max |
+|----------------------------------|------:|-------------:|---------:|---------:|-----:|
+| Synopsis (Plot section)          |  5851 |          604 |      202 |      740 | 2355 |
+| Biography (article introduction) |  7884 |           92 |       26 |      309 |  732 |
+
+### Output and lineage
+
+Films table:
+
+| Column        | Type   |
+|---------------|--------|
+| tconst        | string |
+| primaryTitle  | string |
+| year          | int32  |
+| genre         | string |
+| rank          | int32  |
+| averageRating | double |
+| numVotes      | int32  |
+| synopsis      | string |
+| source_url    | string |
+| retrieved_at  | string |
+| note          | string |
+
+People table:
+
+| Column       | Type   |
+|--------------|--------|
+| nconst       | string |
+| tconst       | string |
+| category     | string |
+| ordering     | int32  |
+| primaryName  | string |
+| birthYear    | int32  |
+| deathYear    | int32  |
+| biography    | string |
+| source_url   | string |
+| retrieved_at | string |
+| note         | string |
+
+Sample rows (synopsis cut to 70 characters here):
+
+| tconst    | primaryTitle             | year | genre    | synopsis                                                                  | source_url                                             | retrieved_at              | note                              |
+|-----------|--------------------------|-----:|----------|---------------------------------------------------------------------------|--------------------------------------------------------|---------------------------|-----------------------------------|
+| tt0111161 | The Shawshank Redemption | 1994 | Drama    | In 1947, Portland, Maine, banker Andy Dufresne arrives at Shawshank St... | https://en.wikipedia.org/wiki/The_Shawshank_Redemption | 2026-11-14T14:53:13+00:00 |                                   |
+| tt0468569 | The Dark Knight          | 2008 | Crime    | A gang of masked criminals rob a mafia-owned bank in Gotham City, betr... | https://en.wikipedia.org/wiki/The_Dark_Knight          | 2026-11-14T14:47:18+00:00 |                                   |
+| tt0468569 | The Dark Knight          | 2008 | Thriller | A gang of masked criminals rob a mafia-owned bank in Gotham City, betr... | https://en.wikipedia.org/wiki/The_Dark_Knight          | 2026-11-14T14:47:18+00:00 |                                   |
+| tt0401792 | Sin City                 | 2005 | Thriller |                                                                           | https://en.wikipedia.org/wiki/Sin_City_%28film%29      | 2026-11-14T14:41:44+00:00 | article found but no Plot section |
+| tt0892255 | Che: Part One            | 2008 | History  |                                                                           |                                                        |                           | no English Wikipedia article      |
+
+### Methodological Explanation
+
 ## 4. Streaming
 
 ## 5. Open question
