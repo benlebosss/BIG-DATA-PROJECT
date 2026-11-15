@@ -74,6 +74,23 @@ def stream_changes(url: str = STREAM_URL) -> Iterator[str]:
         delay = min(delay * 2, 60)
 
 
+def connect(bootstrap, retries=30, delay=2.0):
+    from kafka import KafkaProducer
+    from kafka.errors import NoBrokersAvailable
+    for attempt in range(retries):
+        try:
+            return KafkaProducer(
+                bootstrap_servers=bootstrap,
+                key_serializer=lambda k: k.encode("utf-8"),
+                value_serializer=lambda v: json.dumps(v).encode("utf-8"),
+                linger_ms=200,
+            )
+        except NoBrokersAvailable:
+            log.warning("Kafka not ready (%s/%s), retrying in %ss", attempt + 1, retries, delay)
+            time.sleep(delay)
+    raise NoBrokersAvailable()
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--bootstrap", default=os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092"))
@@ -90,13 +107,7 @@ def main() -> None:
 
     producer = None
     if not a.dry_run:
-        from kafka import KafkaProducer
-        producer = KafkaProducer(
-            bootstrap_servers=a.bootstrap,
-            key_serializer=lambda k: k.encode("utf-8"),
-            value_serializer=lambda v: json.dumps(v).encode("utf-8"),
-            linger_ms=200,
-        )
+        producer = connect(a.bootstrap)
 
     sent = 0
     for data in stream_changes():
