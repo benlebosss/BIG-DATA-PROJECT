@@ -1,5 +1,5 @@
 nconst,primaryName,talents,n_multi_role_movies,n_single_role_movies,avg_rating_multi,avg_rating_single,rating_gain
-nm0001238,Jesús Franco,act+direct+write,127,26,4.65,4.62,0.03
+nm0001238,Jesús Franco,act+direct+write,112,23,4.66,4.6,0.06
 nm0939147,Jing Wong,act+direct+write,91,71,5.65,5.72,-0.07
 nm0945282,Yōji Yamada,direct+write,63,7,6.89,6.89,0.0
 nm0197929,Giannis Dalianidis,direct+write,61,12,5.98,5.94,0.04
@@ -27,7 +27,6 @@ nm0000005,Ingmar Bergman,act+direct+write,38,17,7.28,6.52,0.76
 nm0654839,Mariano Ozores,direct+write,38,10,4.91,5.09,-0.18
 nm0002194,Pupi Avati,direct+write,38,8,6.24,5.98,0.26
 nm0820208,Sreenivasan,act+write,37,71,7.22,6.44,0.78
-nm0765430,Joseph W. Sarno,direct+write,36,2,5.32,6.45,-1.13
 nm0502391,Umberto Lenzi,direct+write,36,25,5.47,5.49,-0.01
 nm0000694,Wim Wenders,act+direct+write,35,23,6.76,6.71,0.05
 nm0002086,Lucio Fulci,act+direct+write,35,29,5.86,5.99,-0.13
@@ -39,7 +38,6 @@ nm0700872,Puri Jagannadh,direct+write,33,7,5.53,6.26,-0.72
 nm0664218,Spede Pasanen,act+direct+write,33,6,5.38,5.33,0.05
 nm0831321,Chris Stokes,direct+write,33,9,4.72,5.07,-0.35
 nm5472963,Brett Bentman,direct+write,32,3,3.35,3.57,-0.22
-nm0001090,Joe D'Amato,act+direct+write,32,41,4.57,4.47,0.09
 nm0814469,Sion Sono,act+direct+write,32,6,6.35,5.53,0.82
 nm0000041,Akira Kurosawa,direct+write,31,26,7.54,6.78,0.77
 nm0006249,Satyajit Ray,direct+write,31,20,7.87,6.83,1.04
@@ -76,6 +74,7 @@ nm0697935,David A. Prior,direct+write,26,5,4.12,3.42,0.7
 nm1953143,Steven M. Smith,act+direct+write,26,1,2.96,2.7,0.26
 nm0006445,Éric Rohmer,direct+write,26,2,7.11,6.0,1.11
 nm0069166,Marco Bellocchio,act+direct+write,26,8,6.54,6.35,0.19
+nm0765430,Joseph W. Sarno,direct+write,26,2,5.19,6.45,-1.26
 nm0442455,Mika Kaurismäki,direct+write,26,9,6.3,6.46,-0.16
 nm0252475,Hasse Ekman,act+direct+write,26,9,5.95,6.34,-0.39
 nm0719756,Jean Renoir,direct+write,26,9,6.82,6.44,0.37
@@ -83,6 +82,7 @@ nm0463740,Ere Kokkonen,act+direct+write,26,9,5.35,5.91,-0.56
 nm0000142,Clint Eastwood,act+direct,25,53,6.91,6.91,0.01
 nm0000264,Pedro Almodóvar,act+direct+write,25,3,6.88,5.9,0.98
 nm0711745,Mani Ratnam,direct+write,25,11,7.41,6.55,0.85
+nm0001090,Joe D'Amato,direct+write,25,35,4.51,4.47,0.04
 nm1104118,Kim Ki-duk,act+direct+write,25,6,6.55,6.45,0.1
 nm0553941,Sergio Martino,direct+write,25,15,5.43,5.77,-0.34
 nm0953130,Krzysztof Zanussi,direct+write,25,3,6.28,7.0,-0.72
@@ -99,12 +99,10 @@ nm0491626,Georges Lautner,direct+write,24,12,6.03,6.32,-0.28
 nm0002087,Samuel Fuller,act+direct+write,24,34,6.7,6.11,0.6
 nm0308042,Philippe Garrel,act+direct+write,24,1,6.5,6.0,0.5
 nm2096009,Andrew Jones,direct+write,24,4,2.81,3.13,-0.31
-nm0226244,Erwin C. Dietrich,act+direct+write,24,14,4.33,4.81,-0.48
 nm0347589,Sacha Guitry,act+direct+write,24,11,6.71,6.25,0.46
 nm0163229,René Clair,direct+write,23,4,6.71,6.95,-0.24
 nm0894577,Henri Verneuil,direct+write,23,9,6.83,6.4,0.43
 nm0921631,Lina Wertmüller,direct+write,23,10,6.18,5.54,0.64
-nm0001206,Abel Ferrara,act+direct+write,23,11,5.59,5.45,0.14
 nm3797575,Srijit Mukherji,act+direct+write,23,11,6.71,6.52,0.19
 nm0003606,Philippe de Broca,act+direct+write,23,11,6.08,6.25,-0.18
 nm0321159,Amos Gitai,act+direct+write,23,2,5.87,5.8,0.07
@@ -123,8 +121,8 @@ nm0230695,Jacques Doillon,act+direct+write,23,5,5.97,6.24,-0.27
 nm0290556,James Franco,act+direct+write,22,63,5.12,6.0,-0.88
 nm3848412,Sam Mason-Bell,act+direct+write,22,8,3.52,3.2,0.32
 nm0496312,Patrice Leconte,direct+write,22,13,6.21,6.2,0.01
-nm0210811,Jean Rollin,act+direct+write,22,6,5.19,4.08,1.11
 nm0000972,Tinto Brass,act+direct+write,22,6,5.2,5.8,-0.6
+nm0001206,Abel Ferrara,act+direct+write,22,11,5.66,5.45,0.21
 nm0729626,Jacques Rivette,direct+write,22,4,6.92,6.93,0.0
 nm0001429,Takeshi Kitano,act+direct+write,22,15,6.9,6.36,0.54
 nm0093051,Uwe Boll,act+direct+write,22,12,3.91,4.32,-0.41
@@ -142,13 +140,13 @@ nm0477702,Helmut Käutner,direct+write,21,11,6.69,6.48,0.21
 nm0000425,Peter Greenaway,act+direct+write,21,4,6.64,7.23,-0.59
 nm0003836,Michael Powell,direct+write,21,20,6.84,6.23,0.62
 nm0406728,Kon Ichikawa,direct+write,21,16,6.7,6.97,-0.27
+nm0210811,Jean Rollin,direct+write,21,4,5.2,3.93,1.28
 nm0595063,Giuseppe Moccia,direct+write,21,40,5.59,5.85,-0.27
 nm0000801,Olivier Assayas,act+direct+write,21,13,6.39,6.56,-0.18
 nm0440604,Anurag Kashyap,act+direct+write,21,46,6.99,6.41,0.58
 nm0173101,Fernando Colomo,act+direct+write,21,9,5.31,5.77,-0.45
 nm0315916,Rituparno Ghosh,act+direct+write,21,2,7.24,7.5,-0.26
 nm0112218,Richard Brooks,direct+write,21,14,6.64,6.68,-0.04
-nm0822555,Doris Wishman,act+direct+write,21,6,4.49,4.72,-0.23
 nm1069826,Gautham Vasudev Menon,act+direct+write,21,26,6.81,6.31,0.5
 nm0000878,Mario Bava,direct+write,21,11,6.15,5.61,0.54
 nm0411030,Teruo Ishii,direct+write,21,2,6.1,6.4,-0.3
@@ -191,9 +189,10 @@ nm0000490,Spike Lee,act+direct+write,19,25,6.43,6.97,-0.54
 nm0894787,Giovanni Veronesi,direct+write,19,26,5.58,5.62,-0.04
 nm0518579,Ulli Lommel,act+direct+write,19,17,3.84,6.1,-2.26
 nm0647438,Ermanno Olmi,direct+write,19,1,6.86,6.5,0.36
-nm0504496,Herschell Gordon Lewis,act+direct+write,19,20,4.45,4.89,-0.43
+nm0504496,Herschell Gordon Lewis,act+direct+write,19,19,4.45,4.96,-0.51
 nm0350168,Robert Guédiguian,direct+write,19,1,6.53,7.0,-0.47
 nm0297935,Kinji Fukasaku,direct+write,19,28,6.77,6.89,-0.11
+nm0822555,Doris Wishman,direct+write,19,6,4.49,4.72,-0.22
 nm0305054,José Luis Garci,direct+write,19,8,6.34,6.15,0.19
 nm0850895,Frank Tashlin,direct+write,19,35,6.23,6.48,-0.25
 nm0088397,Bertrand Blier,direct+write,19,5,6.28,4.6,1.68
@@ -208,6 +207,7 @@ nm0202681,Delmer Daves,act+direct+write,19,37,6.67,6.32,0.35
 nm0210130,Alberto De Martino,direct+write,19,8,5.11,5.25,-0.14
 nm0484073,Jun Robles Lana,direct+write,19,10,6.44,6.36,0.08
 nm1326535,Sundar C.,act+direct+write,19,14,5.28,6.54,-1.26
+nm0226244,Erwin C. Dietrich,act+direct+write,19,13,4.27,4.83,-0.56
 nm0000329,Jackie Chan,act+direct+write,19,94,6.7,5.91,0.79
 nm0351566,Yılmaz Güney,act+direct+write,19,14,6.38,6.16,0.23
 nm0269778,Fazil,direct+write,19,10,6.61,6.92,-0.31
@@ -215,7 +215,6 @@ nm0092372,Yves Boisset,direct+write,19,2,6.26,6.85,-0.59
 nm0335093,Gilles Grangier,direct+write,18,5,6.21,6.06,0.15
 nm4500258,Scott Chambers,act+direct+write,18,29,3.29,3.47,-0.18
 nm0220227,Jacques Deray,direct+write,18,5,6.09,6.02,0.07
-nm0701773,Max Pécas,direct+write,18,1,4.29,3.9,0.39
 nm0554924,Gilberto Martínez Solares,direct+write,18,9,6.5,5.68,0.82
 nm0040789,Gianfranco Parolini,act+direct+write,18,6,5.03,5.28,-0.26
 nm0563509,Amácio Mazzaropi,act+direct+write,18,7,6.7,7.1,-0.4
@@ -225,7 +224,7 @@ nm0000110,Kenneth Branagh,act+direct+write,18,30,6.73,6.64,0.09
 nm0463674,Vincent Kok,act+direct+write,18,42,5.33,6.18,-0.84
 nm0080333,Vikram Bhatt,act+direct+write,18,31,4.64,5.15,-0.5
 nm0906413,Ka-Fai Wai,direct+write,18,13,6.26,6.25,0.01
-nm0023929,Charles Band,act+direct+write,18,37,3.95,4.57,-0.62
+nm0023929,Charles Band,act+direct+write,18,36,3.95,4.57,-0.62
 nm0096180,Bernard Borderie,direct+write,18,1,5.94,5.8,0.14
 nm0001709,Til Schweiger,act+direct+write,18,45,5.33,5.6,-0.26
 nm0000382,Atom Egoyan,act+direct+write,18,10,6.42,6.23,0.19
@@ -252,7 +251,6 @@ nm0216381,Jean Delannoy,direct+write,18,8,6.33,6.71,-0.38
 nm0264762,Aldo Fabrizi,act+direct+write,18,23,6.74,6.39,0.36
 nm0784019,Mrinal Sen,direct+write,18,1,7.37,6.5,0.87
 nm0112374,Nick Broomfield,act+direct+write,18,7,6.61,7.04,-0.43
-nm0515491,Carlo Lizzani,direct+write,18,18,6.49,6.28,0.21
 nm0213940,Henri Decoin,direct+write,17,12,6.45,6.32,0.13
 nm0015570,Orhan Aksoy,direct+write,17,38,5.96,5.94,0.02
 nm0412517,Shunji Iwai,direct+write,17,6,6.79,6.47,0.33
@@ -300,8 +298,10 @@ nm0110292,Fausto Brizzi,direct+write,17,25,5.56,4.67,0.89
 nm0118345,Detlev Buck,act+direct+write,17,30,5.7,6.21,-0.51
 nm0004365,Fred Williamson,act+direct+write,17,52,4.69,4.91,-0.21
 nm0417352,Miklós Jancsó,direct+write,17,6,6.21,6.68,-0.48
+nm0515491,Carlo Lizzani,direct+write,17,18,6.52,6.28,0.25
 nm0004466,E.V.V. Satyanarayana,direct+write,16,5,6.69,6.4,0.29
 nm0314584,Pietro Germi,act+direct+write,16,6,7.14,6.88,0.25
+nm0701773,Max Pécas,direct+write,16,1,4.16,3.9,0.26
 nm1066396,Ranjith,act+direct+write,16,32,6.43,6.48,-0.04
 nm0001929,Josiane Balasko,act+direct+write,16,65,5.73,5.6,0.13
 nm0726472,Adam Rifkin,act+direct+write,16,13,5.19,5.09,0.1
@@ -422,7 +422,6 @@ nm0007131,Subhash Ghai,direct+write,15,9,6.05,6.37,-0.31
 nm0138759,Marcos Carnevale,direct+write,15,14,6.09,5.41,0.69
 nm0653620,Gérard Oury,act+direct+write,15,19,6.0,6.42,-0.42
 nm0035067,Cüneyt Arkın,act+direct+write,15,121,5.19,5.65,-0.46
-nm0107664,Alfonso Brescia,direct+write,15,21,4.5,4.9,-0.4
 nm3524360,Travis Mills,act+direct+write,15,3,4.73,5.07,-0.34
 nm0002218,Claude Miller,direct+write,15,6,6.55,5.9,0.65
 nm0005196,Paul Mazursky,act+direct+write,15,16,6.21,5.97,0.24
@@ -458,7 +457,6 @@ nm0136552,René Cardona Jr.,direct+write,14,8,4.97,4.78,0.2
 nm0474398,Nagesh Kukunoor,act+direct+write,14,0,6.83,,
 nm0664607,Goran Paskaljevic,direct+write,14,5,7.0,7.02,-0.02
 nm0001196,Douglas Fairbanks,act+write,14,19,6.69,6.13,0.56
-nm0011897,Roberta Findlay,act+direct+write,14,9,4.82,5.23,-0.41
 nm0271084,Serge Rodnunsky,direct+write,14,1,3.93,4.3,-0.37
 nm0694843,Renato Pozzetto,act+direct+write,14,44,5.59,5.75,-0.15
 nm0218840,Jacques Demy,direct+write,14,2,6.61,6.4,0.21
@@ -484,7 +482,6 @@ nm0275421,Louis Feuillade,direct+write,14,1,7.03,7.0,0.03
 nm1761677,Brandon Slagle,act+direct+write,14,14,3.48,3.85,-0.37
 nm0586399,Ted V. Mikels,act+direct+write,14,6,3.72,3.98,-0.26
 nm0645477,Kihachi Okamoto,direct+write,14,14,6.87,6.83,0.04
-nm0227661,Chuck Vincent,direct+write,14,11,4.96,4.66,0.3
 nm0748207,Sergio Rubini,act+direct+write,14,43,6.28,6.18,0.1
 nm0649097,Max Ophüls,direct+write,14,8,7.06,6.59,0.47
 nm0760072,Salvatore Samperi,direct+write,14,3,5.56,4.43,1.13
@@ -503,6 +500,7 @@ nm0001120,Vittorio De Sica,act+direct+write,14,77,6.74,6.35,0.39
 nm0154113,Basu Chatterjee,direct+write,14,5,6.95,7.18,-0.23
 nm1823283,Kôji Shiraishi,act+direct+write,14,5,5.75,5.18,0.57
 nm0425364,Jesse V. Johnson,direct+write,14,10,5.2,5.14,0.06
+nm0107664,Alfonso Brescia,direct+write,14,21,4.54,4.9,-0.37
 nm0696247,Emeric Pressburger,direct+write,14,20,7.13,6.42,0.71
 nm1212770,Wenn V. Deramas,direct+write,14,7,6.04,6.21,-0.18
 nm1992193,Denis Côté,direct+write,14,0,6.08,,
@@ -541,7 +539,6 @@ nm0065449,Jean Becker,direct+write,13,4,6.42,7.18,-0.75
 nm0294758,Martin Frič,direct+write,13,14,7.5,7.09,0.41
 nm0000116,James Cameron,act+direct+write,13,18,7.3,7.24,0.06
 nm0379445,Jaime Humberto Hermosillo,direct+write,13,2,6.5,6.35,0.15
-nm0478418,Bruce LaBruce,act+direct+write,13,7,5.15,6.44,-1.3
 nm0002545,Preston Sturges,direct+write,13,27,6.85,6.49,0.36
 nm0659057,Nikos Panayotopoulos,direct+write,13,0,5.6,,
 nm0065442,Jacques Becker,direct+write,13,3,7.04,6.4,0.64
@@ -681,7 +678,6 @@ nm0677880,Elio Petri,direct+write,12,11,7.06,6.75,0.3
 nm0391502,Hannes Holm,direct+write,12,4,5.72,5.77,-0.05
 nm1055105,Madhur Bhandarkar,direct+write,12,4,6.31,5.5,0.81
 nm2201881,Şahan Gökbakar,act+write,12,2,3.97,3.45,0.52
-nm0000127,Wes Craven,act+direct+write,12,27,5.8,6.03,-0.23
 nm0605741,Yoshimitsu Morita,direct+write,12,8,6.07,6.55,-0.48
 nm0946995,Patrick Kong,direct+write,12,11,5.29,5.53,-0.24
 nm1205568,Barbara Wong Chun-Chun,act+direct+write,12,3,5.34,5.53,-0.19
@@ -736,7 +732,6 @@ nm0408348,Hiroshi Inagaki,direct+write,11,6,6.95,7.02,-0.07
 nm0708422,P. Ramlee,act+direct+write,11,1,7.92,8.5,-0.58
 nm0000188,Steve Martin,act+write,11,37,6.41,6.52,-0.12
 nm0203246,Boaz Davidson,act+direct+write,11,25,5.57,4.87,0.7
-nm0247642,George Eastman,act+write,11,46,4.94,5.43,-0.5
 nm0669704,Raoul Peck,direct+write,11,0,6.92,,
 nm5366274,Karthik Subbaraj,direct+write,11,4,7.27,5.63,1.65
 nm0411631,Jūzō Itami,act+direct+write,11,15,7.04,6.39,0.65
@@ -831,9 +826,9 @@ nm0133981,João Canijo,direct+write,11,2,6.6,7.0,-0.4
 nm0203993,Terence Davies,direct+write,11,0,6.85,,
 nm1191481,Leigh Whannell,act+direct+write,11,11,6.47,6.05,0.43
 nm0000186,David Lynch,act+direct+write,11,19,7.3,6.75,0.55
-nm0245081,Ray Dennis Steckler,act+direct+write,11,5,3.99,4.0,-0.01
 nm0478441,Gregory La Cava,direct+write,11,14,6.58,6.41,0.17
 nm0557945,Yasuzō Masumura,direct+write,11,26,6.48,7.05,-0.56
+nm0000127,Wes Craven,act+direct+write,11,27,5.85,6.03,-0.18
 nm0006498,Majid Majidi,act+direct+write,11,6,7.44,4.95,2.49
 nm0678857,Christian Petzold,direct+write,11,1,6.93,7.1,-0.17
 nm1777967,A.L. Vijay,direct+write,11,11,5.56,6.49,-0.93
@@ -878,7 +873,6 @@ nm0008906,Salah Abouseif,direct+write,11,12,7.15,6.62,0.53
 nm0915394,Keoni Waxman,direct+write,11,12,4.06,4.32,-0.25
 nm1363725,Len Kabasinski,act+direct+write,11,1,3.7,2.0,1.7
 nm0327273,Michel Gondry,act+direct+write,11,6,6.73,6.9,-0.17
-nm0655230,Henri Pachard,act+direct+write,11,11,5.95,5.69,0.26
 nm0109885,Jean-Claude Brisseau,act+direct+write,11,1,6.17,7.4,-1.23
 nm0001507,Cheech Marin,act+direct+write,10,39,5.72,5.81,-0.09
 nm0001589,Michael Palin,act+write,10,10,7.24,6.71,0.53
@@ -921,8 +915,6 @@ nm0080278,Vijay K. Bhaskar,direct+write,10,1,6.5,6.2,0.3
 nm0331964,Franz Josef Gottlieb,direct+write,10,15,4.97,4.31,0.66
 nm4898626,Giulio De Santi,act+direct+write,10,1,5.12,4.5,0.62
 nm0136592,J.S. Cardone,direct+write,10,5,5.34,4.8,0.54
-nm0285610,Derek Ford,direct+write,10,13,4.36,5.49,-1.13
-nm0068871,Anthony Spinelli,act+direct+write,10,11,6.03,6.05,-0.02
 nm0457565,Ryūhei Kitamura,direct+write,10,9,5.82,5.8,0.02
 nm0098953,Rachid Bouchareb,direct+write,10,3,6.19,6.13,0.06
 nm0419485,Giorgos Tzavellas,direct+write,10,2,7.51,5.7,1.81
@@ -963,7 +955,6 @@ nm0411809,Olaf Ittenbach,direct+write,10,0,4.07,,
 nm0653200,Ulrike Ottinger,direct+write,10,0,6.29,,
 nm0001178,Sergei Eisenstein,direct+write,10,0,7.31,,
 nm0310747,Cesc Gay,direct+write,10,9,6.48,6.13,0.35
-nm0891580,Paul Vecchiali,act+direct+write,10,0,6.32,,
 nm0942367,Edgar Wright,act+direct+write,10,4,7.18,7.05,0.13
 nm0758933,Jean-Paul Salomé,direct+write,10,0,5.76,,
 nm0161717,Patrice Chéreau,act+direct+write,10,6,6.16,6.63,-0.47
@@ -992,7 +983,7 @@ nm0593056,Kōki Mitani,direct+write,10,2,6.53,7.25,-0.72
 nm0000517,Terrence Malick,direct+write,10,6,6.74,6.13,0.61
 nm0202088,Jules Dassin,direct+write,10,15,6.98,6.8,0.18
 nm0413459,Donald G. Jackson,direct+write,10,2,2.95,3.95,-1.0
-nm0000759,Paul Thomas Anderson,direct+write,10,2,7.43,7.0,0.43
+nm0000759,Paul Thomas Anderson,direct+write,10,1,7.43,7.2,0.23
 nm0031888,Shinji Aoyama,act+direct+write,10,7,6.35,6.16,0.19
 nm0122184,Daniel Burman,direct+write,10,1,6.11,7.0,-0.89
 nm0303032,George Gallo,direct+write,10,13,5.84,5.91,-0.07
@@ -1016,6 +1007,7 @@ nm0389415,Gray Hofmeyr,direct+write,10,1,5.04,7.3,-2.26
 nm0814085,Stephen Sommers,direct+write,10,5,6.1,5.7,0.4
 nm0836809,Adrián Suar,act+direct+write,10,9,5.53,5.79,-0.26
 nm1792604,Anoop Menon,act+write,10,37,6.01,5.84,0.17
+nm0245081,Ray Dennis Steckler,act+direct+write,10,2,3.96,4.05,-0.09
 nm0536238,Luigi Magni,direct+write,10,14,6.79,6.29,0.5
 nm0275494,Jacques Feyder,direct+write,10,11,6.9,6.67,0.23
 nm0957772,Rob Zombie,direct+write,10,1,5.76,6.5,-0.74
@@ -1047,7 +1039,6 @@ nm1546474,Shane Ryan-Reid,act+direct+write,10,9,3.9,4.04,-0.14
 nm0001023,John Cassavetes,act+direct+write,10,26,7.33,6.4,0.93
 nm0070867,Shyam Benegal,direct+write,10,11,7.34,7.13,0.21
 nm0151733,Jang Jin,direct+write,10,10,6.22,6.73,-0.51
-nm0198790,Gerard Damiano,act+direct+write,10,2,5.6,6.35,-0.75
 nm2321771,Smeep Kang,act+direct+write,10,15,6.15,6.04,0.11
 nm0728699,Rudolf Zehetgruber,act+direct+write,10,2,5.18,5.2,-0.02
 nm0952077,Dervis Zaim,direct+write,10,0,6.24,,
@@ -1074,7 +1065,6 @@ nm0080220,Sanjay Leela Bhansali,direct+write,10,3,7.17,5.87,1.3
 nm0137345,Gilles Carle,direct+write,10,1,6.47,5.0,1.47
 nm0227460,Dinos Dimopoulos,direct+write,10,33,6.05,6.32,-0.27
 nm0346360,José Luis Guerín,direct+write,10,1,7.1,6.5,0.6
-nm0582750,Radley Metzger,direct+write,10,8,5.98,5.54,0.44
 nm1060975,Keiichi Hara,direct+write,9,8,7.04,6.65,0.39
 nm2928364,Sebastián Silva,act+direct+write,9,0,6.09,,
 nm0000520,Michael Mann,act+direct+write,9,7,7.08,6.7,0.38
@@ -1125,7 +1115,7 @@ nm0276899,Daniel Filho,act+direct+write,9,19,6.11,5.87,0.24
 nm0823906,Wolfgang Staudte,direct+write,9,7,7.02,6.59,0.44
 nm2092872,Rob Williams,direct+write,9,0,5.48,,
 nm0001410,Lawrence Kasdan,direct+write,9,11,6.61,7.35,-0.73
-nm0004372,Gary Graver,act+direct+write,9,28,5.13,5.51,-0.38
+nm0285610,Derek Ford,direct+write,9,13,4.18,5.49,-1.31
 nm0664085,Paruchuri Venkateswara Rao,act+write,9,93,6.54,6.0,0.54
 nm0849806,Robert Emmett Tansey,direct+write,9,18,6.13,5.27,0.86
 nm0850466,Aarne Tarkas,direct+write,9,2,6.06,6.05,0.01
@@ -1213,8 +1203,10 @@ nm2754122,Pietro Marcello,act+direct+write,9,0,6.59,,
 nm4401174,Dustin Mills,act+direct+write,9,0,4.39,,
 nm6567539,Nabeel Qureshi,direct+write,9,0,6.62,,
 nm0001837,Peter Weir,direct+write,9,7,6.59,7.44,-0.85
+nm0478418,Bruce LaBruce,act+direct+write,9,7,5.18,6.44,-1.27
 nm0716980,Kelly Reichardt,direct+write,9,2,6.56,6.9,-0.34
 nm0775447,Barbet Schroeder,act+direct+write,9,18,6.5,6.43,0.07
+nm0891580,Paul Vecchiali,act+direct+write,9,0,6.42,,
 nm2852166,Vlad Yudin,direct+write,9,6,5.87,6.08,-0.22
 nm3252853,Selçuk Aydemir,direct+write,9,2,5.72,4.5,1.22
 nm4069291,Roman Karimov,direct+write,9,2,5.97,5.15,0.82
@@ -1243,7 +1235,6 @@ nm0850601,Béla Tarr,direct+write,9,3,7.36,6.53,0.82
 nm0943138,Wu Ma,act+direct,9,57,5.86,6.3,-0.44
 nm0027271,Paul W.S. Anderson,direct+write,9,9,5.63,6.27,-0.63
 nm1108007,David Lowery,direct+write,9,4,6.01,5.95,0.06
-nm2947826,Scud,direct+write,9,0,5.14,,
 nm3510519,Jason Mills,act+direct+write,9,0,3.64,,
 nm0201927,Dasari Narayana Rao,act+direct+write,9,9,6.49,6.51,-0.02
 nm0580726,Joseph Merhi,direct+write,9,16,4.61,4.64,-0.03
@@ -1259,7 +1250,7 @@ nm3152327,Ryūsuke Hamaguchi,direct+write,9,3,7.19,6.43,0.76
 nm0001037,Graham Chapman,act+write,9,5,7.06,5.84,1.22
 nm0826348,Jos Stelling,direct+write,9,1,6.74,6.3,0.44
 nm4643507,Adilkhan Yerzhanov,direct+write,9,1,6.37,3.2,3.17
-nm0296532,Lee Frost,act+direct+write,9,13,4.79,4.99,-0.2
+nm0296532,Lee Frost,act+direct+write,9,11,4.79,4.96,-0.17
 nm2560181,Ravi Babu,act+direct+write,9,29,5.2,5.84,-0.64
 nm4179342,Amberdeep Singh,act+direct+write,9,14,6.58,6.24,0.33
 nm0643664,Michel Ocelot,direct+write,9,0,6.98,,
@@ -1277,13 +1268,13 @@ nm0451262,Mohamed Khan,direct+write,9,8,6.84,7.19,-0.34
 nm0739677,Mikhail Romm,direct+write,9,6,7.08,6.55,0.53
 nm0847223,Isao Takahata,direct+write,9,3,7.46,7.2,0.26
 nm2815884,Brian Skiba,direct+write,9,8,3.62,4.0,-0.38
-nm0082420,Hans Billian,direct+write,9,5,5.57,4.9,0.67
 nm0880928,Ümit Ünal,direct+write,9,10,6.56,6.25,0.31
 nm0898547,Robert Vince,direct+write,9,2,4.17,5.15,-0.98
 nm0951304,İhsan Yüce,act+write,9,48,6.83,6.57,0.26
 nm2053461,B. Unnikrishnan,direct+write,9,5,5.73,5.08,0.65
 nm0001045,Tommy Chong,act+direct+write,9,24,5.6,6.15,-0.55
 nm0040630,Mark Atkins,direct+write,9,6,3.02,3.52,-0.49
+nm0227661,Chuck Vincent,direct+write,9,9,4.33,4.21,0.12
 nm0399003,Jianxin Huang,act+direct+write,9,12,6.37,6.17,0.2
 nm0442819,Jerzy Kawalerowicz,direct+write,9,1,6.71,6.7,0.01
 nm0647055,Héctor Olivera,direct+write,9,3,6.4,5.3,1.1
@@ -1332,10 +1323,8 @@ nm0292134,Harry L. Fraser,direct+write,9,20,5.28,5.19,0.09
 nm0366586,William S. Hart,act+direct,9,2,6.42,6.55,-0.13
 nm0570082,Mary McGuckian,direct+write,9,1,5.14,4.7,0.44
 nm1625338,Dinesh D'Souza,act+direct+write,9,2,4.83,4.7,0.13
-nm0000248,Edward D. Wood Jr.,act+direct+write,9,21,3.81,4.07,-0.26
 nm0006845,Sally Potter,direct+write,9,0,6.11,,
 nm0159402,Élie Chouraqui,direct+write,9,1,5.59,6.6,-1.01
-nm0290956,Hubert Frank,direct+write,9,6,4.52,4.9,-0.38
 nm0438494,Rajat Kapoor,act+direct+write,9,36,6.7,6.5,0.2
 nm0495536,Nikolay Lebedev,direct+write,9,1,6.1,3.6,2.5
 nm0685034,Juan Piquer Simón,direct+write,9,2,4.22,4.3,-0.08
@@ -1451,7 +1440,6 @@ nm1679372,Sudeep,act+direct+write,8,47,6.96,6.24,0.72
 nm0001382,Peter Hyams,direct+write,8,16,6.41,5.82,0.59
 nm0294997,Jason Friedberg,direct+write,8,7,3.13,5.16,-2.03
 nm0367860,Wojciech Has,direct+write,8,6,7.04,6.83,0.2
-nm0383776,John Hilbard,direct+write,8,6,4.68,5.25,-0.57
 nm0553237,Pierre-François Martin-Laval,act+direct+write,8,18,5.16,5.23,-0.07
 nm0796361,Harald Sicheritz,direct+write,8,3,6.27,5.43,0.84
 nm1288736,Joshua Tickell,act+direct+write,8,1,7.13,7.6,-0.47
@@ -1481,7 +1469,6 @@ nm3454743,Prabu Solomon,act+direct+write,8,3,6.75,5.83,0.92
 nm0000185,Dolph Lundgren,act+direct+write,8,74,5.09,4.82,0.26
 nm0343518,Yoram Gross,direct+write,8,2,6.35,6.6,-0.25
 nm0425913,Nunnally Johnson,direct+write,8,52,6.0,6.71,-0.71
-nm0454199,Tim Kincaid,direct+write,8,3,5.04,3.2,1.84
 nm2949515,Jason Park,act+direct+write,8,1,5.3,5.7,-0.4
 nm4695478,Rudolf Havlik,direct+write,8,1,5.58,6.0,-0.42
 nm5047867,Bilal Kalyoncu,direct+write,8,11,2.81,3.26,-0.45
@@ -1494,7 +1481,7 @@ nm0016234,Miguel Albaladejo,direct+write,8,0,6.5,,
 nm0198746,Anca Damian,direct+write,8,0,6.23,,
 nm0442929,Yūzō Kawashima,direct+write,8,5,6.98,7.1,-0.13
 nm0740963,Jaime Rosales,direct+write,8,1,6.09,4.9,1.19
-nm0642882,Philip Adrian Booth,direct+write,8,0,4.31,,
+nm0011897,Roberta Findlay,act+direct+write,8,5,4.36,4.82,-0.46
 nm0733886,Eric Rochant,direct+write,8,0,6.11,,
 nm0379775,Måns Herngren,direct+write,8,2,5.81,5.7,0.11
 nm0736622,Seth Rogen,act+write,8,39,6.55,6.54,0.01
@@ -1518,7 +1505,6 @@ nm0140241,Enrique Carreras,direct+write,8,7,5.0,5.44,-0.44
 nm0155913,Jonas Chernick,act+write,8,13,5.68,5.43,0.24
 nm0236043,Thomas Downey,act+write,8,11,3.55,3.23,0.32
 nm0253018,Pascal Elbé,act+direct+write,8,33,5.9,5.82,0.08
-nm0582543,Sven Methling,direct+write,8,14,5.89,5.51,0.38
 nm0969427,Semih Kaplanoğlu,direct+write,8,0,6.33,,
 nm3743617,Philippe Lacheau,act+direct+write,8,9,6.38,5.23,1.14
 nm0175352,Robert Connolly,direct+write,8,2,6.4,5.5,0.9
@@ -1554,7 +1540,6 @@ nm0905154,Lana Wachowski,direct+write,8,2,6.79,7.2,-0.41
 nm1041597,Morgan Spurlock,act+direct+write,8,3,6.58,5.93,0.64
 nm7630832,Krishnadev Yagnik,direct+write,8,3,7.08,7.03,0.04
 nm0214964,Jamil Dehlavi,direct+write,8,0,6.02,,
-nm0612474,Claude Mulot,direct+write,8,12,5.5,4.55,0.95
 nm1220697,Salvatore Ficarra,act+direct+write,8,7,6.1,6.31,-0.21
 nm0001661,Rob Reiner,act+direct+write,8,25,6.77,6.65,0.12
 nm0227625,Sheng Ding,direct+write,8,1,5.56,6.8,-1.24
@@ -1566,8 +1551,8 @@ nm2669564,R Balki,direct+write,8,1,6.84,6.6,0.24
 nm0195264,Frank D'Angelo,act+direct+write,8,1,4.8,5.2,-0.4
 nm0340894,Sergio Grieco,direct+write,8,8,5.01,5.48,-0.46
 nm0470081,Lars Kraume,direct+write,8,2,6.51,7.2,-0.69
-nm0689838,Renato Polselli,direct+write,8,4,4.95,5.48,-0.52
 nm1223910,Sujoy Ghosh,act+direct+write,8,6,6.3,5.95,0.35
+nm2947826,Scud,direct+write,8,0,5.1,,
 nm0551217,Tonie Marshall,direct+write,8,2,5.69,6.5,-0.81
 nm0869665,Maurice Tourneur,direct+write,8,16,6.49,6.49,0.0
 nm1033667,Michael Winnick,direct+write,8,1,4.62,4.3,0.32
@@ -1614,7 +1599,7 @@ nm1243740,Kim Nguyen,direct+write,8,0,6.31,,
 nm3902889,Anil Ravipudi,direct+write,8,9,5.81,5.44,0.37
 nm0025978,Allison Anders,act+direct+write,8,5,6.49,6.76,-0.27
 nm0275244,Larry Fessenden,act+direct+write,8,52,5.26,5.09,0.18
-nm0609151,Ib Mossin,act+direct+write,8,19,4.99,5.71,-0.72
+nm0609151,Ib Mossin,act+direct+write,8,18,4.99,5.71,-0.72
 nm0830249,Mauritz Stiller,direct+write,8,5,6.61,6.56,0.05
 nm2955877,Nathan Silver,act+direct+write,8,0,6.03,,
 nm0124877,David Butler,act+direct+write,8,49,6.16,6.18,-0.01
@@ -1667,7 +1652,7 @@ nm0763287,Dedé Santana,act+direct+write,8,20,5.14,5.35,-0.21
 nm0846010,Carlos Enrique Taboada,direct+write,8,7,7.04,4.9,2.14
 nm0894178,Jan Verheyen,direct+write,8,15,5.94,5.79,0.14
 nm0090625,Juan Bosch,direct+write,8,3,5.36,4.8,0.56
-nm0272104,Michael Findlay,act+direct+write,8,5,4.57,4.62,-0.04
+nm0272104,Michael Findlay,act+direct+write,8,4,4.57,4.63,-0.05
 nm0468995,Damjan Kozole,direct+write,8,0,6.02,,
 nm0540297,Ulf Malmros,direct+write,8,2,6.24,5.5,0.74
 nm0714437,Marc Recha,direct+write,8,0,5.68,,
@@ -1686,7 +1671,6 @@ nm0646444,Margreth Olin,direct+write,8,3,6.94,6.67,0.27
 nm1243970,Mitchell Altieri,direct+write,8,3,4.73,4.73,-0.01
 nm2911203,Yūya Ishii,direct+write,8,3,6.38,6.8,-0.43
 nm3124865,Iván Noel,direct+write,8,0,6.09,,
-nm0013972,Mac Ahlberg,direct+write,8,3,5.02,4.57,0.46
 nm0024622,Alejandro Amenábar,direct+write,8,1,7.02,6.9,0.12
 nm0213983,David DeCoteau,act+direct+write,8,33,3.29,3.45,-0.16
 nm0402161,André Hunebelle,direct+write,8,12,5.91,5.95,-0.04
@@ -1694,6 +1678,7 @@ nm0444244,Abdellatif Kechiche,act+direct+write,8,3,6.56,6.13,0.43
 nm0660707,Gilles Paquet-Brenner,direct+write,8,0,5.59,,
 nm1653460,Vikram K. Kumar,direct+write,8,0,6.95,,
 nm0001232,Miloš Forman,act+direct+write,8,20,7.02,7.05,-0.03
+nm0290956,Hubert Frank,direct+write,8,6,4.48,4.9,-0.43
 nm0399464,Jean-Loup Hubert,direct+write,8,3,6.09,5.6,0.49
 nm0477035,Corey Yuen,act+direct+write,8,31,6.3,6.22,0.08
 nm0585701,Martin Miehe-Renard,act+direct+write,8,5,4.21,5.34,-1.13
@@ -1737,7 +1722,7 @@ nm0001754,Todd Solondz,direct+write,8,0,6.59,,
 nm1908800,Arindam Sil,act+direct+write,8,16,6.7,6.23,0.47
 nm0001188,Nora Ephron,direct+write,7,8,6.1,6.13,-0.03
 nm0094744,Ron Bonk,act+direct+write,7,7,3.64,4.04,-0.4
-nm0320946,Marino Girolami,direct+write,7,21,4.91,5.44,-0.52
+nm0320946,Marino Girolami,direct+write,7,20,4.91,5.48,-0.57
 nm0540176,Tom Malloy,act+write,7,7,4.5,4.89,-0.39
 nm0600409,Daniel Monzón,direct+write,7,1,6.19,5.4,0.79
 nm1922191,V.Z. Dhorai,direct+write,7,1,5.51,7.1,-1.59
@@ -1766,6 +1751,7 @@ nm1905770,Zheng Xu,act+direct+write,7,18,6.16,6.41,-0.25
 nm3080055,John Adams,act+direct+write,7,2,5.43,4.3,1.13
 nm0077587,John Berry,act+direct+write,7,12,5.9,6.06,-0.16
 nm0096539,António Borges Correia,direct+write,7,1,5.31,9.3,-3.99
+nm0247642,George Eastman,act+write,7,46,5.3,5.43,-0.13
 nm0339030,Paul Greengrass,direct+write,7,6,6.91,7.18,-0.27
 nm0364117,Rebecca Harrell Tickell,act+direct+write,7,4,7.1,6.25,0.85
 nm0429517,Ate de Jong,direct+write,7,4,5.4,5.73,-0.33
@@ -1929,7 +1915,6 @@ nm0000484,John Landis,act+direct+write,7,28,6.43,6.59,-0.16
 nm0023859,Keita Amemiya,direct+write,7,6,5.96,6.4,-0.44
 nm0178376,Scott Cooper,act+direct+write,7,3,6.3,6.4,-0.1
 nm0182499,Paolo Costella,direct+write,7,31,4.9,6.08,-1.18
-nm0292500,David I. Frazer,direct+write,7,3,6.13,6.3,-0.17
 nm0315430,Nikolaus Geyrhalter,direct+write,7,1,7.41,6.9,0.51
 nm0403297,Hur Jin-ho,direct+write,7,6,6.66,6.63,0.02
 nm0426059,Rian Johnson,direct+write,7,2,7.19,7.05,0.14
@@ -1952,6 +1937,7 @@ nm4821309,Orçun Benli,direct+write,7,1,4.73,4.6,0.13
 nm0000886,Warren Beatty,act+direct+write,7,22,6.47,6.44,0.03
 nm0119819,Veljko Bulajic,direct+write,7,3,6.56,6.57,-0.01
 nm0173207,Carl Colpaert,direct+write,7,3,4.4,5.23,-0.83
+nm0582543,Sven Methling,direct+write,7,14,6.09,5.51,0.58
 nm0594624,Moshé Mizrahi,direct+write,7,2,6.33,6.55,-0.22
 nm0724798,Tony Richardson,direct+write,7,13,5.96,6.62,-0.67
 nm4149056,Praveen Sattaru,direct+write,7,0,6.21,,
@@ -1972,7 +1958,7 @@ nm2247200,Albert Serra,direct+write,7,2,6.24,5.2,1.04
 nm0104487,Larry Brand,direct+write,7,5,4.63,5.4,-0.77
 nm0273208,Álvaro Fernández Armero,direct+write,7,4,5.57,5.23,0.35
 nm0494069,Maïwenn,act+direct+write,7,12,6.6,5.71,0.89
-nm0611652,Edoardo Mulargia,direct+write,7,7,5.0,5.03,-0.03
+nm0611652,Edoardo Mulargia,direct+write,7,6,5.0,5.13,-0.13
 nm0740021,Brunello Rondi,direct+write,7,16,5.43,6.76,-1.33
 nm0859766,Rudolf Thome,direct+write,7,3,6.1,6.3,-0.2
 nm1378015,Subhash Kapoor,direct+write,7,2,6.31,6.3,0.01
@@ -2003,7 +1989,6 @@ nm0922949,Eric Weston,direct+write,7,6,4.97,4.33,0.64
 nm1163050,Santi Amodeo,direct+write,7,1,5.84,6.4,-0.56
 nm5709298,M. Muthaiah,direct+write,7,3,4.9,3.9,1.0
 nm0159741,Carlos Hugo Christensen,direct+write,7,4,7.06,6.35,0.71
-nm0188173,Domiziano Cristopharo,direct+write,7,11,3.8,4.34,-0.54
 nm0266691,Arnold Fanck,direct+write,7,2,6.29,6.8,-0.51
 nm0687042,Paco Plaza,direct+write,7,8,6.0,5.01,0.99
 nm0705649,Milos 'Misa' Radivojevic,direct+write,7,3,6.66,7.17,-0.51
@@ -2040,7 +2025,6 @@ nm2068971,Vineeth Sreenivasan,act+direct+write,7,27,7.27,6.27,1.0
 nm2083706,Murat Aslan,direct+write,7,2,3.69,3.75,-0.06
 nm0001076,Joan Crawford,act+write,7,79,6.86,5.77,1.08
 nm0048060,Filip Bajon,direct+write,7,1,5.56,6.2,-0.64
-nm0075520,Shaun Costello,direct+write,7,2,5.77,6.05,-0.28
 nm0886976,Felix van Groeningen,direct+write,7,0,7.2,,
 nm0950288,Robert Youngson,direct+write,7,0,7.11,,
 nm1121649,Brad Jones,act+direct+write,7,1,6.61,3.0,3.61
@@ -2073,8 +2057,7 @@ nm1140699,Rabah Ameur-Zaïmeche,act+direct+write,7,0,6.2,,
 nm1402202,Julian Gilbey,direct+write,7,0,5.49,,
 nm5181204,Yan Han,direct+write,7,1,6.81,6.5,0.31
 nm0001554,Errol Morris,act+direct+write,7,13,7.11,6.94,0.18
-nm0113499,Edwin Brown,direct+write,7,2,5.54,5.05,0.49
-nm0134842,John Hayes,direct+write,7,12,4.43,5.12,-0.69
+nm0134842,John Hayes,direct+write,7,8,4.43,4.78,-0.35
 nm0162030,Nando Cicero,direct+write,7,10,4.96,5.8,-0.84
 nm0255547,José María Elorrieta,direct+write,7,1,4.93,4.2,0.73
 nm0428572,Albert Zugsmith,direct+write,7,7,4.2,5.46,-1.26
@@ -2085,7 +2068,6 @@ nm0773884,John Schneider,act+direct+write,7,52,4.04,4.76,-0.71
 nm1365879,Morgan Neville,direct+write,7,9,7.21,7.53,-0.32
 nm1437189,Sriram Raghavan,direct+write,7,3,7.03,6.27,0.76
 nm3359084,Hunter Johnson,act+direct+write,7,6,3.14,3.73,-0.59
-nm0032561,Jean-Marie Pallardy,act+direct+write,7,3,4.51,4.83,-0.32
 nm0458722,Dušan Klein,direct+write,7,1,6.74,4.0,2.74
 nm0512862,Caroline Link,direct+write,7,1,7.09,7.1,-0.01
 nm0615780,John Musker,direct+write,7,4,7.43,6.75,0.68
@@ -2173,7 +2155,6 @@ nm1875808,Jason Trost,act+direct+write,7,0,5.04,,
 nm2155679,Mani Haghighi,act+direct+write,7,16,6.01,5.57,0.45
 nm0131995,Joe Camp,direct+write,7,1,5.84,6.4,-0.56
 nm0132064,Bernard Campan,act+direct+write,7,18,6.01,6.07,-0.05
-nm0163095,Francis Leroi,direct+write,7,0,5.0,,
 nm0244870,Guru Dutt,act+direct+write,7,3,7.16,7.43,-0.28
 nm0376963,Frank Henenlotter,act+direct+write,7,6,5.77,6.77,-1.0
 nm0649875,Joaquín Oristrell,direct+write,7,29,6.07,5.9,0.17
@@ -2192,6 +2173,7 @@ nm0945026,Boaz Yakin,direct+write,7,11,6.1,6.31,-0.21
 nm1373966,Sean King,direct+write,7,0,4.81,,
 nm2378766,Rana Ranbir,act+write,7,31,6.0,6.39,-0.39
 nm8601690,Nigel Bach,act+direct+write,7,0,4.44,,
+nm0000248,Edward D. Wood Jr.,direct+write,7,20,3.76,4.08,-0.32
 nm0382019,David L. Hewitt,direct+write,7,2,3.89,4.35,-0.46
 nm0438029,Raj Kanwar,direct+write,7,7,4.83,5.16,-0.33
 nm0916665,Lois Weber,direct+write,7,1,6.33,5.8,0.53
@@ -2227,7 +2209,6 @@ nm1417392,Adam Wingard,act+direct+write,7,13,5.57,5.17,0.4
 nm1569807,Choi Dong-hoon,direct+write,7,1,6.71,5.3,1.41
 nm1697112,Adam Green,act+direct+write,7,6,5.97,6.53,-0.56
 nm8938704,Chris Shane Sanders,act+direct+write,7,2,2.77,2.85,-0.08
-nm0076419,Claude Bernard-Aubert,direct+write,7,5,5.76,5.6,0.16
 nm0769334,Luigi Scattini,direct+write,7,3,5.13,5.33,-0.2
 nm0775056,Maria Schrader,act+direct+write,7,16,6.37,6.43,-0.05
 nm0909825,Raoul Walsh,direct+write,7,74,6.13,6.41,-0.28
@@ -2287,7 +2268,6 @@ nm7992231,Lokesh Kanagaraj,direct+write,6,6,7.57,6.12,1.45
 nm0001129,Jonathan Demme,act+direct+write,6,30,6.37,6.45,-0.08
 nm0473252,Mike Krüger,act+write,6,1,4.57,5.9,-1.33
 nm0623715,Mark Neale,direct+write,6,0,7.5,,
-nm0715485,Joel M. Reed,direct+write,6,0,4.0,,
 nm0879559,Ferenc Török,direct+write,6,1,6.28,5.5,0.78
 nm0954234,Primo Zeglio,direct+write,6,3,5.3,5.43,-0.13
 nm1011887,Radhakrishnan Parthiban,act+direct+write,6,13,6.58,6.02,0.57
@@ -2327,7 +2307,7 @@ nm1519353,Tom Six,direct+write,6,0,3.63,,
 nm2158772,Jeff Nichols,direct+write,6,0,6.98,,
 nm3241039,Derek Presley,direct+write,6,1,5.0,6.4,-1.4
 nm0072354,Djamel Bensalah,direct+write,6,2,4.73,5.8,-1.07
-nm0074966,Sergio Bergonzelli,direct+write,6,7,4.97,5.19,-0.22
+nm0074966,Sergio Bergonzelli,direct+write,6,6,4.97,5.3,-0.33
 nm0154104,Mike Clattenburg,direct+write,6,0,6.75,,
 nm0273980,Giuseppe Ferrara,direct+write,6,0,6.5,,
 nm0281396,Ryan Fleck,direct+write,6,0,6.77,,
@@ -2407,6 +2387,7 @@ nm2310589,Kentucker Audley,act+direct+write,6,15,6.05,5.66,0.39
 nm2532973,A.S. Ravi Kumar Chowdary,direct+write,6,1,4.4,6.8,-2.4
 nm3270827,Peter Strickland,direct+write,6,2,6.07,7.55,-1.48
 nm3954274,Han Han,direct+write,6,2,6.32,6.0,0.32
+nm0383776,John Hilbard,direct+write,6,6,4.65,5.25,-0.6
 nm0451326,Sohail Khan,act+direct+write,6,19,4.9,4.75,0.15
 nm0516360,Ken Loach,act+direct+write,6,32,6.97,7.1,-0.14
 nm0911061,Wayne Wang,direct+write,6,14,6.38,6.21,0.18
@@ -2490,6 +2471,7 @@ nm0191109,José Luis Cuerda,direct+write,6,5,6.4,6.26,0.14
 nm0348321,Hrafn Gunnlaugsson,direct+write,6,0,5.48,,
 nm0501399,Steve Lemme,act+write,6,5,5.98,5.34,0.64
 nm0592636,Pilar Miró,direct+write,6,3,6.35,6.33,0.02
+nm0642882,Philip Adrian Booth,direct+write,6,0,3.98,,
 nm0954655,David Zellner,act+direct+write,6,6,5.77,5.93,-0.17
 nm3533685,Isaac Ezban,direct+write,6,1,5.5,5.9,-0.4
 nm0056187,Sacha Baron Cohen,act+write,6,13,6.47,6.63,-0.16
@@ -2542,7 +2524,7 @@ nm9103190,Santhosh P. Jayakumar,direct+write,6,1,4.48,5.5,-1.02
 nm0022858,Mustafa Altıoklar,direct+write,6,1,5.73,3.0,2.73
 nm0112456,Peter Brosens,direct+write,6,0,6.67,,
 nm0162166,Milan Cieslar,direct+write,6,2,5.78,6.25,-0.47
-nm0205844,Jean-François Davy,direct+write,6,1,4.98,5.7,-0.72
+nm0205844,Jean-François Davy,direct+write,6,0,4.98,,
 nm0266668,Jamaa Fanaka,direct+write,6,0,5.12,,
 nm0267943,Harun Farocki,act+direct+write,6,6,7.48,6.77,0.72
 nm0288476,Claude Fournier,direct+write,6,2,5.52,5.6,-0.08
@@ -2565,7 +2547,6 @@ nm1893457,Siddharth Anand,direct+write,6,3,6.07,6.3,-0.23
 nm2377660,Julien Maury,direct+write,6,3,5.67,5.13,0.53
 nm7926155,Taylor King,act+direct+write,6,3,4.67,5.17,-0.5
 nm0000860,Paul Bartel,act+direct+write,6,20,5.83,5.42,0.42
-nm0001135,John Derek,act+direct+write,6,24,3.87,6.18,-2.31
 nm0004244,Jacques Tati,act+direct+write,6,0,7.38,,
 nm0038906,William Asher,direct+write,6,5,5.35,5.82,-0.47
 nm0237527,Andreas Dresen,direct+write,6,10,7.13,6.72,0.41
@@ -2585,7 +2566,6 @@ nm1001040,Julián Hernández,direct+write,6,4,5.38,5.83,-0.44
 nm1785320,Sophie Letourneur,act+direct+write,6,3,5.73,6.5,-0.77
 nm3208867,Rodrigo Aragão,direct+write,6,1,5.7,5.5,0.2
 nm4940554,Danny Garcia,direct+write,6,1,6.57,5.2,1.37
-nm0031301,Bill Milling,direct+write,6,9,4.97,5.5,-0.53
 nm0080400,Srinivasa Rao Bhimaneni,direct+write,6,3,6.22,5.9,0.32
 nm0285683,Howard J. Ford,direct+write,6,6,5.12,4.45,0.67
 nm0389712,Joanna Hogg,direct+write,6,0,6.37,,
@@ -2620,10 +2600,12 @@ nm3642592,Pravin Tarde,act+direct+write,6,11,7.53,7.12,0.42
 nm6576552,Midhun Manuel Thomas,direct+write,6,6,6.67,6.47,0.2
 nm0126802,Louis Bélanger,direct+write,6,2,6.88,6.15,0.73
 nm0147251,Beverly Sebastian,direct+write,6,0,4.93,,
+nm0188173,Domiziano Cristopharo,direct+write,6,11,3.68,4.34,-0.65
 nm0567680,Bruce McDonald,act+direct+write,6,11,6.48,5.94,0.55
 nm0634205,Lukas Nola,direct+write,6,0,5.72,,
 nm0645612,Ivan Okhlobystin,act+write,6,34,5.67,5.65,0.02
 nm0689319,Patrik-Ian Polk,direct+write,6,0,6.52,,
+nm0689838,Renato Polselli,direct+write,6,4,5.17,5.48,-0.31
 nm0832187,Stuart Stone,act+direct+write,6,11,4.88,4.53,0.36
 nm1465130,Safy Nebbou,direct+write,6,2,6.52,6.4,0.12
 nm1641306,Taneli Mustonen,direct+write,6,1,4.73,4.1,0.63
@@ -2752,7 +2734,6 @@ nm1349318,Sajid Khan,direct+write,6,2,4.42,4.7,-0.28
 nm2590202,Sachin Kundalkar,direct+write,6,4,6.55,7.52,-0.97
 nm5499331,Ali Atshani,direct+write,6,5,3.97,4.48,-0.51
 nm5794009,Jingming Guo,direct+write,6,1,4.07,6.4,-2.33
-nm0048158,Gérard Kikoïne,direct+write,6,11,5.55,5.35,0.2
 nm0231596,Andrew Dominik,act+direct+write,6,2,7.0,7.0,0.0
 nm0347720,Stere Gulea,direct+write,6,4,7.43,7.63,-0.19
 nm0485859,Michel Lang,direct+write,6,1,5.47,3.7,1.77
@@ -2785,7 +2766,6 @@ nm0000894,Jean-Jacques Beineix,direct+write,6,2,6.43,6.95,-0.52
 nm0001627,Sidney Poitier,act+direct,6,41,6.45,6.72,-0.27
 nm0381273,John Herzfeld,act+direct+write,6,6,5.68,6.3,-0.62
 nm0711416,Steen Rasmussen,act+direct+write,6,0,5.98,,
-nm0864818,Carlos Tobalina,act+direct+write,6,5,4.62,5.52,-0.9
 nm0922520,Robert Jan Westdijk,direct+write,6,0,6.28,,
 nm1088868,Gary Wheeler,direct+write,6,6,5.73,6.05,-0.32
 nm1319671,Gerardo Naranjo,direct+write,6,2,5.77,5.1,0.67
@@ -2809,7 +2789,6 @@ nm0299134,Jorge Furtado,direct+write,6,13,7.0,6.68,0.32
 nm0304395,Charles T. Kanganis,act+direct+write,6,9,4.18,4.46,-0.27
 nm0434443,Ján Kadár,direct+write,6,2,7.1,6.35,0.75
 nm0436784,Kenji Kamiyama,direct+write,6,4,6.52,6.3,0.22
-nm0501471,Michel Lemoine,act+direct+write,6,12,4.77,4.87,-0.1
 nm0692652,Toby Poser,act+direct+write,6,4,5.48,5.65,-0.17
 nm0803066,Abderrahmane Sissako,direct+write,6,1,6.35,5.4,0.95
 nm3073146,Maite Alberdi,direct+write,6,1,7.18,6.1,1.08
@@ -2885,8 +2864,7 @@ nm1963808,Hideo Jōjō,direct+write,6,6,4.87,6.1,-1.23
 nm2319883,Gabriel Riva Palacio Alatriste,act+direct+write,6,0,5.53,,
 nm3141804,Thirumala Kishore,direct+write,6,4,6.52,5.78,0.74
 nm0000086,Louis de Funès,act+write,6,51,6.7,6.35,0.35
-nm0055634,John F. Goff,act+write,6,20,4.05,4.66,-0.61
-nm0163034,Osvaldo Civirani,direct+write,6,1,4.68,4.9,-0.22
+nm0055634,John F. Goff,act+write,6,19,4.05,4.61,-0.56
 nm0219959,Ruggero Deodato,act+direct+write,6,23,4.3,5.34,-1.04
 nm0223924,Gianni Di Gregorio,act+direct+write,6,3,6.38,6.6,-0.22
 nm0267405,Roberto Farias,direct+write,6,2,6.42,6.8,-0.38
@@ -2899,7 +2877,6 @@ nm4276395,John Migliore,act+direct+write,6,6,2.65,3.13,-0.48
 nm0003160,Christopher McQuarrie,direct+write,6,8,7.23,6.84,0.4
 nm0006954,Pierre Schoendoerffer,direct+write,6,2,6.75,6.45,0.3
 nm0043335,Barry Avrich,direct+write,6,6,6.93,6.27,0.67
-nm0175730,David Worth,direct+write,6,10,4.43,4.8,-0.37
 nm0312078,Hans W. Geissendörfer,direct+write,6,1,6.52,5.4,1.12
 nm0498212,Sang-il Lee,direct+write,6,2,6.95,7.1,-0.15
 nm0525303,Baz Luhrmann,act+direct+write,6,6,7.08,6.87,0.22
@@ -2962,7 +2939,6 @@ nm0637838,Garin Nugroho,direct+write,6,3,6.58,6.47,0.12
 nm0665993,Giuseppe Patroni Griffi,direct+write,6,8,5.93,6.03,-0.09
 nm0766263,Shinsuke Satô,direct+write,6,14,6.38,6.37,0.01
 nm0858680,Daniela Thomas,direct+write,6,5,6.82,5.98,0.84
-nm0890910,Paul Vatelli,direct+write,6,4,6.03,5.98,0.06
 nm0941017,Jessica Woodworth,direct+write,6,0,6.43,,
 nm1267707,Nicolas Bedos,act+direct+write,6,7,6.43,5.64,0.79
 nm1559043,Chris Martinez,direct+write,6,7,6.07,6.26,-0.19
@@ -3037,6 +3013,7 @@ nm3060331,Luv Ranjan,direct+write,5,5,6.84,6.36,0.48
 nm0028196,Mario Andreacchio,direct+write,5,4,5.42,5.3,0.12
 nm0150796,Anthony Chan,act+direct+write,5,15,5.98,6.08,-0.1
 nm0644203,Steve Oedekerk,direct+write,5,7,6.3,5.93,0.37
+nm0715485,Joel M. Reed,direct+write,5,0,3.98,,
 nm0745199,Thilo Rothkirch,direct+write,5,4,6.14,5.33,0.82
 nm0858235,A.C. Trilogchander,direct+write,5,0,7.24,,
 nm0994603,Onir,direct+write,5,2,6.24,6.8,-0.56
@@ -3095,7 +3072,6 @@ nm3265368,Josh Webber,direct+write,5,1,5.18,5.6,-0.42
 nm3360412,Andrey Bogatyrev,act+direct+write,5,1,5.3,4.9,0.4
 nm0001401,Angelina Jolie,act+direct+write,5,43,5.48,6.3,-0.82
 nm0075849,Shari Springer Berman,direct+write,5,3,6.12,6.3,-0.18
-nm0126864,José Bénazéraf,act+direct+write,5,2,5.2,5.85,-0.65
 nm0177228,Peter Cook,act+write,5,14,6.2,6.11,0.09
 nm0203194,Paul Davids,direct+write,5,0,6.52,,
 nm0379108,Phil Herman,act+direct+write,5,2,4.32,5.0,-0.68
@@ -3111,7 +3087,6 @@ nm0001700,Nancy Savoca,direct+write,5,1,6.04,7.3,-1.26
 nm0092632,Carlos Bolado,direct+write,5,4,6.4,6.68,-0.27
 nm0099324,Laurent Bouhnik,direct+write,5,2,5.8,5.25,0.55
 nm0151135,Tony Chan,direct+write,5,3,5.52,5.8,-0.28
-nm0211108,Alex de Renzy,direct+write,5,8,5.86,6.15,-0.29
 nm0471420,John Krish,direct+write,5,4,6.32,6.1,0.22
 nm0599910,Robert Montgomery,act+direct,5,55,6.72,6.36,0.36
 nm0792514,Lowell Sherman,act+direct,5,16,6.04,6.49,-0.45
@@ -3156,6 +3131,7 @@ nm4263190,Bilall Fallah,direct+write,5,3,6.68,6.2,0.48
 nm4342198,Burak Aksak,direct+write,5,0,5.96,,
 nm9331458,Rajnish Mishra,direct+write,5,1,8.18,7.5,0.68
 nm0004303,Gavin Hood,act+direct+write,5,8,6.6,5.13,1.47
+nm0004372,Gary Graver,act+direct+write,5,14,4.16,4.95,-0.79
 nm0005787,Stelvio Massi,direct+write,5,14,5.96,5.56,0.4
 nm0046347,Edouard Baer,act+direct+write,5,39,4.96,5.9,-0.94
 nm0089940,Don Bluth,direct+write,5,6,6.4,6.53,-0.13
@@ -3205,7 +3181,6 @@ nm1996918,Dito Montiel,direct+write,5,4,5.76,5.8,-0.04
 nm2243359,Gajendra Vitthal Ahire,direct+write,5,2,7.58,7.1,0.48
 nm3423765,Adrian Panek,direct+write,5,0,5.98,,
 nm0226323,Damion Dietz,direct+write,5,0,4.8,,
-nm0373361,Werner Hedman,direct+write,5,2,5.34,5.35,-0.01
 nm0408440,Stefano Incerti,direct+write,5,0,5.94,,
 nm0469650,Robert Kramer,act+direct+write,5,4,6.98,6.15,0.83
 nm0652225,F.J. Ossang,direct+write,5,0,5.44,,
@@ -3247,7 +3222,7 @@ nm2500541,Castille Landon,act+direct+write,5,7,5.28,4.73,0.55
 nm2647420,Brea Grant,act+direct+write,5,19,5.34,4.88,0.46
 nm3849107,Seenu Ramasamy,direct+write,5,1,6.68,7.1,-0.42
 nm4776957,Muhammad Mostafa Kamal Raz,direct+write,5,0,6.02,,
-nm0084218,Wes Bishop,act+write,5,11,5.08,4.87,0.21
+nm0084218,Wes Bishop,act+write,5,9,5.08,4.81,0.27
 nm0096375,Sebastián Borensztein,direct+write,5,3,6.76,4.8,1.96
 nm0165282,Hugo Claus,direct+write,5,10,5.72,6.11,-0.39
 nm0415207,Luc Jacquet,direct+write,5,0,6.92,,
@@ -3271,9 +3246,10 @@ nm5360411,Andreas Schmied,direct+write,5,1,5.94,6.4,-0.46
 nm5367447,Ardit Sadiku,direct+write,5,0,6.94,,
 nm6257847,Kiwi Chow,direct+write,5,1,6.36,8.5,-2.14
 nm0004363,Rakesh Roshan,act+direct+write,5,29,6.44,6.1,0.34
-nm0080580,Andrea Bianchi,direct+write,5,7,4.86,5.06,-0.2
+nm0080580,Andrea Bianchi,direct+write,5,6,4.86,4.97,-0.11
 nm0312881,Toby Genkel,direct+write,5,6,5.7,5.67,0.03
 nm0403629,Michael Hurst,direct+write,5,6,5.14,4.97,0.17
+nm0454199,Tim Kincaid,direct+write,5,3,3.48,3.2,0.28
 nm0700090,Eros Puglielli,direct+write,5,2,5.7,5.75,-0.05
 nm0718243,Harald Reinl,direct+write,5,32,6.1,5.6,0.5
 nm0747808,Michael Rubbo,direct+write,5,0,6.24,,
@@ -3400,7 +3376,7 @@ nm0015091,Serdar Akar,direct+write,5,9,6.96,5.91,1.05
 nm0155093,Peter Chelsom,direct+write,5,7,6.16,5.81,0.35
 nm0314995,Fredrik Gertten,direct+write,5,3,7.0,6.7,0.3
 nm0351486,Sigi Rothemund,direct+write,5,9,4.12,4.66,-0.54
-nm0365835,Richard Harrison,act+direct+write,5,62,4.96,4.89,0.07
+nm0365835,Richard Harrison,act+direct+write,5,61,4.96,4.91,0.05
 nm0406722,Jun Ichikawa,direct+write,5,2,6.58,6.65,-0.07
 nm0484824,James Landis,direct+write,5,2,5.64,4.5,1.14
 nm0612786,Ian Mune,act+direct+write,5,17,6.1,5.94,0.16
@@ -3448,6 +3424,7 @@ nm2208558,H.P. Mendoza,direct+write,5,1,6.0,6.0,0.0
 nm2475544,Rezo Gigineishvili,direct+write,5,1,5.36,6.1,-0.74
 nm4436444,Roberto D'Antona,act+direct+write,5,2,4.28,4.15,0.13
 nm0000668,Emma Thompson,act+write,5,45,6.58,6.69,-0.11
+nm0001135,John Derek,act+direct+write,5,24,3.54,6.18,-2.64
 nm0182450,Leonardo Di Costanzo,direct+write,5,0,6.28,,
 nm0205827,Abolhassan Davoodi,direct+write,5,3,5.54,6.03,-0.49
 nm0220774,Arnaud des Pallières,direct+write,5,0,5.8,,
@@ -3512,7 +3489,6 @@ nm4366753,Brian Dorton,act+direct+write,5,2,4.58,3.65,0.93
 nm9959993,Ricky Umberger,act+direct+write,5,0,4.72,,
 nm0001880,Edward Zwick,direct+write,5,10,6.84,6.9,-0.06
 nm0015085,Kazuki Akane,direct+write,5,1,6.5,7.2,-0.7
-nm0201283,Gregory Dark,direct+write,5,13,5.94,5.08,0.86
 nm0390822,Savage Steve Holland,direct+write,5,2,5.62,4.75,0.87
 nm0453707,Kim Tae-yong,direct+write,5,1,6.4,5.8,0.6
 nm0454771,Henry King,direct+write,5,48,6.86,6.57,0.29
@@ -3535,7 +3511,7 @@ nm0116254,Valeria Bruni Tedeschi,act+direct+write,5,64,5.76,6.3,-0.54
 nm0141646,Greg Carter,direct+write,5,2,3.68,7.0,-3.32
 nm0156448,Chi Leung 'Jacob' Cheung,act+direct+write,5,7,6.88,6.44,0.44
 nm0171443,Nesli Çölgeçen,direct+write,5,2,6.94,7.0,-0.06
-nm0403794,Harry Hurwitz,direct+write,5,5,4.82,5.08,-0.26
+nm0403794,Harry Hurwitz,direct+write,5,4,4.82,5.18,-0.35
 nm0409007,Malcolm Ingram,direct+write,5,2,6.32,6.45,-0.13
 nm0497934,Lee Myung-se,direct+write,5,2,6.28,5.95,0.33
 nm0583600,Nancy Meyers,direct+write,5,10,6.84,6.03,0.81
@@ -3714,6 +3690,7 @@ nm1637163,Sophon Sakdaphisit,direct+write,5,6,6.12,6.13,-0.01
 nm2223858,Steve Ravic,direct+write,5,1,5.38,5.1,0.28
 nm3283609,Matt Cloude,direct+write,5,2,3.62,4.1,-0.48
 nm3556568,Sebastián Badilla,act+direct+write,5,1,2.54,3.4,-0.86
+nm0032561,Jean-Marie Pallardy,act+direct+write,5,2,4.7,4.9,-0.2
 nm0039531,Semir Aslanyürek,direct+write,5,1,5.26,7.0,-1.74
 nm0046554,Maroun Bagdadi,direct+write,5,1,6.48,6.5,-0.02
 nm0209010,Mijke de Jong,direct+write,5,3,6.72,6.53,0.19
@@ -3800,7 +3777,6 @@ nm0000809,Daniel Auteuil,act+direct+write,5,84,6.52,6.09,0.43
 nm0223622,Robert Dhéry,act+direct+write,5,3,5.86,6.33,-0.47
 nm0275277,Shana Feste,direct+write,5,1,6.08,7.3,-1.22
 nm0375093,Mats Helge Olsson,direct+write,5,0,3.72,,
-nm0382942,Roger Watkins,direct+write,5,1,5.38,6.1,-0.72
 nm0415538,Jagadish,act+write,5,116,6.58,6.16,0.42
 nm0523509,Gustavo Loza,direct+write,5,2,6.86,5.9,0.96
 nm0587741,Nick Millard,direct+write,5,4,4.08,4.38,-0.29
@@ -3832,6 +3808,7 @@ nm0141351,John Paddy Carstairs,direct+write,5,19,6.0,5.93,0.07
 nm0384342,James Hill,direct+write,5,11,6.16,6.25,-0.09
 nm0406591,Tancred Ibsen,direct+write,5,3,6.56,6.13,0.43
 nm0415333,Just Jaeckin,direct+write,5,5,5.28,5.48,-0.2
+nm0501471,Michel Lemoine,act+direct+write,5,12,4.64,4.87,-0.23
 nm0716257,Matt Reeves,direct+write,5,4,6.3,6.65,-0.35
 nm0814734,Türkan Şoray,act+direct+write,5,77,6.42,6.05,0.37
 nm0952569,Steven F. Zambo,direct+write,5,1,4.54,5.3,-0.76
@@ -3936,6 +3913,8 @@ nm4087886,Mykola Yeriomin,act+direct+write,5,8,5.14,5.65,-0.51
 nm4414980,Aris Chatzistefanou,direct+write,5,0,8.08,,
 nm4628502,Prem,direct+write,5,2,7.14,5.25,1.89
 nm5567731,Sudheer Varma,direct+write,5,3,6.0,5.83,0.17
+nm0163034,Osvaldo Civirani,direct+write,5,1,4.68,4.9,-0.22
+nm0163095,Francis Leroi,direct+write,5,0,4.44,,
 nm0271816,Xiaoning Feng,direct+write,5,1,5.12,7.0,-1.88
 nm0388198,Mike Hodges,direct+write,5,7,6.2,6.01,0.19
 nm0463596,Takashi Koizumi,direct+write,5,2,6.76,7.15,-0.39
@@ -3962,7 +3941,6 @@ nm6142895,Rishab Shetty,act+direct+write,5,6,8.08,7.78,0.3
 nm0316151,David Giancola,direct+write,5,3,3.44,5.0,-1.56
 nm0340886,Gabriel Grieco,direct+write,5,0,4.52,,
 nm0709527,Addison Randall,act+direct+write,5,7,4.24,4.2,0.04
-nm0739124,Lina Romay,act+direct,5,68,4.36,4.46,-0.1
 nm0768597,Louis Saia,direct+write,5,1,5.74,7.7,-1.96
 nm0799682,Anthony Simmons,direct+write,5,2,6.12,4.9,1.22
 nm0841232,Jan Svěrák,direct+write,5,6,6.72,6.7,0.02
@@ -4077,7 +4055,6 @@ nm0111845,Adam Brooks,direct+write,4,8,6.1,6.3,-0.2
 nm0126965,Gábor Bódy,direct+write,4,0,6.78,,
 nm0304921,Sam Garbarski,direct+write,4,2,6.3,7.0,-0.7
 nm0403963,Karim Hussain,direct+write,4,1,5.03,5.5,-0.47
-nm0437919,Richard Kanter,direct+write,4,1,5.03,5.1,-0.07
 nm0512501,Jon Lindström,direct+write,4,0,5.03,,
 nm0579828,Vladimir Menshov,act+direct+write,4,27,7.3,6.23,1.07
 nm0580565,Burgess Meredith,act+direct+write,4,63,5.7,6.24,-0.54
@@ -4185,7 +4162,6 @@ nm0805760,Pål Sletaune,direct+write,4,0,6.27,,
 nm0819033,Peter Spirer,direct+write,4,5,6.7,6.44,0.26
 nm0875953,Michael Tucker,direct+write,4,3,6.58,6.23,0.34
 nm0930539,Emlyn Williams,act+write,4,26,6.23,6.61,-0.39
-nm0994566,Phil Prince,direct+write,4,2,5.8,5.6,0.2
 nm1094036,James Napier Robertson,direct+write,4,0,7.05,,
 nm1498570,Matías Bize,direct+write,4,3,6.1,5.97,0.13
 nm2193400,Juliana Rojas,direct+write,4,0,6.55,,
@@ -4310,6 +4286,7 @@ nm2981113,Tony Wash,direct+write,4,0,3.85,,
 nm6916808,Ludovic Boukherma,direct+write,4,0,5.88,,
 nm8273413,Arun Prabhu Purushothaman,direct+write,4,0,7.0,,
 nm0075627,Alan Berliner,act+direct+write,4,2,7.27,7.35,-0.08
+nm0126864,José Bénazéraf,act+direct+write,4,1,5.27,7.6,-2.33
 nm0141033,Willard Carroll,direct+write,4,0,5.78,,
 nm0198755,Michael Damian,direct+write,4,1,6.23,3.3,2.93
 nm0235719,John Erick Dowdle,direct+write,4,2,6.25,5.75,0.5
@@ -4470,7 +4447,7 @@ nm0029458,Hélène Angel,direct+write,4,0,5.33,,
 nm0073488,Géza Bereményi,direct+write,4,8,6.18,7.0,-0.83
 nm0074844,Nir Bergman,direct+write,4,2,6.85,6.75,0.1
 nm0177234,Philip J. Cook,direct+write,4,0,4.5,,
-nm0211922,Anthony Steffen,act+write,4,40,5.63,5.64,-0.02
+nm0211922,Anthony Steffen,act+write,4,39,5.63,5.67,-0.05
 nm0223522,David Dhawan,direct+write,4,37,5.18,5.31,-0.14
 nm0273863,Pascale Ferran,direct+write,4,2,6.45,6.95,-0.5
 nm0296064,Roger Fritz,act+direct+write,4,9,5.98,6.02,-0.05
@@ -4677,7 +4654,6 @@ nm5814459,Kellen Garner,act+direct+write,4,1,5.63,3.5,2.13
 nm7628634,Bibin George,act+write,4,10,5.45,5.32,0.13
 nm0000782,Asia Argento,act+direct+write,4,48,5.7,5.48,0.22
 nm0005295,Trey Parker,act+direct+write,4,5,6.98,6.84,0.13
-nm0107781,Arthur J. Bressan Jr.,direct+write,4,1,7.13,7.3,-0.17
 nm0217325,Jeffrey Dell,direct+write,4,18,6.23,6.22,0.01
 nm0233393,Olivier Doran,direct+write,4,1,5.0,7.2,-2.2
 nm0307531,Jeff Garlin,act+direct+write,4,17,5.73,6.55,-0.83
@@ -4715,7 +4691,7 @@ nm0557267,Olivier Masset-Depasse,direct+write,4,0,6.13,,
 nm0596407,Hans Petter Moland,direct+write,4,9,6.83,6.68,0.15
 nm0602941,Nick Moran,act+direct+write,4,43,5.78,4.93,0.85
 nm0740110,Mika Ronkainen,direct+write,4,0,7.03,,
-nm0741128,Giuseppe Rosati,direct+write,4,1,5.48,4.9,0.57
+nm0741128,Giuseppe Rosati,direct+write,4,0,5.48,,
 nm0824216,Giorgio Stegani,direct+write,4,11,5.8,6.01,-0.21
 nm0910852,Chao Wang,direct+write,4,1,6.33,5.7,0.63
 nm0945847,Mitsuo Yanagimachi,direct+write,4,2,6.73,6.8,-0.08
@@ -5058,6 +5034,7 @@ nm0470729,Jiří Krejčík,direct+write,4,0,7.4,,
 nm0479889,Luiz Carlos Lacerda,direct+write,4,0,5.95,,
 nm0480894,Stéphane Lafleur,direct+write,4,1,6.77,6.9,-0.13
 nm0506518,Lorraine Lévy,direct+write,4,0,6.3,,
+nm0612474,Claude Mulot,direct+write,4,8,5.13,3.94,1.19
 nm0662529,Oliver Parker,direct+write,4,10,6.45,5.95,0.5
 nm0702028,Julio Pérez Tabernero,act+direct+write,4,5,4.08,5.2,-1.13
 nm0744107,Kim Rossi Stuart,act+direct+write,4,19,6.7,5.91,0.79
@@ -5163,7 +5140,6 @@ nm0126492,Hyuk Byun,direct+write,4,0,5.68,,
 nm0139036,Ana Carolina,direct+write,4,0,6.9,,
 nm0210948,Thierry de Peretti,direct+write,4,2,6.0,6.0,0.0
 nm0252845,Raafat El-Mihi,direct+write,4,3,6.82,6.9,-0.08
-nm0289565,Ody Fraga,direct+write,4,7,5.2,5.43,-0.23
 nm0322839,Greg Glienna,direct+write,4,5,6.03,6.16,-0.13
 nm0346331,Hernán Guerschuny,direct+write,4,1,5.9,4.7,1.2
 nm0359387,John Lee Hancock,direct+write,4,7,6.5,6.96,-0.46
@@ -5201,7 +5177,6 @@ nm0000059,Laurence Olivier,act+direct+write,4,48,7.05,6.57,0.48
 nm0008332,Aktan Arym Kubat,direct+write,4,2,6.6,6.95,-0.35
 nm0126756,Gilles Béhat,direct+write,4,3,5.25,4.5,0.75
 nm0162878,Souleymane Cissé,direct+write,4,0,6.68,,
-nm0173275,Zebedy Colt,act+direct+write,4,3,5.45,5.83,-0.38
 nm0181902,George P. Cosmatos,direct+write,4,6,5.83,6.17,-0.34
 nm0210320,Kirk DeMicco,direct+write,4,3,6.0,6.17,-0.17
 nm0314305,Tom Gerhardt,act+write,4,8,4.53,4.44,0.09
@@ -5255,7 +5230,6 @@ nm0148482,Massimiliano Cerchi,direct+write,4,4,3.1,2.88,0.23
 nm0172718,Tom Collins,direct+write,4,0,6.65,,
 nm0323582,Sergio Gobbi,direct+write,4,2,5.15,4.65,0.5
 nm0328636,Vincci Cheuk,act+direct+write,4,12,5.45,5.52,-0.07
-nm0454879,Jean-Claude Roy,direct+write,4,4,5.55,4.68,0.87
 nm0474747,Kazuyoshi Kumakiri,direct+write,4,10,6.25,6.16,0.09
 nm0510912,Justin Lin,direct+write,4,10,5.98,6.3,-0.32
 nm0554890,Juan Martínez Moreno,direct+write,4,1,5.98,5.6,0.38
@@ -5321,7 +5295,6 @@ nm2902565,Nicola Caulfield,direct+write,4,0,7.32,,
 nm3233092,Gor Kirakosian,direct+write,4,0,6.1,,
 nm3996813,Brandon Bassham,direct+write,4,1,4.55,6.3,-1.75
 nm5628853,Vijay Kumar Konda,direct+write,4,1,6.28,5.9,0.38
-nm0042155,Carlos Aured,direct+write,4,5,4.6,5.06,-0.46
 nm0069118,Francesc Bellmunt,direct+write,4,0,5.15,,
 nm0080387,Sumitra Bhave,direct+write,4,4,7.5,7.75,-0.25
 nm0127373,Louis C.K.,act+direct+write,4,11,6.15,6.32,-0.17
@@ -5397,7 +5370,6 @@ nm0006092,Serge Gainsbourg,act+direct+write,4,16,5.2,5.78,-0.58
 nm0124112,Dan Bush,direct+write,4,1,5.35,3.5,1.85
 nm0150894,Frankie Chan,act+direct+write,4,8,6.0,6.16,-0.16
 nm0171917,James F. Collier,direct+write,4,6,6.27,6.33,-0.06
-nm0293354,David F. Friedman,act+direct+write,4,26,5.53,4.83,0.69
 nm0300370,Hans Åke Gabrielsson,direct+write,4,4,5.2,5.9,-0.7
 nm0446539,Justin Kelly,direct+write,4,1,5.28,4.2,1.08
 nm0487210,Dan Lantz,direct+write,4,1,5.33,5.2,0.13
@@ -5426,6 +5398,7 @@ nm6497799,Paul Nicholas,direct+write,4,3,5.25,4.57,0.68
 nm0007399,Veikko Aaltonen,direct+write,4,6,6.5,6.95,-0.45
 nm0037130,Fernando Arrabal,act+direct+write,4,7,6.25,5.87,0.38
 nm0062862,Peter Bay,direct+write,4,3,4.9,6.37,-1.47
+nm0082420,Hans Billian,direct+write,4,5,4.03,4.9,-0.88
 nm0098291,Charlotte Sachs Bostrup,direct+write,4,7,5.05,5.23,-0.18
 nm0147167,Gianni Cavina,act+write,4,17,6.13,6.14,-0.01
 nm0207357,John De Bello,direct+write,4,0,4.5,,
@@ -5598,7 +5571,7 @@ nm0523154,Richard Lowenstein,direct+write,4,2,6.95,7.85,-0.9
 nm0596311,Tanvir Mokammel,direct+write,4,0,7.85,,
 nm0617130,Daniel Myrick,direct+write,4,3,5.57,5.3,0.27
 nm0660522,Jaroslav Papoušek,direct+write,4,5,6.85,6.72,0.13
-nm0756612,Christopher Saint Booth,act+direct+write,4,3,4.48,4.4,0.08
+nm0756612,Christopher Saint Booth,act+direct+write,4,1,4.48,2.6,1.87
 nm0796119,Shyamaprasad,act+direct+write,4,13,6.58,6.13,0.44
 nm0812553,Jo Sol,direct+write,4,0,6.3,,
 nm1150656,Remo D'Souza,act+direct+write,4,4,5.33,4.38,0.95
@@ -5630,7 +5603,6 @@ nm0598336,Jacques Monnet,direct+write,4,4,5.33,5.55,-0.22
 nm0637493,Cyrus Nowrasteh,direct+write,4,1,6.52,6.1,0.42
 nm0748589,Oren Rudavsky,direct+write,4,1,6.83,7.0,-0.17
 nm0812176,Gerardo Sofovich,direct+write,4,2,5.65,5.75,-0.1
-nm0861312,Chris Warfield,act+direct+write,4,7,5.2,5.31,-0.11
 nm1099918,Jeremy Saulnier,direct+write,4,1,6.65,5.6,1.05
 nm1223381,Andrés Baiz,direct+write,4,1,6.68,6.2,0.48
 nm1342721,Alan Rowe Kelly,act+direct+write,4,8,4.48,3.35,1.12
@@ -5751,7 +5723,6 @@ nm0660346,Nikos Papatakis,direct+write,4,1,7.0,6.3,0.7
 nm0679974,Harald Philipp,direct+write,4,3,5.65,5.57,0.08
 nm0707705,O.P. Ralhan,act+direct+write,4,1,6.3,6.3,0.0
 nm0769421,Johannes Schaaf,direct+write,4,2,6.63,5.5,1.13
-nm0781907,Stu Segall,direct+write,4,6,5.13,5.48,-0.36
 nm0787452,Krishna Shah,direct+write,4,1,5.23,6.1,-0.88
 nm0837116,Arne Sucksdorff,direct+write,4,0,6.78,,
 nm0935164,Adolf Winkelmann,direct+write,4,2,5.73,5.75,-0.03
@@ -5774,7 +5745,6 @@ nm0001834,Damon Wayans,act+write,4,12,5.85,5.57,0.28
 nm0065644,Ruth Beckermann,direct+write,4,1,7.05,7.7,-0.65
 nm0075626,Alain Berliner,direct+write,4,4,6.63,6.05,0.58
 nm0104146,Jacques Bral,direct+write,4,1,6.0,5.6,0.4
-nm0105808,Lasse Braun,direct+write,4,1,5.88,6.2,-0.33
 nm0452221,Jan Kidawa-Blonski,direct+write,4,2,5.58,5.45,0.13
 nm0506290,Kristian Levring,direct+write,4,2,6.25,7.0,-0.75
 nm0622860,Demetrius Navarro,act+direct,4,11,3.58,4.72,-1.14
@@ -5812,7 +5782,6 @@ nm0437526,Shūsuke Kaneko,act+direct+write,4,15,6.75,6.47,0.28
 nm0467017,Dover Koshashvili,act+direct+write,4,3,5.9,6.9,-1.0
 nm0501548,Arnaud Lemort,direct+write,4,2,5.38,4.85,0.53
 nm0567620,John Michael McDonagh,direct+write,4,1,6.65,6.4,0.25
-nm0593140,Artie Mitchell,direct+write,4,0,5.85,,
 nm0880297,Andrei Ujica,direct+write,4,0,7.18,,
 nm0919041,Jiří Weiss,direct+write,4,0,7.05,,
 nm1218281,Jon Watts,direct+write,4,4,6.48,7.12,-0.65
@@ -5870,8 +5839,9 @@ nm5464371,Baz Poonpiriya,direct+write,4,0,7.13,,
 nm5541436,Anthony M. Winson,direct+write,4,0,3.75,,
 nm0006590,Georgi Djulgerov,direct+write,4,0,7.18,,
 nm0010383,Aleksandr Adabashyan,act+write,4,21,6.48,6.09,0.39
+nm0013972,Mac Ahlberg,direct+write,4,3,4.78,4.57,0.21
 nm0080143,Bhadran,direct+write,4,1,6.73,5.8,0.92
-nm0203996,Leonard Kirtman,direct+write,4,6,4.53,5.47,-0.94
+nm0175730,David Worth,direct+write,4,10,3.58,4.8,-1.22
 nm0268107,Daniel Farrands,direct+write,4,4,3.88,4.6,-0.72
 nm0276169,Tom Holland,act+direct+write,4,20,5.93,6.1,-0.17
 nm0340485,Kevin Grevioux,act+write,4,6,5.93,5.5,0.42
@@ -5885,7 +5855,7 @@ nm0663409,Pim de la Parra,direct+write,4,0,5.85,,
 nm0721074,Florián Rey,direct+write,4,0,6.6,,
 nm0739298,Joaquín Luis Romero Marchent,direct+write,4,8,5.9,5.51,0.39
 nm0739308,Rafael Romero Marchent,direct+write,4,12,5.5,5.68,-0.18
-nm0900238,Piero Vivarelli,direct+write,4,8,4.83,5.81,-0.99
+nm0900238,Piero Vivarelli,direct+write,4,7,4.83,5.9,-1.07
 nm0925220,Michael Jai White,act+write,4,55,5.8,4.83,0.97
 nm0927468,Robert Wiene,direct+write,4,4,6.25,6.88,-0.63
 nm0945144,Suat Yalaz,direct+write,4,2,5.8,5.15,0.65
@@ -6260,7 +6230,6 @@ nm0000521,Sophie Marceau,act+direct+write,3,45,4.73,5.92,-1.19
 nm0000976,Martin Brest,direct+write,3,4,5.33,7.53,-2.19
 nm0001962,Lizzie Borden,direct+write,3,2,6.07,5.55,0.52
 nm0042884,Joe Mari Avellana,act+write,3,23,3.9,4.84,-0.94
-nm0086471,Andrew Blake,direct+write,3,1,6.93,7.3,-0.37
 nm0093252,Luiz Bolognesi,direct+write,3,10,7.13,7.11,0.02
 nm0132490,Graeme Campbell,direct+write,3,2,4.8,5.5,-0.7
 nm0136388,Liz Cardenas,act+write,3,7,5.5,5.04,0.46
@@ -6619,14 +6588,14 @@ nm0232540,Jacques Doniol-Valcroze,act+direct+write,3,10,6.07,6.09,-0.02
 nm0240987,Martine Dugowson,direct+write,3,0,6.33,,
 nm0271136,Andi Feldmann,act+write,3,2,5.57,5.55,0.02
 nm0294394,Alain Fresnot,direct+write,3,0,5.87,,
-nm0297523,Robert Fuest,direct+write,3,5,5.4,5.86,-0.46
+nm0297523,Robert Fuest,direct+write,3,4,5.4,6.25,-0.85
 nm0322242,Jonathan Glazer,direct+write,3,1,6.63,7.3,-0.67
 nm0412808,Yutaka Izubuchi,direct+write,3,5,6.97,6.42,0.55
 nm0418925,Cody Jarrett,direct+write,3,0,5.03,,
 nm0427478,Andrew P. Jones,direct+write,3,0,4.77,,
 nm0441090,Sunao Katabuchi,direct+write,3,0,7.07,,
 nm0497442,Jack Lee,direct+write,3,6,6.57,6.33,0.23
-nm0558975,Olivier Mathot,act+direct,3,26,3.5,4.3,-0.8
+nm0558975,Olivier Mathot,act+direct,3,23,3.5,4.13,-0.63
 nm0576197,Jeanine Meerapfel,direct+write,3,0,5.8,,
 nm0629216,Phil Nibbelink,direct+write,3,2,3.83,6.3,-2.47
 nm0658823,Jake Paltrow,direct+write,3,1,6.0,7.4,-1.4
@@ -6768,7 +6737,7 @@ nm0001452,Charles Laughton,act+write,3,45,6.87,6.86,0.0
 nm0004082,Geoff Marslett,direct+write,3,1,5.5,6.0,-0.5
 nm0004767,Joseph Bologna,act+write,3,19,5.7,5.65,0.05
 nm0175239,Frank Conniff,act+write,3,2,7.83,7.3,0.53
-nm0187563,Bob Cresse,act+write,3,9,4.17,5.12,-0.96
+nm0187563,Bob Cresse,act+write,3,8,4.17,5.07,-0.91
 nm0187671,Alfredo B. Crevenna,direct+write,3,11,4.73,5.59,-0.86
 nm0238841,Don Mancini,direct+write,3,7,5.27,5.87,-0.6
 nm0296545,Nick Frost,act+write,3,25,6.13,6.14,-0.01
@@ -6887,7 +6856,6 @@ nm0323281,Obrad Gluscevic,direct+write,3,0,7.37,,
 nm0348123,Ismail Günes,direct+write,3,3,6.9,5.93,0.97
 nm0391542,Peter Lindholm,direct+write,3,1,5.4,6.0,-0.6
 nm0687751,Rodrigo Plá,direct+write,3,3,6.57,6.57,0.0
-nm0690894,Wakefield Poole,direct+write,3,1,6.17,7.0,-0.83
 nm0701821,Marie Pérennou,direct+write,3,0,7.1,,
 nm0702024,Jorge Pérez Solano,direct+write,3,0,6.83,,
 nm0705823,Vlastimir Radovanovic,direct+write,3,6,6.77,6.28,0.48
@@ -6975,7 +6943,7 @@ nm0140196,Carlos Carrera,direct+write,3,7,6.87,6.6,0.27
 nm0244999,Daniel Duval,act+direct+write,3,29,6.57,5.81,0.76
 nm0257373,Kurt Engfehr,direct+write,3,2,6.97,7.15,-0.18
 nm0290118,Coleman Francis,act+direct+write,3,6,1.83,4.82,-2.98
-nm0336960,Spalding Gray,act+write,3,20,7.3,6.29,1.01
+nm0336960,Spalding Gray,act+write,3,19,7.3,6.36,0.94
 nm0399430,Hubert Aranha,act+write,3,1,3.83,5.7,-1.87
 nm0404701,Seppo Huunonen,direct+write,3,0,5.4,,
 nm0483625,John D. Lamond,direct+write,3,3,5.0,4.43,0.57
@@ -7094,7 +7062,6 @@ nm0719298,Filip Renč,direct+write,3,5,6.77,5.1,1.67
 nm0726261,Ziska Riemann,direct+write,3,2,5.2,5.9,-0.7
 nm0818547,Scott Spiegel,act+direct+write,3,8,5.07,5.51,-0.45
 nm0838936,Chung Sun,direct+write,3,12,6.17,6.54,-0.38
-nm0847463,Tetsuji Takechi,direct+write,3,1,5.67,7.2,-1.53
 nm0885554,Robert van Ackeren,direct+write,3,0,5.7,,
 nm0937501,Przemyslaw Wojcieszek,direct+write,3,1,6.0,5.7,0.3
 nm0951975,S. Craig Zahler,direct+write,3,3,7.03,5.27,1.77
@@ -7344,7 +7311,6 @@ nm0332392,Heywood Gould,direct+write,3,5,5.47,6.5,-1.03
 nm0368643,Till Hastreiter,direct+write,3,0,4.6,,
 nm0376655,Daniel Hendler,act+direct+write,3,29,6.13,6.22,-0.08
 nm0380547,Gerardo Herrero,direct+write,3,17,6.17,5.79,0.38
-nm0399592,Tom Huckabee,direct+write,3,1,5.27,4.8,0.47
 nm0597673,Karen Moncrieff,act+direct+write,3,5,6.47,4.98,1.49
 nm0599787,George Montgomery,act+direct+write,3,47,4.7,5.81,-1.11
 nm0670447,Mary Jo Pehl,act+write,3,2,7.83,7.3,0.53
@@ -7476,7 +7442,6 @@ nm0716262,Michael Reeves,direct+write,3,3,5.87,5.63,0.23
 nm0759410,Hal Salwen,direct+write,3,0,5.87,,
 nm0780944,Ferd Sebastian,direct+write,3,3,5.13,4.73,0.4
 nm0835629,Adriano Stuart,act+direct+write,3,10,4.93,5.72,-0.79
-nm0841247,Svetlana Mischoff,direct+write,3,11,5.77,6.02,-0.25
 nm0947121,Keren Yedaya,direct+write,3,0,6.4,,
 nm10301904,K.R. Devmani,direct+write,3,0,8.8,,
 nm1075593,Martin Turk,direct+write,3,0,6.0,,
@@ -7551,7 +7516,6 @@ nm6127822,Ganesh Vinayak,direct+write,3,1,5.87,6.1,-0.23
 nm0001104,Frank Darabont,act+direct+write,3,8,8.33,6.84,1.5
 nm0012337,Alexander Adolph,direct+write,3,1,6.83,6.1,0.73
 nm0013049,Nika Agiashvili,direct+write,3,1,4.93,4.6,0.33
-nm0024658,John Amero,direct+write,3,2,5.73,4.95,0.78
 nm0037879,Roberto Artiagoitía,direct+write,3,1,4.3,6.6,-2.3
 nm0070865,Dev Benegal,direct+write,3,0,6.93,,
 nm0081423,Paľo Bielik,direct+write,3,1,6.93,6.8,0.13
@@ -7564,7 +7528,6 @@ nm0513039,Regina Linnanheimo,act+write,3,11,6.57,6.06,0.5
 nm0519043,Justin Long,act+write,3,55,5.6,5.58,0.02
 nm0530623,Vibeke Løkkeberg,act+direct+write,3,1,6.27,5.5,0.77
 nm0637518,Phillip Noyce,direct+write,3,18,6.57,6.41,0.16
-nm0658234,Gail Palmer,direct+write,3,2,5.47,5.65,-0.18
 nm0671105,Gabriel Pelletier,direct+write,3,2,6.2,5.8,0.4
 nm0685454,Salvatore Piscicelli,direct+write,3,0,6.33,,
 nm0702600,Peyman Ghassemkhani,act+write,3,11,5.13,5.78,-0.65
@@ -7862,7 +7825,7 @@ nm1669870,Rade Cosic,act+write,3,1,5.3,4.8,0.5
 nm1736575,Aram Rappaport,direct+write,3,1,5.73,5.0,0.73
 nm1831657,Russell Brown,direct+write,3,0,4.97,,
 nm1855334,Gani Rüzgar Savata,act+direct+write,3,0,2.37,,
-nm1903612,Sébastien Marnier,direct+write,3,1,6.47,6.7,-0.23
+nm1903612,Sébastien Marnier,direct+write,3,0,6.47,,
 nm1932020,Kenji Uchida,direct+write,3,2,7.17,6.55,0.62
 nm2011696,Dee Rees,direct+write,3,0,6.33,,
 nm2043219,Mila Turajlic,direct+write,3,0,7.93,,
@@ -7884,7 +7847,6 @@ nm5858328,Nicholas Michael Jacobs,act+direct+write,3,0,3.57,,
 nm6097273,Kiarash Asadizadeh,direct+write,3,0,4.6,,
 nm8083112,Silvia de Satkliff,act+write,3,0,5.97,,
 nm0018133,Patrick Alessandrin,direct+write,3,2,4.97,6.0,-1.03
-nm0082971,Patrice Rhomm,direct+write,3,3,4.37,5.07,-0.7
 nm0187769,Charles Crichton,direct+write,3,18,6.53,6.61,-0.08
 nm0199660,Jean-Louis Daniel,direct+write,3,0,3.9,,
 nm0228597,Adriaan Ditvoorst,direct+write,3,0,6.63,,
@@ -7897,7 +7859,6 @@ nm0348617,Luis Guridi,direct+write,3,0,5.3,,
 nm0398185,Peter Howitt,direct+write,3,5,6.47,5.32,1.15
 nm0481674,Miu-Suet Lai,direct+write,3,0,5.17,,
 nm0492288,Alex Law,direct+write,3,11,6.97,6.53,0.44
-nm0504126,John Leslie,act+direct+write,3,61,6.67,5.94,0.72
 nm0513974,Steven Lisberger,direct+write,3,3,6.43,5.87,0.57
 nm0603446,Yolande Moreau,act+direct+write,3,43,6.4,5.97,0.43
 nm0606483,David Burton Morris,direct+write,3,2,5.5,5.05,0.45
@@ -7954,6 +7915,7 @@ nm0222077,Gustav Deutsch,direct+write,3,1,7.03,5.0,2.03
 nm0225869,Katherine Dieckmann,direct+write,3,1,5.83,6.3,-0.47
 nm0244011,André van Duren,direct+write,3,2,6.3,6.4,-0.1
 nm0288263,Fred Fougea,direct+write,3,2,6.83,5.7,1.13
+nm0289565,Ody Fraga,direct+write,3,6,5.23,5.52,-0.28
 nm0326500,Kresimir Golik,direct+write,3,3,7.67,7.2,0.47
 nm0469694,Wayne Kramer,direct+write,3,3,6.97,6.53,0.43
 nm0560364,Jenna Mattison,act+write,3,2,3.93,4.3,-0.37
@@ -8052,7 +8014,7 @@ nm0346640,Chih-Hung Kuei,direct+write,3,14,6.57,6.01,0.55
 nm0374663,Benjamin Heisenberg,direct+write,3,1,6.23,6.5,-0.27
 nm0399655,John Huddles,direct+write,3,0,5.47,,
 nm0422710,Penn Jillette,act+write,3,13,6.47,6.7,-0.23
-nm0505415,William A. Levey,direct+write,3,7,4.13,4.03,0.1
+nm0505415,William A. Levey,direct+write,3,6,4.13,4.15,-0.02
 nm0518350,Bruna Lombardi,act+write,3,2,5.53,6.45,-0.92
 nm0545876,Rodolphe Marconi,direct+write,3,1,5.53,6.7,-1.17
 nm0551631,Mônica Martelli,act+write,3,5,6.53,6.68,-0.15
@@ -8164,7 +8126,7 @@ nm0362566,Catherine Hardwicke,act+direct+write,3,12,5.23,6.45,-1.22
 nm0405632,Mikael Håfström,direct+write,3,11,5.9,6.15,-0.25
 nm0409723,Ciro Ippolito,direct+write,3,5,4.87,5.24,-0.37
 nm0433520,Sakke Järvenpää,act+write,3,4,6.6,6.9,-0.3
-nm0433971,Preben Kaas,act+write,3,22,5.57,5.84,-0.27
+nm0433971,Preben Kaas,act+write,3,21,5.57,5.9,-0.34
 nm0460294,Harry Klynn,act+write,3,3,7.0,6.1,0.9
 nm0482901,Luis Alberto Lamata,direct+write,3,1,5.3,5.9,-0.6
 nm0496447,Herbert J. Leder,direct+write,3,2,5.4,4.35,1.05
@@ -8298,6 +8260,7 @@ nm0030612,Reverge Anselmo,direct+write,3,0,5.23,,
 nm0081217,Antonio Bido,direct+write,3,0,5.43,,
 nm0184698,Brendan Cowell,act+write,3,11,5.57,6.19,-0.62
 nm0226151,Saskia Diesing,direct+write,3,0,6.3,,
+nm0293354,David F. Friedman,act+direct+write,3,26,5.37,4.83,0.53
 nm0324683,Lana Gogoberidze,direct+write,3,0,7.4,,
 nm0418697,Jesper Jargil,direct+write,3,0,5.73,,
 nm0445245,Harvey Keith,direct+write,3,0,4.97,,
@@ -8633,6 +8596,7 @@ nm0714853,James Redford,direct+write,3,4,6.63,7.1,-0.47
 nm0718305,António Reis,direct+write,3,1,6.9,7.3,-0.4
 nm0769953,Hannes Michael Schalle,direct+write,3,0,6.83,,
 nm0862605,Kartal Tibet,act+direct+write,3,78,6.67,6.27,0.4
+nm0864818,Carlos Tobalina,direct+write,3,0,4.07,,
 nm0882403,Jamshed Usmonov,direct+write,3,1,6.27,6.7,-0.43
 nm0917358,Stephen Weeks,direct+write,3,1,4.9,5.7,-0.8
 nm0948075,Ying Ning,direct+write,3,1,6.87,4.9,1.97
@@ -8690,6 +8654,7 @@ nm0744630,Kaspar Rostrup,direct+write,3,0,6.2,,
 nm0760925,Conrado Sanchez,direct+write,3,1,3.93,3.2,0.73
 nm0804122,Sandra Sciberras,direct+write,3,1,5.23,4.4,0.83
 nm0846369,Christian Tafdrup,act+direct+write,3,9,6.23,5.67,0.57
+nm0861312,Chris Warfield,act+write,3,5,4.77,5.2,-0.43
 nm0901861,Irene von Alberti,direct+write,3,0,5.17,,
 nm1028832,Renzil D'Silva,direct+write,3,5,5.8,6.16,-0.36
 nm10308381,Sree Harsha Konuganti,direct+write,3,0,5.83,,
@@ -8782,7 +8747,6 @@ nm3755906,Gerald Salmina,direct+write,3,1,7.0,6.8,0.2
 nm5020492,Aniket Chattopadhyay,direct+write,3,4,6.73,6.38,0.36
 nm9942830,Ahammed Khabeer,direct+write,3,0,7.4,,
 nm0005069,Spike Jonze,act+direct+write,3,11,7.43,7.15,0.28
-nm0024659,Lem Amero,direct+write,3,0,5.73,,
 nm0256820,Sylke Enders,direct+write,3,0,6.53,,
 nm0335131,Denys Granier-Deferre,direct+write,3,1,5.1,7.2,-2.1
 nm0345536,Nikolay Gubenko,act+direct+write,3,5,7.3,7.06,0.24
@@ -9101,7 +9065,6 @@ nm0087861,William Peter Blatty,direct+write,3,11,6.83,5.92,0.92
 nm0111379,Jean-Stéphane Bron,direct+write,3,8,6.63,6.39,0.25
 nm0120268,Aydin Bulut,direct+write,3,0,6.53,,
 nm0171253,Warren Coleman,direct+write,3,2,6.83,5.4,1.43
-nm0192132,Cláudio Cunha,act+direct+write,3,1,5.9,5.2,0.7
 nm0239768,John Ducey,act+write,3,9,5.33,5.4,-0.07
 nm0332647,Romain Goupil,act+direct+write,3,4,6.23,6.2,0.03
 nm0362734,Rob Hardy,direct+write,3,1,4.63,4.2,0.43
@@ -9171,8 +9134,7 @@ nm0531817,Kevin Macdonald,direct+write,3,18,7.17,6.99,0.17
 nm0551752,Calle Marthin,act+write,3,1,5.63,6.8,-1.17
 nm0602206,Maryam Moghadam,act+write,3,1,7.03,6.5,0.53
 nm0707184,Aage Rais-Nordentoft,direct+write,3,1,5.47,5.0,0.47
-nm0716701,Piero Regnoli,direct+write,3,49,4.57,5.1,-0.53
-nm0730924,Joseph F. Robertson,direct+write,3,2,4.47,4.65,-0.18
+nm0716701,Piero Regnoli,direct+write,3,48,4.57,5.09,-0.52
 nm0788243,Shan-Hsi Ting,direct+write,3,2,5.9,6.3,-0.4
 nm0795153,Cate Shortland,direct+write,3,1,6.7,6.6,0.1
 nm0804408,Erik Skjoldbjærg,direct+write,3,5,6.17,6.48,-0.31
@@ -9369,7 +9331,6 @@ nm0342927,Ferde Grofé Jr.,direct+write,3,3,5.17,5.23,-0.07
 nm0345146,Changwei Gu,act+direct,3,4,6.9,6.48,0.43
 nm0420524,András Jeles,direct+write,3,0,6.3,,
 nm0459571,Aurel Klimt,direct+write,3,0,6.93,,
-nm0497412,Hyapatia Lee,act+write,3,3,5.97,5.97,0.0
 nm0621667,Janusz Nasfeter,direct+write,3,1,6.8,6.5,0.3
 nm0633080,Doze Niu,act+direct+write,3,8,6.73,7.07,-0.34
 nm0672543,Clare Peploe,direct+write,3,4,5.5,6.45,-0.95
@@ -9422,6 +9383,7 @@ nm0025241,Vicente Amorim,direct+write,3,6,5.2,6.28,-1.08
 nm0044762,Obba Babatundé,act+write,3,34,3.97,5.29,-1.33
 nm0054672,Francesco Barilli,act+direct+write,3,6,5.93,6.08,-0.15
 nm0061944,Tristán Bauer,direct+write,3,0,7.47,,
+nm0076419,Claude Bernard-Aubert,direct+write,3,0,5.77,,
 nm0079096,Antonio José Betancor,direct+write,3,2,6.43,6.2,0.23
 nm0208343,Raymond De Felitta,direct+write,3,5,6.7,6.34,0.36
 nm0258355,Petra Epperlein,direct+write,3,4,6.67,6.25,0.42
@@ -9467,11 +9429,8 @@ nm4524554,Tien-Yu Fu,direct+write,3,1,5.63,7.1,-1.47
 nm4589954,James Bird,direct+write,3,1,5.47,5.6,-0.13
 nm4727866,Lois Patiño,direct+write,3,1,6.37,6.9,-0.53
 nm6218837,Nicolás Onetti,direct+write,3,7,4.67,4.19,0.48
-nm0002668,George 'Buck' Flower,act+write,3,48,4.5,4.9,-0.4
+nm0002668,George 'Buck' Flower,act+write,3,46,4.5,4.91,-0.41
 nm0091430,Budd Boetticher,direct+write,3,29,6.07,6.21,-0.15
-nm0116949,James Bryan,direct+write,3,3,4.37,3.93,0.43
-nm0136622,David Cardoso,act+direct,3,7,5.1,5.71,-0.61
-nm0157778,Bob Chinn,direct+write,3,16,5.7,5.68,0.02
 nm0169486,Jem Cohen,direct+write,3,3,7.13,7.1,0.03
 nm0227570,Isabelle Doval,act+direct+write,3,2,5.7,5.6,0.1
 nm0282921,Phil Flores,direct+write,3,3,4.8,4.57,0.23
@@ -9484,6 +9443,7 @@ nm0451869,Levan Khotivari,direct+write,3,0,7.4,,
 nm0463473,Greg Kohs,direct+write,3,2,7.4,7.55,-0.15
 nm0491286,Fabrizio Laurenti,direct+write,3,1,5.1,4.4,0.7
 nm0509870,Luciano Ligabue,direct+write,3,1,6.27,7.0,-0.73
+nm0582750,Radley Metzger,direct+write,3,6,5.3,5.42,-0.12
 nm0662180,Dave Parker,direct+write,3,5,4.1,4.08,0.02
 nm0683597,Benoit Pilon,direct+write,3,2,6.63,7.65,-1.02
 nm0689358,Barry Pollack,direct+write,3,0,4.9,,
@@ -9556,7 +9516,6 @@ nm0844983,Jordi Sánchez,act+write,2,18,4.8,5.13,-0.33
 nm1475034,Evgeny Ruman,direct+write,2,2,6.45,5.2,1.25
 nm7721059,Diamond Ratna Babu,direct+write,2,11,3.9,5.1,-1.2
 nm0001040,Joan Chen,act+direct,2,49,6.15,6.07,0.08
-nm0128334,Maria Lease,act+direct,2,8,5.55,4.91,0.64
 nm0141281,L.M. Kit Carson,act+write,2,12,5.75,5.81,-0.06
 nm0157857,Chung-Hsing Chao,act+direct+write,2,5,6.95,6.68,0.27
 nm0232382,Harris Done,direct+write,2,2,5.6,4.5,1.1
@@ -9641,7 +9600,7 @@ nm1702781,Frank Perozo,act+direct,2,18,5.8,6.44,-0.64
 nm4892380,Cheyenne Gordon,act+write,2,3,3.6,3.3,0.3
 nm0104132,Stan Brakhage,act+direct,2,7,6.6,6.84,-0.24
 nm0265314,Stewart Faichney,act+write,2,2,5.7,6.65,-0.95
-nm0393222,James Hong,act+direct,2,69,4.4,5.24,-0.84
+nm0393222,James Hong,act+direct,2,68,4.4,5.24,-0.84
 nm0395262,Israel Horovitz,act+write,2,7,6.5,6.33,0.17
 nm0443433,Howard Kaylan,act+write,2,2,5.35,6.4,-1.05
 nm0570190,Don McGuire,act+write,2,23,6.1,6.39,-0.29
@@ -9679,7 +9638,7 @@ nm12528427,Sophie Osbourne,direct+write,2,7,4.45,2.91,1.54
 nm1795697,Caetano Gotardo,act+write,2,4,6.2,5.5,0.7
 nm3345961,Lee Hwan,act+direct,2,3,5.95,6.5,-0.55
 nm0036496,Jennifer Arnold,direct+write,2,3,6.65,5.9,0.75
-nm0070482,Joel Bender,direct+write,2,7,5.1,5.66,-0.56
+nm0070482,Joel Bender,direct+write,2,5,5.1,5.4,-0.3
 nm0123931,Juan Pablo Buscarini,direct+write,2,5,4.9,5.04,-0.14
 nm0257288,Erich Engels,direct+write,2,2,6.15,6.8,-0.65
 nm0291253,Al Franken,act+write,2,7,5.45,6.24,-0.79
@@ -9750,7 +9709,6 @@ nm0151125,Teddy Chan,act+direct+write,2,14,6.3,6.36,-0.06
 nm0251033,Ólafur Egilsson,act+write,2,4,6.4,6.65,-0.25
 nm0347797,Sean Gullette,act+write,2,5,6.85,6.28,0.57
 nm0416258,Alan James,direct+write,2,11,4.95,6.26,-1.31
-nm0418486,Howard Ziehm,direct+write,2,4,4.1,5.0,-0.9
 nm0432846,Nathan Juran,direct+write,2,22,5.4,5.8,-0.4
 nm0765767,Kiyoshi Sasabe,direct+write,2,4,6.6,6.55,0.05
 nm1818216,Payman Maadi,act+write,2,24,6.45,6.57,-0.12
@@ -9991,6 +9949,7 @@ nm3729931,François Gaillard,direct+write,2,2,4.8,4.65,0.15
 nm4274640,Perci M. Intalan,direct+write,2,6,6.0,5.68,0.32
 nm8288750,Da Ke,act+write,2,3,6.5,4.93,1.57
 nm0004555,Walter Murch,act+write,2,5,7.25,7.34,-0.09
+nm0082971,Patrice Rhomm,direct+write,2,3,3.95,5.07,-1.12
 nm0106423,George P. Breakston,act+direct+write,2,13,5.75,6.01,-0.26
 nm0536774,Anthony Maharaj,direct+write,2,5,4.4,4.96,-0.56
 nm0818765,Mickey Spillane,act+write,2,7,5.45,5.81,-0.36
@@ -10048,6 +10007,7 @@ nm0090066,Reggie Rock Bythewood,act+write,2,5,5.5,5.98,-0.48
 nm0116103,Adrian Brunel,direct+write,2,3,5.25,5.77,-0.52
 nm0265139,Giovanni Fago,direct+write,2,5,5.75,5.82,-0.07
 nm0421716,Tomas Villum Jensen,act+direct,2,15,5.4,5.89,-0.49
+nm0454879,Jean-Claude Roy,direct+write,2,4,4.95,4.68,0.27
 nm0494103,Yvan Le Bolloc'h,act+write,2,3,4.55,4.67,-0.12
 nm0564827,Tim McCanlies,direct+write,2,4,7.05,6.8,0.25
 nm0766020,Oley Sassone,direct+write,2,4,4.2,5.35,-1.15
@@ -10068,6 +10028,7 @@ nm1122945,Birgitte Stærmose,direct+write,2,2,6.1,5.85,0.25
 nm1186589,Chi-Man Wan,direct+write,2,7,6.35,6.03,0.32
 nm3450267,Raimund Huber,direct+write,2,3,3.9,4.33,-0.43
 nm5801106,Krish Thirukumaran,direct+write,2,3,4.0,6.83,-2.83
+nm0042155,Carlos Aured,direct+write,2,5,4.95,5.06,-0.11
 nm0097077,Josephine Bornebusch,act+direct,2,11,6.5,5.46,1.04
 nm0182873,Manny Coto,direct+write,2,3,5.35,4.53,0.82
 nm0282984,Robert Florey,direct+write,2,43,6.45,6.24,0.21
@@ -10219,10 +10180,9 @@ nm1673756,Jan-Ole Gerster,direct+write,2,3,6.85,6.53,0.32
 nm1893855,Josh Appignanesi,direct+write,2,2,5.05,5.6,-0.55
 nm4861887,Torquil Jones,direct+write,2,2,7.55,7.85,-0.3
 nm8870020,Jay.k,direct+write,2,3,5.4,6.2,-0.8
-nm0216155,Michel Delahaye,act+write,2,17,6.65,6.54,0.11
+nm0216155,Michel Delahaye,act+write,2,16,6.65,6.61,0.04
 nm0433471,Stefan Jäger,direct+write,2,3,5.3,6.23,-0.93
 nm0453987,Bruce Kimmel,act+direct+write,2,4,4.45,4.95,-0.5
-nm0511107,Fred J. Lincoln,act+direct,2,8,5.65,5.46,0.19
 nm0559877,John Mathew Matthan,direct+write,2,2,6.65,5.5,1.15
 nm0644900,Oh Seung-uk,direct+write,2,2,5.8,6.75,-0.95
 nm0758161,Pierre-Henry Salfati,act+write,2,5,5.15,5.8,-0.65
@@ -10241,7 +10201,6 @@ nm0004570,Sunil Dutt,act+direct,2,24,7.0,6.66,0.34
 nm0006837,Bill Melendez,act+direct,2,4,7.2,7.08,0.12
 nm0007124,Suhasini,act+write,2,69,6.9,6.74,0.16
 nm0009016,Jon Abrahams,act+direct,2,24,5.45,5.44,0.01
-nm0033179,Paul Aratow,direct+write,2,2,3.7,4.5,-0.8
 nm0080868,Herbert J. Biberman,direct+write,2,7,5.4,6.6,-1.2
 nm0522123,Eugène Lourié,direct+write,2,3,6.15,5.93,0.22
 nm0605648,Azuma Morisaki,direct+write,2,3,7.25,6.7,0.55
@@ -10367,6 +10326,7 @@ nm2639032,Jason Eisener,direct+write,2,5,5.5,6.32,-0.82
 nm2653170,David Pablos,direct+write,2,2,6.95,6.15,0.8
 nm4512390,Jakir Hossain Raju,direct+write,2,2,6.35,5.3,1.05
 nm0001770,Fisher Stevens,act+direct,2,37,6.35,5.9,0.45
+nm0136622,David Cardoso,act+direct,2,7,5.2,5.71,-0.51
 nm0137573,Lewis John Carlino,direct+write,2,12,6.7,6.38,0.33
 nm0295030,Richard Friedenberg,direct+write,2,5,6.8,6.24,0.56
 nm0329023,Brian Goodman,act+direct,2,5,6.3,5.44,0.86
@@ -10455,7 +10415,7 @@ nm0782707,George B. Seitz,direct+write,1,50,6.0,6.24,-0.24
 nm0791007,David Sheldon,direct+write,1,8,4.1,4.96,-0.86
 nm1305753,Dennis Marasigan,act+write,1,7,4.1,5.33,-1.23
 nm0534221,Jeanie Macpherson,act+write,1,37,6.5,6.51,-0.01
-nm0628399,Ted Newsom,act+write,1,6,5.3,4.57,0.73
+nm0628399,Ted Newsom,act+write,1,5,5.3,4.24,1.06
 nm0861841,Thotapalli Madhu,act+write,1,8,2.1,6.44,-4.34
 nm0891299,Lyn Vaus,act+write,1,4,6.6,6.25,0.35
 nm0266684,Hampton Fancher,act+write,1,8,6.0,6.56,-0.56
@@ -10637,8 +10597,7 @@ nm1095510,Iafa Britz,act+write,1,4,6.2,7.1,-0.9
 nm2817420,Natalie Dickinson,act+write,1,5,2.7,4.7,-2.0
 nm0756908,Kōichi Saitō,direct+write,1,5,7.1,6.6,0.5
 nm0144252,Ted Cassidy,act+write,1,8,4.2,5.65,-1.45
-nm0192446,Sean S. Cunningham,direct+write,1,20,5.5,5.59,-0.08
-nm0249892,Paul Thomas,act+direct,1,54,6.7,5.89,0.81
+nm0192446,Sean S. Cunningham,direct+write,1,19,5.5,5.63,-0.13
 nm0489155,Börje Larsson,direct+write,1,5,3.6,4.74,-1.14
 nm0521974,Todd Louiso,act+direct,1,14,4.1,6.5,-2.4
 nm0653708,Roos Ouwehand,act+write,1,10,6.1,6.34,-0.24
@@ -10654,7 +10613,7 @@ nm0662956,Hugh Parks,direct+write,1,4,4.4,4.75,-0.35
 nm0773104,Marlene Schmidt,act+write,1,7,4.4,4.71,-0.31
 nm5320889,Pengfei Qin,act+direct,1,8,6.5,5.89,0.61
 nm0285401,Scott Forbes,act+write,1,12,6.4,6.25,0.15
-nm0298889,Giacomo Furia,act+write,1,30,5.3,5.73,-0.43
+nm0298889,Giacomo Furia,act+write,1,29,5.3,5.76,-0.46
 nm0751481,Toby Russell,act+direct,1,6,6.6,5.73,0.87
 nm0794791,Jack Sholder,direct+write,1,9,6.0,5.61,0.39
 nm0161823,John Cianetti,act+write,1,6,5.0,4.07,0.93
@@ -10668,7 +10627,6 @@ nm0873779,Gary Trousdale,direct+write,1,4,6.9,7.53,-0.63
 nm6845075,Biswapati Sarkar,act+write,1,4,7.2,6.4,0.8
 nm0184170,Raoul Coutard,act+direct,1,4,7.2,5.88,1.33
 nm0291205,David Frankel,direct+write,1,10,5.5,6.39,-0.89
-nm0358430,Barbara Hammer,act+direct,1,4,7.1,7.1,0.0
 nm1149945,Bruno Mazzeo,act+write,1,5,5.2,5.46,-0.26
 nm2078626,Sebastián Brahm,act+write,1,6,5.4,6.67,-1.27
 nm2116766,Marzieh Boroomand,act+direct,1,6,6.0,6.15,-0.15

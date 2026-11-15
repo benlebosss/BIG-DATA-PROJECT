@@ -1,6 +1,6 @@
 table,column,type,rows,null_count,empty_count,null_pct,empty_pct,missing_pct
-title.akas,isOriginalTitle,BooleanType(),59668790,59668790,0,100.0,0.0,100.0
-title.basics,isAdult,BooleanType(),12846867,12846867,0,100.0,0.0,100.0
-title.akas,attributes,StringType(),59668790,59353075,0,99.471,0.0,99.471
-title.basics,endYear,IntegerType(),12846867,12684284,0,98.734,0.0,98.734
-name.basics,deathYear,IntegerType(),15716378,15452135,0,98.319,0.0,98.319
+title.akas,attributes,StringType(),59706412,59390547,0,99.471,0.0,99.471
+title.basics,endYear,IntegerType(),12855557,12692766,0,98.734,0.0,98.734
+name.basics,deathYear,IntegerType(),15726308,15461971,0,98.319,0.0,98.319
+name.basics,birthYear,IntegerType(),15726308,15042845,0,95.654,0.0,95.654
+title.principals,job,StringType(),102236837,82513420,0,80.708,0.0,80.708

@@ -80,8 +80,12 @@ def sparql(ids: list, pause: float, retries: int = 5) -> list:
 
 
 def wikimedia_code(code: str) -> str:
-    """Wikimedia language codes look like ``zh-yue``: keep the specific part."""
-    return code.split("-")[-1] if code else None
+    """Wikimedia codes are either a language (``zh-yue``: keep ``yue``) or a regional
+    variant (``en-us``: keep ``en``, American English is still English)."""
+    if not code:
+        return None
+    parts = code.split("-")
+    return parts[0] if len(parts[-1]) == 2 else parts[-1]
 
 
 def to_record(binding: dict, retrieved_at: str) -> dict:

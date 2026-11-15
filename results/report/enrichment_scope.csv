@@ -1,0 +1,9 @@
+item,value
+genres,25
+genre-year groups,1027
+groups with fewer than 10 films,68
+film x genre rows,9833
+distinct films,6820
+film x person rows,20428
+distinct people,10452
+films with fewer than 3 principals,23
