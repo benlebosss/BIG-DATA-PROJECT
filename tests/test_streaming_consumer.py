@@ -80,3 +80,8 @@ def test_all_windows_flagged_with_threshold_one(spark, tmp_path):
     m = match_entities(parse_changes(raw), ref_df(spark, tmp_path))
     w = window_counts(m, "30 minutes", "5 minutes", "10 minutes", min_matches=1).collect()
     assert w and all(r.flagged for r in w)
+
+
+def test_franchise_page_is_not_matched(spark, tmp_path):
+    raw = lines_df(spark, tmp_path, [event("Alien (franchise)", 1700000000)])
+    assert match_entities(parse_changes(raw), ref_df(spark, tmp_path)).count() == 0
