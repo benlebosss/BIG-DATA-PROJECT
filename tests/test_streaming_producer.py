@@ -50,3 +50,11 @@ def test_several_wikis_are_accepted():
 
 def test_iter_sse_skips_comment_lines():
     assert list(iter_sse([": ping", "id: 7", 'data: {"x": 2}', ""])) == [("7", '{"x": 2}')]
+
+
+def test_main_starts_in_dry_run(monkeypatch):
+    import sys
+    from src.streaming import wikipedia_producer as wp
+    monkeypatch.setattr(sys, "argv", ["wikipedia_producer", "--dry-run"])
+    monkeypatch.setattr(wp, "stream_changes", lambda *a, **k: iter([]))
+    wp.main()
