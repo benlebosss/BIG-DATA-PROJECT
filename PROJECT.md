@@ -1,5 +1,7 @@
 # PROJECT
 
+Group number: 2
+
 ## Contributors
 
 | Name | Email |
