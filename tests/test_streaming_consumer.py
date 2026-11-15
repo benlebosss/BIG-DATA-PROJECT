@@ -85,3 +85,8 @@ def test_all_windows_flagged_with_threshold_one(spark, tmp_path):
 def test_franchise_page_is_not_matched(spark, tmp_path):
     raw = lines_df(spark, tmp_path, [event("Alien (franchise)", 1700000000)])
     assert match_entities(parse_changes(raw), ref_df(spark, tmp_path)).count() == 0
+
+
+def test_year_film_suffix_is_matched(spark, tmp_path):
+    raw = lines_df(spark, tmp_path, [event("Alien (1979 film)", 1700000000)])
+    assert match_entities(parse_changes(raw), ref_df(spark, tmp_path)).count() == 1
