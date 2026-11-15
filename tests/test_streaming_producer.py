@@ -30,3 +30,23 @@ def test_filters():
 def test_iter_sse():
     lines = [":ok", "event: message", "id: 42", 'data: {"a": 1}', "", "data: {}"]
     assert list(iter_sse(lines)) == [("42", '{"a": 1}'), ("42", "{}")]
+
+
+def test_new_pages_are_kept():
+    assert parse_event(make(type="new")) is not None
+
+
+def test_bot_flag_is_forwarded():
+    assert parse_event(make(bot=True))["bot"] is True
+
+
+def test_allowed_namespace_is_kept():
+    assert parse_event(make(namespace=0), {"enwiki"}, {0}) is not None
+
+
+def test_several_wikis_are_accepted():
+    assert parse_event(make(wiki="frwiki"), {"enwiki", "frwiki"}, None)["wiki"] == "frwiki"
+
+
+def test_iter_sse_skips_comment_lines():
+    assert list(iter_sse([": ping", "id: 7", 'data: {"x": 2}', ""])) == [("7", '{"x": 2}')]
