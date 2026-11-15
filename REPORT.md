@@ -121,6 +121,14 @@ Most extreme short movies (found by the IQR criterion only):
 
 #### Methodological Explanation
 
+I looked for abnormal runtimes inside each genre, because a normal length is not the same from one genre to the next. Two rules run on the same population: a z-score (threshold set with `--z`) and the IQR fences. I ran both on purpose, because comparing them shows how skewed the runtimes are.
+
+The gap is large. The z-score finds no short film at all and 4,708 films that are too long. The IQR rule finds 4,669 short films (5,184 film-genre rows, as a film is tested in each of its genres) and 19,039 long ones. Runtimes have a long right tail, and a few extreme values inflate the mean and the standard deviation. In 25 of the 26 genres the lower z-score bound falls under the 40-minute floor. In Film-Noir it is 40.58 minutes, still under the shortest possible runtime of 41. So the z-score can never flag a film as short. Quartiles are not pulled by the tail, so the IQR fences are tighter in all genres but Talk-Show, but that is not enough everywhere. In 14 genres the lower fence is still at 41 minutes or below (7.5 for Documentary and Western, 16.5 for Biography), and no film can be short there either. It rises above 41 minutes in the 12 other genres, among them Drama, Comedy and Action, and these are exactly the genres where the rule finds short films.
+
+The extremes mix real films and data problems. Out 1 is a real Rivette film of about 13 hours, while the Tom and Jerry anthology is a compilation. The longest title is The Story of Documentary Film (960 minutes, dated 2026), and the largest z-score is Kahrlton Heights North at 37.3. Runtimes above 1,000 minutes had already been removed during data preparation.
+
+A z-score built on the median and the MAD is the obvious alternative. I expect it to behave more like the IQR rule, since neither is distorted by extreme values, but I did not test it. The IQR rule has the opposite weakness: with 19,039 long outliers, it is quick to call a film abnormal.
+
 ### Q2. Top three genres per year (1980-2025)
 
 Top three genres by total number of votes (share of the year's votes in %):
@@ -176,6 +184,16 @@ Top three genres by total number of votes (share of the year's votes in %):
 
 #### Methodological Explanation
 
+The assignment says “most popular” without defining it. I used the sum of `numVotes` over the feature films of a genre released in a given year. A vote means somebody watched the film and cared enough to rate it, which is the closest thing to audience size in IMDb. The percentage next to each genre is its share of all votes that year.
+
+Three other measures were possible, and each one answers a different question:
+
+- Number of films measures what the industry produces, not what people watch. It would favour genres with many small productions, Documentary for example.
+- Average rating measures how much a film is liked by those who saw it. It would push niche genres with few, enthusiastic voters to the top.
+- Vote-weighted rating is more stable, but it still ranks the best-rated genre, not the most popular one.
+
+With votes, Drama dominates: first in 42 of the 46 years, and in the top 3 every year. The four exceptions are 1981 (Adventure), 1984 (Action), 1985 and 1989 (Comedy). Two periods stand out. All nine appearances of Crime fall in the 1990s (every year from 1990 to 1999 except 1997), and Action is in the top 3 every year from 2008 to 2025.
+
 ### Q3. Top three genres compared with the other genres
 
 Mean over 1980-2025:
@@ -210,6 +228,12 @@ Years in the top three:
 
 #### Methodological Explanation
 
+Each year, the three genres from Q2 form one group that is compared with all other genres together. I chose four indicators: share of votes (how much of the audience the group holds), vote-weighted rating (how well it is liked, without films with a few dozen votes distorting the mean), votes per film and number of films. Votes per film matters most, because it tells whether the audience comes from each film or from the number of films.
+
+Three genres out of more than twenty hold 44.7% of the votes, so popularity is concentrated. Their films, however, are not individually more popular or much better rated. Votes per film are practically equal (8,186 against 8,289), the top 3 is ahead in only 26 years out of 46, and its rating advantage is 0.14 points. The difference is the size of each genre: about 1,240 films a year for each top 3 genre, against about 270 for any other genre. Taken as a group, the others still release more films (5,243 against 3,722).
+
+The alternative was to compare the top 3 with each other genre separately. That is more detailed, but it gives about 19 comparisons a year and no readable answer. Grouping loses the detail and treats Documentary, Horror and Musical as one block. The two groups also overlap: a Drama-Romance film sits in both, which pulls them closer together.
+
 ### Q4. Directors with a single movie rated 8.0 or more
 
 172 directors found. The 15 with the most voted hit:
@@ -243,6 +267,12 @@ Number of other movies:
 
 #### Methodological Explanation
 
+Directors come from `title.crew.directors`. A director qualifies with exactly one film rated 8.0 or above, at least two other films, and an average of 6.0 or below on those others. These three values are fixed in the code. I read “multiple other movies” as two or more, because with a single other film there is nothing to average. I asked for exactly one hit because a director with two films above 8.0 is no longer a one-hit case.
+
+Only films with at least 100 votes count (`--min-votes`, the same default as in Q7 and Q8). A rating built on a few dozen votes means little: the friends of the crew are enough to produce a 9. One hundred is still low enough to keep the small, badly rated films that the “other movies” condition depends on.
+
+The vote threshold is the main trade-off. At 100 votes the list has 172 directors, but 82 of the hits have fewer than 1,000 votes, and 12 are 2026 releases whose ratings have not settled (Om Ka Hari stands at 9.9). I re-ran the query at 1,000 votes to see how much it matters. Only 49 directors are left, 41 from the original list and 8 new ones, and the 2026 hits drop from 12 to 2. The stricter list is more convincing, but the result clearly depends on this one setting.
+
 ### Q5. Series whose best episode is early and worst episode is in the last season
 
 353 series found. The 15 most voted:
@@ -272,6 +302,10 @@ Summary:
 |    353 |                8.6 |                 6.2 |        2.2 |                          19 |
 
 #### Methodological Explanation
+
+Series are titles of type `tvSeries` or `tvMiniSeries` with at least 3 seasons of at least 10 episodes (both fixed in the code). With fewer seasons, “early” and “last” overlap. The best episode must be in season 1 or 2, and the worst in the last season, taken as the highest season number. Only episodes with at least 20 votes count (`--min-votes`), a lower bar than for films because episodes get far fewer votes. Ties on rating go to the episode with more votes, so each series has exactly one best and one worst episode.
+
+Season averages would be less sensitive to one odd episode, but the question is about episodes. Two edge cases remain. 19 of the 353 series have no end year, so their “last” season may only be the latest so far, and episodes without a season number are ignored. For the series that match, the fall is steep: the median gap between best and worst episode is 2.2 points.
 
 ### Q6. Actors successful in movies of several original languages
 
@@ -347,6 +381,20 @@ Actors successful in three or more languages:
 
 #### Methodological Explanation
 
+A film is a success with a rating of 7 or above and at least 10,000 votes. I wanted both conditions: the rating says the film is liked, the votes say it was actually seen. A film rated 7 with 300 votes may be well liked, but few people saw it.
+
+The hard part is the language, because IMDb does not give it. `title.akas` has a language column, but it is never filled on the rows marked as the original title. My first version guessed the language from the other `title.akas` rows, and it classified Wings of Desire, a German film, as English. That was enough to make me look elsewhere.
+
+I took the original language from Wikidata. Each film there carries its IMDb identifier (property P345), so the join is exact and needs no title matching, and property P364 gives the original language. This covers 86.6% of the successful films. Regional variants are reduced to their base language (American English becomes `en`). Otherwise an actor with one American and one British film would count as bilingual.
+
+Films with several original languages (11.8%) are excluded by default, which `--multi-language` can change. I cannot know which language a given actor performed in, and counting every language would create multilingual actors who are not. Where Wikidata has no answer (1.6%), the query falls back on the `title.akas` heuristic.
+
+Staying on IMDb alone would have kept the pipeline self-contained, but it would repeat the Wings of Desire error on many non-English films. The production country is no better as a proxy, since a country is not a language (India and Switzerland are enough to show it).
+
+Some errors remain. Wikidata is edited by volunteers and can be wrong or incomplete. The excluded multilingual films are often international co-productions, exactly where multilingual actors work, so the 741 actors with hits in two or more languages are probably an underestimate. And the original language of a film is not always the one a given actor spoke in it.
+
+English is part of 66.8% of the profiles with two or more languages, so multilingual success mostly means a national career plus English-language films.
+
 ### Q7. Long careers whose ratings peaked early
 
 5522 actors and actresses found. The 15 largest drops:
@@ -380,6 +428,17 @@ Size of the drop between the first and second half of the career:
 | 2+                   |     68 |
 
 #### Methodological Explanation
+
+Actors and actresses come from `title.principals`, with feature films of at least 100 votes. Career length is the year of the last film minus the year of the first. I kept careers of at least 20 years and 15 films (both fixed in the code): a peak needs a long career to stand out from, and each half needs enough films for its average to mean something.
+
+“Peaked early” is not defined in the assignment. I cut each career at its middle year and asked for two things: the best-rated film is in the first half, and the first half has a higher average rating than the second. Each condition alone is too weak. The best film is a single data point, and one lucky film at 25 does not make a declining career. The average alone accepts careers that drift down without ever having had a high point.
+
+Two other definitions were possible:
+
+- The slope of a regression of rating on year uses every film and gives a rate of decline. But a negative slope is a trend, not a peak, and it is harder to explain than two halves.
+- Best film in the first quarter is stricter on “early” and would shorten the list, but it rests entirely on one film.
+
+My definition is generous. Of the 5,522 people it returns, 2,640 lose half a point or less between the two halves, which is closer to slow erosion than to a fall, and only 1,037 lose more than one point. A minimum drop would give a shorter and more convincing list. The cut is also made on years, not on films, so the two halves can hold very different numbers of films.
 
 ### Q8. Multi-talented film professionals
 
@@ -420,6 +479,22 @@ People with the most movies in several roles:
 | Kader Khan         | act+write        |                    45 |              125 |         5.73 |     5.33 |  0.40 |
 
 #### Methodological Explanation
+
+Three roles count. Acting comes from `title.principals` (categories actor, actress and self). Directing and writing come from `title.crew`, completed with the director and writer rows of `title.principals`, so that a credit present in only one table is not lost. A multi-talent holds at least two roles, each on at least three films (`--min-per-role`) with 100 votes or more. Three films separates a regular activity from a one-off, such as a director with a single cameo. A higher minimum would shrink the population quickly.
+
+The question asks how these people perform, which calls for a comparison. I made it per person: the average rating of their multi-role films minus the average of their single-role films. Each person is their own reference, so the result does not depend on whether they are famous or obscure. Comparing all multi-role films with all single-role films would mostly compare different people. I still report the averages by combination because they are easy to read. They stay within a quarter of a point, from 6.00 for directing and writing down to 5.75 for acting and writing.
+
+Combining roles changes almost nothing. The average gain goes from -0.08 to +0.05 depending on the combination, and about half of the people do better when they combine.
+
+Two limits are specific to this question. The “self” category counts as acting, although appearing as oneself in a documentary is not really acting, and it probably inflates that role. The “People” column counts all 11,082 multi-talents, while the gain only covers the 8,481 who have both kinds of films. The other 2,601 have nothing to compare.
+
+### Common limits
+
+Three limits apply to most of the questions above.
+
+- Genres overlap. A multi-genre film counts in each of its genres, so one blockbuster tagged Action, Adventure and Sci-Fi lifts three genres at once.
+- Votes keep accumulating after release. The figures describe films as they are seen today, not as they were received at the time, and very recent titles have ratings that have not settled.
+- The IMDb rating is the only measure of quality. It reflects the people who vote on IMDb, not box office or critics.
 
 ## 3. Data enrichment
 
