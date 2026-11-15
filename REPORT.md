@@ -662,6 +662,8 @@ Sample rows (synopsis cut to 70 characters here):
 
 ### 5.1 Do director-actor duos make better films together?
 
+Some directors keep coming back to the same actor: Kurosawa and Mifune, Scorsese and De Niro. Film history treats these pairs as something special, and I wanted to check it on the whole dataset: are the films a duo makes together rated higher than what each of them does separately? The question needs no data outside IMDb, but it joins five tables and compares each pair with two separate filmographies.
+
 All duos:
 
 | Duos | Directors | Actors | Avg duo rating | Avg baseline | Avg lift | Median lift | % duos better |
@@ -753,6 +755,18 @@ Lowest lift (duos with 5 films or more):
 | Albert Pyun       | Norbert Weisser   |     8 |  1984 | 2005 |    4.32 |           4.08 |        6.65 |     5.36 | -1.04 |
 | Robert Rodriguez  | Alexa PenaVega    |     5 |  2001 | 2013 |    4.92 |           6.34 |        5.56 |     5.95 | -1.03 |
 
+**Key takeaways.** The lift of a duo is the average rating of its films together minus the average of the director's and the actor's separate filmographies (see **Lift** below). There are 4,646 duos. The average lift is +0.188, with a 95% confidence interval from +0.172 to +0.204. 3,039 duos (65.4%) do better together, 1,571 do worse and 36 round to zero, and a sign test gives z = 21.6, so this is not chance. The effect is real, but small on a 10-point scale. Only 6.3% of duos gain a full point or more. The stricter test gives the same direction: 48.6% of duos beat both of their separate averages, against 21.0% that fall below both. The number of films together barely matters. The lift goes from +0.185 at three films to +0.203 at six or more, and duo by duo the correlation is 0.01. The two pairs from the introduction are in the data and fit the popular idea: Kurosawa and Mifune (16 films, +0.62), Scorsese and De Niro (10 films, +0.84). Peter Jackson and Ian McKellen go further (6 films, +1.44). Edward Drake and Bruce Willis (7 films in 2021-2023, -1.91) show the opposite case. By decade of first collaboration the lift peaks in the 1980s and 1990s (around +0.30) and drops afterwards, down to -0.20 for the 2020s, on only 69 duos.
+
 #### Methodological Explanation
+
+**Data and definition.** The query joins `title.basics` (the feature films of Part 2), `title.ratings`, `title.crew` for directors, `title.principals` for actors and actresses, and `name.basics` for names. I keep films with at least 1,000 votes (`--min-votes`). That is stricter than in most of Part 2, because a duo's average can rest on only three films and each rating has to be reliable. A duo is a director and an actor with at least 3 feature films together (`--min-films`): two films can be a coincidence or a sequel, three starts to look like a habit. Someone who directs themselves is not a duo, and two co-directors count as two duos.
+
+**Lift.** For each duo I compute the average rating of their films together, then subtract a baseline. The baseline is the mean of two numbers: the director's average without this actor, and the actor's average without this director. Each of them needs at least 2 films outside the duo (fixed in the code), or there is nothing to compare with. I gave the two sides equal weight on purpose. If I had pooled all their other films, a director with forty films would have decided the baseline almost alone. A positive lift means the pair does better together than apart.
+
+**Limits.** The lift is not a causal effect. People usually keep working together because their first films did well, so duos that reach three films are already a selected group. I also checked regression to the mean in a simple way. If the lift came only from pairs starting from a low baseline, it would fall steadily as the baseline rises. By baseline quartile the lift is +0.17, +0.23, +0.22 and +0.13. It is lowest in the top quartile, but it rises before it falls, and the correlation between baseline and lift is 0.02. So the data show no clear trend, which is a weaker statement than saying the lift does not decline. As everywhere in this report, the IMDb rating is the only measure of quality.
+
+**Alternatives.** A regression with one fixed effect per director and per actor would separate each person's own level from the pair more cleanly, especially for directors in dozens of duos like Michael Curtiz (37). It is harder to explain, and with three films per duo the pair effect would rest on very little. Comparing films before and after the first collaboration would get closer to causality, but ratings also move with age and period, so the comparison would mix the two. Weighting by votes would let one blockbuster decide a duo's average, and the 1,000-vote minimum already removes unreliable ratings.
+
+**Relation to 5.2.** Section 5.2 looks at the same effect by decade and by genre, with a different definition: two films together within the same decade or genre, all movie titles, directors taken from `title.principals`, a pooled baseline, and people who direct themselves are not excluded. The two sections therefore do not measure exactly the same thing, and their figures should not be compared directly.
 
 ### 5.2 Duo effect by decade and genre
