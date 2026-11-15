@@ -51,7 +51,7 @@ Each question is also a module with its own parameters, e.g.
 - Enrichment (`src/enrichment/`, `tests/test_enrichment.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia lookup code (rate limiting, retries, lineage columns) and its tests. The data comes from Wikipedia, never from an AI tool.
 - Enrichment, full scope (`src/enrichment/select_films.py`, `wiki_texts.py`, `build.py`, `tests/test_enrichment_texts.py`): Claude (Anthropic, Claude Code) was used to write the selection of the films and principals, the Wikipedia/Wikidata gatherer and the Spark cleaning and lineage, with their tests.
 - Open question, duos overall (`src/open_question/duos.py` and its test): Claude (Anthropic, Claude Code) was used to write the PySpark code.
-- REPORT.md: the result tables were made from the CSV files in `results/` with a small script written with Claude (Anthropic, Claude Code), and checked against the code. No AI tool was used to write explanations or reasoning in REPORT.md, the text is written by us.
+- REPORT.md: the result tables were made from the CSV files in `results/`, and the derived tables and figures with `src/report_tables.py`; this script was written with Claude (Anthropic, Claude Code) and the numbers were checked against the code. No AI tool was used to write explanations or reasoning in REPORT.md, the text is written by us.
 
 ## Requirements
 
@@ -77,6 +77,7 @@ Spark tests start a local session and take a few seconds each.
     python -m src.streaming.reference
     python -m src.open_question.duos
     python -m src.open_question.duos_by_period
+    python -m src.report_tables              # derived tables and figures of REPORT.md
 
 ## Streaming run
 
