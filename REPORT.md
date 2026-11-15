@@ -780,50 +780,54 @@ Sample rows (synopsis cut to 70 characters here):
 
 ## 4. Streaming
 
-lets start with the Architecture of the pipeline .......
-the live treatment pipeline is built on the continuous feeding of wikipedia pages modifications and their links with a IMDB reference. 
+Let's start with the architecture of the pipeline.
+The live treatment pipeline is built on the continuous feeding of Wikipedia pages modifications and their links with an IMDb reference.
 
-First, we use Kafka as a broker with a producer script  that listen the continuous public flow of recents wikipedia modifications and publish each events in wikipedia-changes. then our Spark motor, fed by this contnent link the title of each modificated pages with one of our reference tables from IMDB ( 24244 movies and 47899 personnas). To avoid the false positive, a filter analyse the () in the end of titel like we could have on Alien ( franchise). this process help us to avoid generic pages or homonymes. our validated links are then stocked in a 30 minutes sliding window ( with a 5 minutes jump ), as soon as a frame reach the critical points defined by --min-matches, it gets flagged. 
+First, we use Kafka as a broker with a producer script that listens to the continuous public flow of recent Wikipedia modifications and publishes each event in wikipedia-changes. Then our Spark motor, fed by this content link the title of each modified pages with one of our reference tables from IMDb (24244 movies and 47899 people). To avoid the false positive, a filter analyse the () in the end of title like we could have on Alien (franchise). This process helps us to avoid generic pages or homonyms. Our validated links are then stored in a 30 minutes sliding window (with a 5 minutes jump), as soon as a frame reach the critical points defined by --min-matches, it gets flagged.
 
-on our collect session that lasted 26 minutes, the pipeline recorded different metrics : first a global volume of 2190 events passed by KAFKA the only 63 events matched with our IDMB base ( 2.9%). those 63 events are divided in 2 categories : 28 are linked to personalities and about 35 are linked to movies. those 63 event reprensent 47 wikipedia pages. 
+On our collect session that lasted 26 minutes, the pipeline recorded different metrics: first a global volume of 2190 events passed by Kafka and only 63 events matched with our IMDb base (2.9%). Those 63 events are divided in 2 categories: 28 are linked to personalities and about 35 are linked to movies. Those 63 events represent 47 Wikipedia pages.
 
-only 3 windows were written and all passed over the critical point :
+Only 3 windows were written and all passed over the critical point:
 
-18:25 - 18:55 : 15 matchs
-18:30 - 19:00 : 27 matchs
-18:35 - 19:05 : 40 matchs
+| Window         | Matches |
+|----------------|--------:|
+| 18:25 to 18:55 |      15 |
+| 18:30 to 19:00 |      27 |
+| 18:35 to 19:05 |      40 |
 
-we justify our kafak /spark methodology by two main reasons : 
+### Methodological Explanation
 
-First kafka act like a buffer between the data source and the calculus. if the spark treatment is interrupted or restrating, the messages are still conserved in kafka and the treatment restart exactly where the last offset was validated. 
+We justify our Kafka/Spark methodology by two main reasons:
 
-the econd reason is more technical : Kafka is better in transport and flux retetion in high speed while spark have enough processing power for complex joins and aggregations. Furthermore, using Spark Structured Streaming makes it possible to use the same DataFrame API as for batch processing, facilitating the direct reuse of the IMDb tables prepared upstream.
+First Kafka acts like a buffer between the data source and the calculus. If the Spark treatment is interrupted or restarting, the messages are still conserved in Kafka and the treatment restart exactly where the last offset was validated.
 
-we choosed a stream static - broadcast joint to avoid the shuffle. when we broadcast a full copy of IMDB on the memory f each worker node, each coming event is compared locally. this system avoid spark to redistribute all the data flow on the shuffle by joints keys. 
+The second reason is more technical: Kafka is better in transport and flux retention in high speed while Spark has enough processing power for complex joins and aggregations. Furthermore, using Spark Structured Streaming makes it possible to use the same DataFrame API as for batch processing, facilitating the direct reuse of the IMDb tables prepared upstream.
 
-we also choosed sliding windows for 2 reason : 
+We chose a stream static - broadcast join to avoid the shuffle. When we broadcast a full copy of IMDb on the memory of each worker node, each coming event is compared locally. This system avoids Spark to redistribute all the data flow on the shuffle by join keys.
 
-Sliding windoxs are more interesting than tumbling windows ( who cut the time in blocs and can mask the A peak of activity if it straddles two intervals) because  the sliding window (30 minutes wide, 5-minute step) always assure a continuous coverage. 
+We also chose sliding windows for 2 reasons:
 
-we also choosed tge sliding windows for the accuracy because 1 same event could be considered in 6 windows that are working at the same time. even if this increase the work of the CPU to keep the windows active this way is way better to observe meticulously the evolution of trends and to set the flagged alarm as soon as the ccritical point is hit. 
+Sliding windows are more interesting than tumbling windows (which cut the time in blocs and can mask a peak of activity if it straddles two intervals) because  the sliding window (30 minutes wide, 5-minute step) always assure a continuous coverage.
 
-we also choosed to put the watermark at 10 minutes because this timeframe is perfect to avoid loosing some data ! 
-since the wikipedia flow is almost instant, a timeframe to short like 1 minute would make us loose all the data that is being slowed by the network and a timeframe too long ( 1 hour) would just delay unnecessarily the publication of results and increase memory usage.
+We also chose the sliding windows for the accuracy because 1 same event could be considered in 6 windows that are working at the same time. Even if this increase the work of the CPU to keep the windows active this way is way better to observe meticulously the evolution of trends and to set the flagged alarm as soon as the critical point is hit.
 
-to conclude this chapter lets analyze the 3 windows result : 
-Only 3 windows have been opened : this is explained by the combination of the time of the first match, the position of the watermark, and the writing mode used:
+We also chose to put the watermark at 10 minutes because this timeframe is perfect to avoid losing some data!
+Since the Wikipedia flow is almost instant, a timeframe too short like 1 minute would make us lose all the data that is being slowed by the network and a timeframe too long (1 hour) would just delay unnecessarily the publication of results and increase memory usage.
 
-on the Lower bound, The first IMDb match was recorded at 18:50:16. Any window ending before this time being empty, the first relevant window is the one covering 18:25 – 18:55
+To conclude this chapter let's analyze the 3 windows result:
+Only 3 windows have been opened: this is explained by the combination of the time of the first match, the position of the watermark, and the writing mode used:
 
-On the Upper bound and Append mode: The last event of the test was captured at 19:15:51, placing the final watermark around 19:05:51. In append output mode, Spark guarantees the immutability of results: it only writes a window once the watermark has strictly passed its end. Only the windows ending at 18:55, 19:00, and 19:05 met this condition at the time the pipeline stopped. The following windows (19:10, 19:15, etc.) were still waiting to close in memory.
+On the lower bound, the first IMDb match was recorded at 18:50:16. Any window ending before this time being empty, the first relevant window is the one covering 18:25 – 18:55
 
-But there is some limits to this exeriment :
+On the upper bound and append mode: The last event of the test was captured at 19:15:51, placing the final watermark around 19:05:51. In append output mode, Spark guarantees the immutability of results: it only writes a window once the watermark has strictly passed its end. Only the windows ending at 18:55, 19:00, and 19:05 met this condition at the time the pipeline stopped. The following windows (19:10, 19:15, etc.) were still waiting to close in memory.
 
-on a windows of 26 minutes, the watermark blocks the export on the last minutes of activity. A longer execution time or a change in the update mode would make us able to observe more windows. 
+But there are some limits to this experiment:
 
-the size of the sample is also too small : the analysis is done on a small batch of data that doesnt represent the general statistics on Wikipedia's overall activity.
+On a window of 26 minutes, the watermark blocks the export on the last minutes of activity. A longer execution time or a change in the update mode would make us able to observe more windows.
 
-and our last liimits is obviously the IMDb reference bias: Since the reference table is filtered to movies and personalities that received the most votes, the pipeline  ignores changes related to more rare or recent works, which partly explains the 2.9% match rate.
+The size of the sample is also too small: the analysis is done on a small batch of data that doesn't represent the general statistics on Wikipedia's overall activity.
+
+And our last limit is obviously the IMDb reference bias: Since the reference table is filtered to movies and personalities that received the most votes, the pipeline  ignores changes related to more rare or recent works, which partly explains the 2.9% match rate.
 
 ## 5. Open question
 
