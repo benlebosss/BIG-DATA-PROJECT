@@ -937,3 +937,61 @@ Lowest lift (duos with 5 films or more):
 **Relation to 5.2.** Section 5.2 looks at the same effect by decade and by genre, with a different definition: two films together within the same decade or genre, all movie titles, directors taken from `title.principals`, a pooled baseline, and people who direct themselves are not excluded. The two sections therefore do not measure exactly the same thing, and their figures should not be compared directly.
 
 ### 5.2 Duo effect by decade and genre
+
+Section 5.1 found that duos do slightly better together on average. An average over the whole dataset can hide large differences, so here we split the same question by decade of release and by genre, to see whether the effect belongs to one period or to a few genres.
+
+Effect by decade of release:
+
+| Decade | Duos | Mean effect | Median effect | % duos better | Avg films together |
+|-------:|-----:|------------:|--------------:|--------------:|-------------------:|
+|   1910 |   31 |      -0.047 |        -0.150 |          38.7 |               2.71 |
+|   1920 |  137 |       0.095 |         0.129 |          59.1 |               2.36 |
+|   1930 |  602 |       0.037 |         0.015 |          51.8 |               2.42 |
+|   1940 |  755 |       0.019 |         0.020 |          52.7 |               2.34 |
+|   1950 |  930 |       0.022 |         0.012 |          51.6 |               2.35 |
+|   1960 | 1030 |       0.056 |         0.067 |          54.4 |               2.45 |
+|   1970 | 1247 |       0.071 |         0.100 |          57.3 |               2.50 |
+|   1980 | 1175 |       0.082 |         0.050 |          54.1 |               2.34 |
+|   1990 | 1404 |       0.173 |         0.177 |          61.5 |               2.30 |
+|   2000 | 2402 |       0.177 |         0.197 |          62.0 |               2.27 |
+|   2010 | 4161 |       0.114 |         0.129 |          56.6 |               2.25 |
+|   2020 | 1585 |       0.119 |         0.117 |          56.6 |               2.16 |
+
+Effect by genre:
+
+| Genre       |  Duos | Mean effect | Median effect | % duos better | Avg films together |
+|-------------|------:|------------:|--------------:|--------------:|-------------------:|
+| Drama       | 11513 |       0.112 |         0.130 |          60.2 |               2.38 |
+| Comedy      |  7575 |       0.129 |         0.150 |          59.6 |               2.51 |
+| Action      |  4325 |       0.197 |         0.205 |          62.7 |               2.43 |
+| Crime       |  2390 |       0.162 |         0.157 |          60.8 |               2.33 |
+| Romance     |  2140 |       0.113 |         0.100 |          58.0 |               2.29 |
+| Adventure   |  1814 |       0.196 |         0.183 |          60.9 |               2.42 |
+| Horror      |  1345 |       0.130 |         0.160 |          58.8 |               2.31 |
+| Thriller    |  1091 |       0.186 |         0.150 |          59.0 |               2.22 |
+| Animation   |  1068 |       0.085 |         0.117 |          56.5 |               2.65 |
+| Mystery     |   454 |       0.166 |         0.225 |          62.3 |               2.21 |
+| Family      |   412 |       0.151 |         0.150 |          61.2 |               2.30 |
+| Sci-Fi      |   394 |       0.191 |         0.200 |          58.9 |               2.40 |
+| Fantasy     |   321 |       0.287 |         0.333 |          65.7 |               2.25 |
+| Musical     |   269 |       0.144 |         0.144 |          61.0 |               2.33 |
+| Western     |   240 |       0.049 |         0.050 |          55.0 |               2.35 |
+| History     |   182 |       0.080 |         0.050 |          54.4 |               2.13 |
+| Biography   |   159 |       0.103 |         0.100 |          56.0 |               2.11 |
+| Film-Noir   |   132 |       0.013 |         0.000 |          49.2 |               2.11 |
+| War         |    79 |       0.161 |         0.233 |          67.1 |               2.19 |
+| Music       |    39 |      -0.180 |        -0.133 |          46.2 |               2.10 |
+| Sport       |    20 |       0.297 |         0.208 |          70.0 |               2.40 |
+| Documentary |    13 |       0.064 |         0.207 |          69.2 |               2.38 |
+
+**Key takeaways.** The effect is positive in every decade except the 1910s (-0.047, on only 31 duos). It stays weak from the 1930s to the 1980s (+0.02 to +0.08, with 52% to 57% of duos doing better together) and grows from the 1990s: +0.173 in the 1990s and +0.177 in the 2000s, with about 62% of duos doing better, then +0.114 in the 2010s and +0.119 in the 2020s. The number of duos grows overall, from 31 in the 1910s to 4,161 in the 2010s, although the 1980s have slightly fewer than the 1970s and the 2020s are not complete yet. By genre, the effect is positive in 21 of 22 genres, and only Music is negative (-0.180, 39 duos). The three largest genres are Drama (+0.112, 11,513 duos), Comedy (+0.129, 7,575) and Action (+0.197, 4,325). Among genres with more than 100 duos, the strongest after Fantasy (+0.287) are Action, Adventure (+0.196), Sci-Fi (+0.191) and Thriller (+0.186), and the weakest are Film-Noir (+0.013), Western (+0.049), History (+0.080) and Animation (+0.085). Film-Noir and Western are probably low because most of their films come from the decades where the effect is weak.
+
+#### Methodological Explanation
+
+**Definition.** We take every film (`titleType = movie`) with a year and at least 1,000 votes (`--min-votes`), without the feature-film filter of Part 2. Directors and actors both come from `title.principals`. Films are grouped by decade of release, or by genre, where a film with several genres counts in each. Within a group, a duo needs at least 2 films together (`--min-joint`).
+
+**Effect.** The effect of a duo is the average rating of its films together minus the average of its films apart. The films apart are the director's films without the actor and the actor's films without the director, in the same group, pooled together, with at least 2 in total (`--min-separate`). Unlike 5.1, the two sides do not get equal weight: the person with more films counts more. A director who acts in their own films is paired with themselves, where 5.1 excludes them.
+
+**Limits.** Small groups can swing on a single duo: the 1910s (31 duos), Documentary (13), Sport (20), Music (39) and War (79). The two negative values, for the 1910s and Music, therefore say little. The pooled baseline lets a director with many films decide the comparison, which is what 5.1 avoided. Genre groups overlap, and the caveats of 5.1 still apply: the effect is not causal, and duos that keep working together are already a selected group. Since the films, the source of directors, the duo threshold, the baseline and the self-pairs all differ, these figures should not be compared directly with those of 5.1.
+
+**Alternatives.** Keeping the definition of 5.1 and only adding the decade or genre would make the two sections comparable. But duos make 2.2 to 2.7 films together per decade on average, so asking for three would remove a large share of them. A regression with fixed effects for director, actor and decade would separate each person's level from the period, but it is harder to explain and rests on very few films per pair. Grouping by decade of the first collaboration, as in the 5.1 table, would follow each duo over its whole history. Grouping by decade of release compares each film with others from the same period, so a general change in ratings over time affects both sides of the difference.
