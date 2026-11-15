@@ -16,8 +16,12 @@ def parse_changes(raw: DataFrame) -> DataFrame:
 
 
 def match_entities(changes: DataFrame, ref: DataFrame) -> DataFrame:
-    keyed = changes.withColumn("key", norm_key(F.col("title")))
-    return keyed.join(F.broadcast(ref), "key", "inner")
+    keyed = (changes.withColumn("key", norm_key(F.col("title")))
+             .withColumn("suffix", F.lower(F.regexp_extract("title", r"\(([^)]*)\)\s*$", 1))))
+    joined = keyed.join(F.broadcast(ref), "key", "inner")
+    title_ok = (F.col("kind") == "title") & F.col("suffix").rlike(r"^$|film|tv|series|television|miniseries|movie")
+    person_ok = (F.col("kind") == "person") & F.col("suffix").rlike(r"^$|actor|actress|director|filmmaker|producer|screenwriter")
+    return joined.where(title_ok | person_ok).drop("suffix")
 
 
 def window_counts(matches: DataFrame, window: str = "30 minutes", slide: str = "5 minutes",
