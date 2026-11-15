@@ -1,5 +1,5 @@
 """Pick the films and people to enrich: top 10 films per genre and year (by votes),
-and the first 3 principals (actors, actresses, directors) of each film.
+and the first 3 principals of each film (actors, actresses and directors first).
 
 Usage: python -m src.enrichment.select_films [--start 1980 --end 2025 --top 10 --people 3]
 """
@@ -23,9 +23,14 @@ def top_films(basics: DataFrame, ratings: DataFrame, start: int, end: int, top: 
 
 
 def film_people(films: DataFrame, principals: DataFrame, n: int) -> DataFrame:
-    w = Window.partitionBy("tconst").orderBy("ordering")
-    return (principals.where(F.col("category").isin("actor", "actress", "director"))
-            .join(films.select("tconst").distinct(), "tconst")
+    # actors, actresses and directors come first; when a film has fewer than n of them
+    # (documentaries list people as "self"), the next principals fill the gap
+    main_role = F.when(F.col("category").isin("actor", "actress", "director"), 0).otherwise(1)
+    # a voice actor has one row per character: keep one row per person
+    per_person = Window.partitionBy("tconst", "nconst").orderBy(main_role, "ordering")
+    w = Window.partitionBy("tconst").orderBy(main_role, "ordering")
+    return (principals.join(films.select("tconst").distinct(), "tconst")
+            .withColumn("k", F.row_number().over(per_person)).where(F.col("k") == 1)
             .withColumn("r", F.row_number().over(w)).where(F.col("r") <= n)
             .select("tconst", "nconst", "category", "ordering"))
 
