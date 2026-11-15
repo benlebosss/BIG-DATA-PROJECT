@@ -76,7 +76,8 @@ def stream_changes(url: str = STREAM_URL) -> Iterator[str]:
 
 def connect(bootstrap, retries=30, delay=2.0):
     from kafka import KafkaProducer
-    from kafka.errors import NoBrokersAvailable
+    from kafka.errors import KafkaError
+    last = None
     for attempt in range(retries):
         try:
             return KafkaProducer(
@@ -85,10 +86,11 @@ def connect(bootstrap, retries=30, delay=2.0):
                 value_serializer=lambda v: json.dumps(v).encode("utf-8"),
                 linger_ms=200,
             )
-        except NoBrokersAvailable:
+        except (KafkaError, OSError) as exc:
+            last = exc
             log.warning("Kafka not ready (%s/%s), retrying in %ss", attempt + 1, retries, delay)
             time.sleep(delay)
-    raise NoBrokersAvailable()
+    raise last
 
 
 def main() -> None:
