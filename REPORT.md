@@ -403,7 +403,7 @@ English is part of 66.8% of the profiles with two or more languages, so multilin
 
 ### Q7. Long careers whose ratings peaked early
 
-5522 actors and actresses found. The 15 largest drops:
+5,522 actors and actresses found. The 15 largest drops:
 
 | Name            | Movies | First | Last | Best movie                       | Best year | Best rating | 1st half avg | 2nd half avg | Drop |
 |-----------------|-------:|------:|-----:|----------------------------------|----------:|------------:|-------------:|-------------:|-----:|
