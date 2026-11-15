@@ -1,0 +1,11 @@
+director_name,actor_name,n_films,first_year,last_year,duo_avg,director_other_avg,actor_other_avg,baseline,lift,decade
+Kevin Smith,Brian O'Halloran,5,1994,2022,7.14,5.86,4.5,5.18,1.96,1990
+Tigmanshu Dhulia,Rajiv Gupta,5,2003,2013,7.32,5.8,5.11,5.46,1.86,2000
+Kevin Smith,Jason Mewes,5,1994,2022,7.0,5.93,4.45,5.19,1.81,1990
+Rainer Werner Fassbinder,Ulli Lommel,7,1969,1976,6.67,7.19,2.9,5.05,1.62,1960
+Anthony Russo,Chris Evans,5,2014,2022,7.76,6.1,6.41,6.26,1.5,2010
+Joe Russo,Chris Evans,5,2014,2022,7.76,6.1,6.41,6.26,1.5,2010
+Peter Jackson,Ian McKellen,6,2001,2014,8.28,7.29,6.4,6.85,1.44,2000
+Hansal Mehta,Rajkummar Rao,5,2012,2020,7.38,5.45,6.44,5.95,1.43,2010
+Mehmet Ada Öztekin,Sarp Akkaya,6,2017,2024,7.37,6.85,5.16,6.0,1.36,2010
+Neeraj Pandey,Anupam Kher,5,2008,2018,7.46,6.1,6.09,6.1,1.36,2000

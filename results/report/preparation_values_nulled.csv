@@ -1,0 +1,4 @@
+table,column,rule,values_set_to_null
+title.basics,runtimeMinutes,<= 0 or > 1000 min,441
+title.basics,endYear,endYear < startYear,0
+name.basics,deathYear,deathYear < birthYear,27

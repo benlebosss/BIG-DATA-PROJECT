@@ -1,11 +1,13 @@
 # PROJECT
 
+Group number: 2
+
 ## Contributors
 
 | Name | Email |
 |------|-------|
-| TODO | TODO  |
-| TODO | TODO  |
+| Benoit (GitHub: benlebosss) | benoitquaranta030405@gmail.com |
+| Théodore Bricout (GitHub: TheodoreBricout) | theodore.bricout@edu.ece.fr |
 
 ## Setup (from scratch)
 
@@ -16,8 +18,8 @@ docker compose up -d --build        # Kafka + Python/Spark container
 docker compose exec app bash        # shell inside the Spark container
 ```
 
-Run each module from inside the container, e.g. `python -m src.preparation.<script>`
-(to be completed as steps are implemented).
+Run each module from inside the container, e.g. `python -m src.preparation.<script>`.
+The full order is in "Pipeline order" below.
 
 ### Data exploration
 
@@ -46,4 +48,47 @@ Each question is also a module with its own parameters, e.g.
   languages (`src/exploration/wikidata_language.py`). The language data itself comes from
   Wikidata (human-curated, CC0), never from an AI tool. The interpretation of the results in REPORT.md
   is written by us.
-- No AI tool was used to write explanations or reasoning in REPORT.md.
+- Data preparation (`src/preparation/`, `tests/test_preparation.py`): Claude (Anthropic, Claude Code) was used to write the profiling, cleaning and Parquet-conversion code and its tests. The cleaning choices and their explanation in REPORT.md are ours.
+- Streaming (`src/streaming/`, `tests/test_streaming_*.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia -> Kafka producer, the IMDb lookup builder and the Structured Streaming consumer (join, windows, watermark) with their tests. The explanation of late-data handling in REPORT.md is written by us.
+- Enrichment (`src/enrichment/`, `tests/test_enrichment.py`): Claude (Anthropic, Claude Code) was used to write the Wikipedia lookup code (rate limiting, retries, lineage columns) and its tests. The data comes from Wikipedia, never from an AI tool.
+- Enrichment, full scope (`src/enrichment/select_films.py`, `wiki_texts.py`, `build.py`, `tests/test_enrichment_texts.py`): Claude (Anthropic, Claude Code) was used to write the selection of the films and principals, the Wikipedia/Wikidata gatherer and the Spark cleaning and lineage, with their tests.
+- Open question, duos overall (`src/open_question/duos.py` and its test): Claude (Anthropic, Claude Code) was used to write the PySpark code.
+- REPORT.md: the result tables were made from the CSV files in `results/`, and the derived tables and figures with `src/report_tables.py`; this script was written with Claude (Anthropic, Claude Code) and the numbers were checked against the code. No AI tool was used to write explanations or reasoning in REPORT.md, the text is written by us.
+
+## Requirements
+
+PySpark 3.5 needs Java 17. The Docker image provides Java 17 and Python 3.11. Outside Docker, export JAVA_HOME to a Java 17 install before running Spark.
+
+## Run the tests
+
+    python -m pytest -q
+
+Spark tests start a local session and take a few seconds each.
+
+## Pipeline order
+
+    python -m src.preparation.to_parquet
+    ./scripts/run_quality_checks.sh
+    python -m src.preparation.clean
+    python -m src.exploration.wikidata_language
+    python -m src.exploration.run_all
+    python -m src.enrichment.wikipedia
+    python -m src.enrichment.select_films
+    python -m src.enrichment.wiki_texts      # needs internet, about 1h30 the first time, then cached
+    python -m src.enrichment.build
+    python -m src.streaming.reference
+    python -m src.open_question.duos
+    python -m src.open_question.duos_by_period
+    python -m src.report_tables              # derived tables and figures of REPORT.md
+
+## Streaming run
+
+Start Kafka with docker compose up -d kafka, then run the producer (python -m src.streaming.wikipedia_producer) and the consumer (python -m src.streaming.consumer) in two terminals. Details in src/streaming/README.md.
+
+## Where the results are
+
+results/preparation, results/exploration, results/enrichment and results/open_question hold the CSV files quoted in REPORT.md.
+
+## Git workflow
+
+One feature branch per task, one pull request per branch, reviewed and approved by the other contributor before merging. main is protected.

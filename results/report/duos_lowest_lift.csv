@@ -1,0 +1,11 @@
+director_name,actor_name,n_films,first_year,last_year,duo_avg,director_other_avg,actor_other_avg,baseline,lift,decade
+Edward Drake,Bruce Willis,7,2021,2023,3.46,5.05,5.68,5.36,-1.91,2020
+Juan Piquer Simón,Frank Braña,5,1979,1992,3.88,5.3,5.78,5.54,-1.66,1970
+Ram Gopal Varma,Amitabh Bachchan,8,2005,2017,5.21,6.59,6.49,6.54,-1.32,2000
+Edward Drake,Lochlyn Munro,5,2021,2023,3.38,4.35,5.0,4.68,-1.3,2020
+Neri Parenti,Christian De Sica,12,1985,2008,4.4,6.02,5.33,5.68,-1.28,1980
+Roger Corman,Ed Nelson,5,1956,1959,4.3,5.61,5.52,5.57,-1.27,1950
+Dario Argento,Asia Argento,6,1993,2022,4.98,6.45,5.77,6.11,-1.12,1990
+Orhan Aksoy,Kemal Sunal,5,1987,1991,6.36,7.64,7.27,7.46,-1.1,1980
+Albert Pyun,Norbert Weisser,8,1984,2005,4.32,4.08,6.65,5.36,-1.04,1980
+Robert Rodriguez,Alexa PenaVega,5,2001,2013,4.92,6.34,5.56,5.95,-1.03,2000
