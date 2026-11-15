@@ -1,0 +1,39 @@
+figure,value
+q1 genres with z_low under 40 min,25
+q1 genres with z_low under 41 min,26
+q1 genres with iqr_low at 41 min or below,14
+q1 genres with mean above median,23
+q3 years top3 rating higher,34
+q3 years top3 votes per movie higher,26
+q3 genres per year min,21
+q3 genres per year max,25
+q3 movies per top3 genre per year,1241
+q3 movies per other genre per year,271
+q4 hits with fewer than 1000 votes,82
+q4 hits released in 2026,12
+q6 share of 2+ profiles with English,66.8
+q7 median movies,25.0
+q7 median span,34.0
+q7 median drop,0.53
+q7 best movie in first year,800
+q8 people with both kinds of movies,8481
+enrichment distinct films with synopsis %,85.8
+enrichment no-plot rows with source_url %,100.0
+5.1 duos,4646
+5.1 directors,1401
+5.1 actors,3367
+5.1 mean lift,0.188
+5.1 mean lift 95% CI low,0.172
+5.1 mean lift 95% CI high,0.204
+5.1 duos better (rounded lifts),3039
+5.1 duos worse (rounded lifts),1571
+5.1 duos at zero (rounded lifts),36
+5.1 sign test z,21.6
+5.1 duo above both apart %,48.6
+5.1 duo below both apart %,21.0
+5.1 lift >= 1 %,6.3
+5.1 corr lift / films together,0.01
+5.1 corr lift / baseline,0.02
+q4 directors at 1000 votes,49
+q4 kept from the 100-vote list,41
+q4 hits released in 2026 at 1000 votes,2

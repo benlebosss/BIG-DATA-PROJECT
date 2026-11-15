@@ -1,0 +1,26 @@
+genre,article found but no Plot section,no English Wikipedia article,ok
+Action,1,0,459
+Adventure,2,0,458
+Animation,12,14,434
+Biography,20,1,439
+Comedy,2,0,458
+Crime,4,0,456
+Documentary,202,35,223
+Drama,3,0,457
+Family,5,8,447
+Fantasy,12,0,448
+Game-Show,0,3,0
+History,43,9,408
+Horror,6,0,454
+Music,41,9,410
+Musical,46,33,381
+Mystery,2,0,458
+News,39,80,20
+Reality-TV,1,61,4
+Romance,5,0,455
+Sci-Fi,4,1,455
+Sport,44,34,382
+Talk-Show,0,18,0
+Thriller,3,0,457
+War,50,16,394
+Western,29,179,199

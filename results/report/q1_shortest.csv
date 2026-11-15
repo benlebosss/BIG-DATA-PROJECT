@@ -1,0 +1,11 @@
+genre,tconst,primaryTitle,startYear,runtimeMinutes,genre_mean,genre_std,genre_median,z_score,direction,z_outlier,iqr_outlier
+Thriller,tt41890482,Dasher,2026,41,96.1,21.7,93,-2.54,shorter,False,True
+Thriller,tt44535956,Trigger,2024,42,96.1,21.7,93,-2.5,shorter,False,True
+Thriller,tt9274978,Are You Watching Closely?,2019,43,96.1,21.7,93,-2.45,shorter,False,True
+Thriller,tt42176058,Lured,2026,43,96.1,21.7,93,-2.45,shorter,False,True
+Thriller,tt43377206,Catherine,2026,43,96.1,21.7,93,-2.45,shorter,False,True
+Comedy,tt27983128,Morgan Almighty,2023,41,93.2,21.6,91,-2.41,shorter,False,True
+Comedy,tt29550855,Stray Cat,2023,41,93.2,21.6,91,-2.41,shorter,False,True
+Comedy,tt5065924,Bethlehem,2015,41,93.2,21.6,91,-2.41,shorter,False,True
+Comedy,tt22496010,Combat Club,2022,41,93.2,21.6,91,-2.41,shorter,False,True
+Comedy,tt3148296,Super Fat,2013,41,93.2,21.6,91,-2.41,shorter,False,True
